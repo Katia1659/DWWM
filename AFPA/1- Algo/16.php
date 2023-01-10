@@ -1,0 +1,41 @@
+<?php 
+    /* 
+    Ecrire un algorithme qui demande un nombre à l'utilisateur, 
+    et l'informe ensuite si ce nombre est positif ou négatif
+    (on inclus cette fois le traitement du cas où le nombre vaut zéro).
+
+
+    Var nb : Entier;
+    debut
+        Ecrire("Entrez un nombre :");
+        LIRE <- nb;
+        SI nb < 0 alors
+            debut si
+                Ecrire('Le nombre est négatif')
+            fin_si
+        Sinon si nb > 0 alors
+            debut sinon
+                Ecrire('Le nombre est positif')
+            fin sinon
+        Sinon si nb = 0 alors 
+            debut sinon
+                ecrire('Le nombre vaut zéro')
+            fin sinon
+    fin
+    */
+    // Demande à l'utilisateur de saisir un nombre
+    $nb = readline('Entre un nombre :');
+
+    // Puis affiche si le nombre est negatif , positif ou vaut zéro.
+    if ($nb < 0) 
+    {
+        echo 'Le nombre est négatif';
+    }
+    elseif($nb > 0) 
+    {
+        echo 'Le nombre est positif';
+    }
+    elseif ($nb == 0) {
+        echo 'Le nombre vaut zéro';
+    }
+?>
