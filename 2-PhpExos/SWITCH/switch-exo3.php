@@ -13,7 +13,7 @@ $variable a la valeur null
 
 */
 
-$variable = 22;
+$variable = 42;
 
 switch (true) {
     case is_int($variable):
