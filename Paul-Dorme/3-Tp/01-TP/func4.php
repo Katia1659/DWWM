@@ -19,8 +19,8 @@ if (!file_exists('TP-1')) {
 $info = "";
 
 // 
-foreach ($newPlacesStag as $key => $value) {
-    $info .= $key.'=>'.$value."\n"; 
+foreach ($newPlacesStag as $stag => $place) {
+    $info .= $stag.'=>'.$place."\n"; 
 }
 
 // Créer et remplit un nouveau fichier.txt avec le nouveau mélange
