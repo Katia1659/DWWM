@@ -1,0 +1,16 @@
+Place_1 => Thibaut
+Place_2 => Alexandre
+Place_3 => Mounir
+Place_4 => Yacoube
+Place_5 => Jean-Batiste
+Place_6 => Gregory
+Place_7 => Florian
+Place_8 => Sebastien
+Place_9 => Kaouthar
+Place_10 => Thomas
+Place_11 => Maksen
+Place_12 => Batiste
+Place_13 => Lucas
+Place_14 => Paul
+Place_15 => Julien
+Place_16 => Anthony
