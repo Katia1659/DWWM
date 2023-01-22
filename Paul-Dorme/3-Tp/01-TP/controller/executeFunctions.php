@@ -1,6 +1,6 @@
 <?php
 
-require ('functions.php');
+require ('../modele/functions.php');
 
 $listPlaces = array(
     'Place_1',
@@ -23,7 +23,7 @@ $listPlaces = array(
 
 
 
-$listStag = readFileToArray('listStag.txt');
+$listStag = readFileToArray('../modele/listStag.txt');
 
 
 $listStagPlaces = generateStagPlaces($listPlaces, $listStag);

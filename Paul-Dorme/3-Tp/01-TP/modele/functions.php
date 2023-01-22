@@ -82,23 +82,5 @@ function changementPlaces(array $listStagPlaces): array
 
     return $listStagPlaces;
 }
-/*
-
-    $reponse = ' ';
-    while ($reponse == ' ') {
-
-    $listValues = array_values($listStagPlaces);
-    $listKeys = array_keys($listStagPlaces);
-    $temp = $listValues[0];
-    for ($i = 0; $i < sizeof($listValues) - 1; $i++) {
-        $listValues[$i] = $listValues[$i + 1];
-    }
-    $listValues[15] = $temp;
-    $listStagPlaces = array_combine($listKeys, $listValues);
-    var_dump($listStagPlaces);
-    $reponse = readline('On continue ! Si oui tape sur entrée');
 
 
-    }
-}
-*/
