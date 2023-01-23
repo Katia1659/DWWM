@@ -16,15 +16,12 @@
       <?php
       echo " Mme, Mr." . $_SESSION['nom'] . ", " . $_SESSION['prenom'] . ".";
       ?><br>
-      
       Vous n'êtes pas IMPOSABLE!!.
     </p><br>
     <div id="mag">
-        <img id="img" src="nnimpo.jfif" alt="tax">
+      <img id="img" src="nnimpo.jfif" alt="tax">
+    </div>
   </div>
-  </div>
- 
-
 </body>
 
 </html>

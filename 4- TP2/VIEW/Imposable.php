@@ -19,11 +19,8 @@
       Vous êtes IMPOSABLE.
     </p><br>
     <div id="mag">
-        <img id="img" src="impo.gif" alt="tax">
+      <img id="img" src="impo.gif" alt="tax">
+    </div>
   </div>
-  </div>
- 
-
 </body>
-
 </html>
