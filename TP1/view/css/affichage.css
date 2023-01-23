@@ -1,0 +1,48 @@
+.table{
+         
+    width: 150px;
+    height: 150px; 
+    display: flex;
+}
+
+.poste{
+    border: 1px solid black; 
+    background-color: gold;
+    border-radius: 5%;
+    width: 90px;
+    height: 55px;
+    margin-right: 2px;
+    margin-top: 2px;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.salle{
+    height: 50em;
+    padding: 30px;
+}
+
+.display{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+
+
+.bas{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#table2{
+    margin-right: 300px;
+}
+
+body{
+    background: linear-gradient(to right,
+    rgb(129, 6, 6) 15%, rgb(170, 11, 11) 30%, rgb(206, 51, 4) 50%, rgb(255, 94, 0) 70%, rgb(255, 166, 0) 80%, gold 90%);
+    /* background: linear-gradient(to left,
+    lime 20%, red 30%, red 45%, cyan 55%, cyan 70%, yellow 80% ); */
+}
