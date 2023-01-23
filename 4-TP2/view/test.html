@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="../controller/execute.php" method="get">
+        <label for="nom">nom</label>
+        <input name="nom" type="text"/>
+        
+        <label for="prenom">prenom</label>
+        <input name="prenom" type="text"/>
+
+        <label for="start">DATE DE NAISSANCE</label>
+
+        <input type="date" id="date_naiss" name="date_naiss"
+        value="2023-01-23"
+        min="2018-01-01" max="2023-01-23">
+
+        <fieldset>
+            <legend>SEXE : </legend>
+        
+            <div>
+              <input type="radio" id="gender" name="gender" value="femme"
+                     checked>
+              <label for="femme">femme</label>
+            </div>
+        
+            <div>
+              <input type="radio" id="gender" name="gender" value="homme">
+              <label for="homme">homme</label>
+            </div>
+
+
+
+
+
+
+
+
+    </form>
+
+
+
+</body>
+</html>
