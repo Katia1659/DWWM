@@ -1,0 +1,160 @@
+body{
+    overflow-y: hidden;
+    background-color: peachpuff;
+}
+/*  */
+table{
+    background-color: #bc884a;
+    border: black solid 2px;
+    width: 160px;
+    height: 100px;
+}
+h1{
+    text-align: center;
+}
+td, th, h2, form{
+    text-align: center;
+    color: #e5cdcd;
+}
+
+.btn{
+    height: 100%;
+    width: 100%;
+}
+
+.input{
+    height: 80px;
+    width: 130px;
+}
+.input:hover , .btn:hover{
+    background-color: #c3b4b4;
+    border-radius: 3px;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr) ;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    ". Moussa . ."
+    "TAB1 . . TAB4"
+    ". . . ."
+    ". TAB2 . TAB3";
+}
+
+.TAB1 {
+    display: grid;
+    grid-template-columns: 1.3fr 1.3fr;
+    grid-template-rows: 1.1fr 1.1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "place1 place2"
+    "place4 place3";
+    grid-area: TAB1;
+    width: 20em;
+}
+.place1 {
+    grid-area: place1;
+}
+.place2 {
+    grid-area: place2;
+}
+.place3 {
+    grid-area: place3;
+}
+.place4 {
+    grid-area: place4;
+}
+
+.TAB2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "place6 place7"
+    "place5 place8";
+    grid-area: TAB2;
+    width: 20em;
+}
+.place5 {
+    grid-area: place5;
+}
+.place6 {
+    grid-area: place6;
+}
+.place7 {
+    grid-area: place7;
+}
+.place8 {
+    grid-area: place8;
+}
+.TAB3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "place10 place11"
+    "place9 place12";
+    grid-area: TAB3;
+    width: 20em;
+}
+.place9 {
+    grid-area: place9;
+}
+.place10 {
+    grid-area: place10;
+}
+.place11 {
+    grid-area: place11;
+}
+.place12 {
+    grid-area: place12;
+}
+.TAB4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "place15 place16"
+    "place14 place13";
+    grid-area: TAB4;
+    width: 20em;
+}
+.place13 {
+    grid-area: place13;
+}
+.place14 {
+    grid-area: place14;
+}
+.place15 {
+    grid-area: place15;
+}
+.place16 {
+    grid-area: place16;
+}
+
+.Moussa {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "Titre"
+    "button";
+    grid-area: Moussa;
+    width: 20em;
+    background-color: #bc884a;
+}
+.Titre {
+    grid-area: Titre;
+}
+.button {
+    grid-area: button;
+}
+
