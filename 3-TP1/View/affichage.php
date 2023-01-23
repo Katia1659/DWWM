@@ -23,23 +23,23 @@
             <!-- 1 -->
 	
             <tr>
-                <td>1</td>
-                <td><?php echo $_SESSION ['listPlaceStag']['1'];?></td>
+                <td>Place_1 : </td>
+                <td><?php echo $_SESSION ['listPlaceStag']['Place_1'];?></td>
             </tr>
             <!-- 2 -->
             <tr>
-                <td>2</td>
-                <td><?php echo $_SESSION ['listPlaceStag']['2'];?></td>
+                <td>Place_2 : </td>
+                <td><?php echo $_SESSION ['listPlaceStag']['Place_2'];?></td>
             </tr>
             <!-- 3 -->
             <tr>
-                <td>3</td>
-                <td><?php echo $_SESSION ['listPlaceStag']['3'];?></td>
+                <td>Place_3 : </td>
+                <td><?php echo $_SESSION ['listPlaceStag']['Place_3'];?></td>
             </tr>
             <!-- 4 -->
             <tr>
-                <td>4</td>
-                <td><?php echo $_SESSION ['listPlaceStag']['4'];?></td>
+                <td>Place_4 : </td>
+                <td><?php echo $_SESSION ['listPlaceStag']['Place_4'];?></td>
             </tr>
         </table>
         <table class="tableau2">
@@ -49,23 +49,23 @@
             </tr>
             <!-- 5 -->
             <tr>
-                <td>5</td>
-                <td><?php echo $_SESSION ['listPlaceStag']['5'];?></td>
+                <td>Place_5 : </td>
+                <td><?php echo $_SESSION ['listPlaceStag']['Place_5'];?></td>
             </tr>
             <!-- 6 -->
             <tr>
-                <td>6</td>
-                <td><?php echo $_SESSION ['listPlaceStag']['6'];?></td>
+                <td>Place_6 : </td>
+                <td><?php echo $_SESSION ['listPlaceStag']['Place_6'];?></td>
             </tr>
             <!-- 7 -->
             <tr>
-                <td>7</td>
-                <td><?php echo $_SESSION ['listPlaceStag']['7'];?></td>
+                <td>Place_7 : </td>
+                <td><?php echo $_SESSION ['listPlaceStag']['Place_7'];?></td>
             </tr>
             <!-- 8 -->
             <tr>
-                <td>8</td>
-                <td><?php echo $_SESSION ['listPlaceStag']['8'];?></td>
+                <td>Place_8 : </td>
+                <td><?php echo $_SESSION ['listPlaceStag']['Place_8'];?></td>
             </tr>
         </table>
         <table class="tableau3">
@@ -75,23 +75,23 @@
             </tr>    
             <!-- 9 -->
             <tr>
-                <td>9</td>
-                <td><?php echo $_SESSION ['listPlaceStag']['9'];?></td>
+                <td>Place_9 : </td>
+                <td><?php echo $_SESSION ['listPlaceStag']['Place_9'];?></td>
             </tr>
             <!-- 10 -->
             <tr>
-                <td>10</td>
-                <td><?php echo $_SESSION ['listPlaceStag']['10'];?></td>
+                <td>Place_10 : </td>
+                <td><?php echo $_SESSION ['listPlaceStag']['Place_10'];?></td>
             </tr>
             <!-- 11 -->
             <tr>
-                <td>11</td>
-                <td><?php echo $_SESSION ['listPlaceStag']['11'];?></td>
+                <td>Place_11 : </td>
+                <td><?php echo $_SESSION ['listPlaceStag']['Place_11'];?></td>
             </tr>
             <!-- 12 -->
             <tr>
-                <td>12</td>
-                <td><?php echo $_SESSION ['listPlaceStag']['12'];?></td>
+                <td>Place_12 : </td>
+                <td><?php echo $_SESSION ['listPlaceStag']['Place_12'];?></td>
             </tr>
         </table> 
         <table class="tableau4">
@@ -101,23 +101,23 @@
             </tr>       
             <!-- 13 -->
             <tr>
-                <td>13</td>
-                <td><?php echo $_SESSION ['listPlaceStag']['13'];?></td>
+                <td>Place_13 : </td>
+                <td><?php echo $_SESSION ['listPlaceStag']['Place_13'];?></td>
             </tr>
             <!-- 14 -->
             <tr>
-                <td>14</td>
-                <td><?php echo $_SESSION ['listPlaceStag']['14'];?></td>
+                <td>Place_14 : </td>
+                <td><?php echo $_SESSION ['listPlaceStag']['Place_14'];?></td>
             </tr>
             <!-- 15 -->
             <tr>
-                <td>15</td>
-                <td><?php echo $_SESSION ['listPlaceStag']['15'];?></td>
+                <td>Place_15 : </td>
+                <td><?php echo $_SESSION ['listPlaceStag']['Place_15'];?></td>
             </tr>
             <!-- 16 -->
             <tr>
-                <td>16</td>
-                <td><?php echo $_SESSION ['listPlaceStag']['16'];?></td>
+                <td>Place_16 : </td>
+                <td><?php echo $_SESSION ['listPlaceStag']['Place_16'];?></td>
 
             </tr>
         </table>       
