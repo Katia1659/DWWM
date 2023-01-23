@@ -1,0 +1,16 @@
+.bouton {
+    display: flex;
+    justify-content: center;
+
+}
+
+input {
+    border-radius: 50px;
+    background-color: blue;
+    color: white;
+}
+
+input:hover {
+    background-color: black;
+    rotate :180deg ;
+}
