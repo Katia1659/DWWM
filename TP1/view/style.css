@@ -1,0 +1,58 @@
+.bouton {
+    align-items: center;
+    margin-top: 2%;
+    height: 200%;
+    width: 100%;
+    font-size:x-large;
+    background-color: dodgerblue;
+}
+.emplacement{
+    align-items: center;
+    margin-top: 2%;
+    margin-left: 45%;
+    font-size:x-large;
+}
+
+.changement{
+    margin-top: 2%;
+    margin-left: 43%;
+}
+.parent {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .div1 { 
+        grid-area: 2 / 2 / 4 / 4; 
+        background-color:darkgray;
+        text-align: center;
+        border-radius: 10px;
+    }
+    .div2 { 
+        grid-area: 2 / 5 / 4 / 7;
+        background-color: darkgray; 
+        text-align: center;
+        border-radius: 10px;
+    }
+    .div3 { 
+        grid-area: 5 / 2 / 7 / 4;
+        background-color: darkgray;
+        text-align: center;
+        border-radius: 10px;
+    }
+    .div4 { 
+        grid-area: 5 / 5 / 7 / 7;
+        background-color:#a9a9a9;
+        text-align: center;
+        border-radius: 10px;
+     
+    }
+    .div5 { 
+        grid-area: 8 / 6 / 10 / 8;
+        background-color:darkgray; 
+        text-align: center;
+        border-radius: 10px;
+    }
