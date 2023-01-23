@@ -50,7 +50,7 @@ function placesStagRotate(string $listStagPlaces) : array  {
     }
     $json = file_get_contents($listStagPlaces); 
     $listStagPlaces = json_decode($json, true);
-    $cle= array_keys($listStagPlaces);
+    $cle = array_keys($listStagPlaces);
     $valeur = array_values($listStagPlaces);
     $lastValue = array_pop($valeur);
     array_unshift($valeur, $lastValue);
@@ -59,5 +59,11 @@ function placesStagRotate(string $listStagPlaces) : array  {
     file_put_contents('./save/Backup.json', $saveJson);
     return $listStagPlaces;   
 } 
+
+function modeleFunction(String $message): String
+{
+    return "Je suis dans le Modele, et le message est : ".$message; 
+}
+
 
 ?>
