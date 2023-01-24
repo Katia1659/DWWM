@@ -21,7 +21,7 @@
           <label for="name"> Prénom : </label><br />
           <input type="text" name="prenom" id="prenom" placeholder="Prénom"><br />
           <label for="age">Date de Naissance *:</label><br />
-          <input type="date" name="dateNaissance" id="age" required><br />
+          <input type="date" name="dateNaissance" id="age" min="1930-01-31" max="2022-12-31" required><br />
           <label for="gender" id="sex">Homme*</label>
           <input type="radio" id="homme" name="gender" value="M" required>
           <label for="gender" id="sex">Femme*</label>
