@@ -1,0 +1,83 @@
+body {
+    background: linear-gradient(90deg, #2354c5 0%, #182848 100%);
+    font-family: 'Orbitron', sans-serif;
+    
+}
+.bodyImposable {
+    background-image: url(./R.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+.imposable {
+    display: flex;
+    justify-content: center;
+    color:#FC1C12;
+    text-shadow:black 5px 5px; 
+    margin-top: 21%;
+    font-size: xx-large;
+    
+}
+.navbar {
+    background: linear-gradient(180deg, rgba(241, 70, 48,0.95) 0%, #5c1910 100%);
+}
+.navbar-brand {
+    
+    display: flex;
+    justify-content: center;
+}
+h1 {
+    
+    color: #FC1C12;
+    text-shadow:black 5px 5px; 
+}
+.titre {
+    margin-top: 5%;
+    margin-bottom: 3%;
+    text-align: center;
+}
+h3 {
+    color: #37c04e;
+    text-shadow:black 7px 7px;; 
+}
+.formulaire {
+    display: flex;
+    justify-content: center;
+    
+}
+input[type=radio] {
+    accent-color: red;
+}
+input[type=submit] {
+    
+    background: linear-gradient(180deg, #c53623 0%, #5c1910 100%);
+    box-shadow: black 1px 3px ;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    text-align: center;
+    
+    
+}
+fieldset{
+    
+    background-color:linear-gradient(90deg, #2354c5 0%, #182848 100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 41%;
+}
+.navbar2 {
+    position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(241, 70, 48, 0.9) 0%, #5c1910 100%);
+}
+.bottom {
+    color: black;
+    text-shadow:red 5px 3px;   
+}
