@@ -1,0 +1,19 @@
+.body1{
+    background-image: url("../View/asset/Argent.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100% ;
+}
+
+.body2{
+    background-image: url("../View/asset/Stonks.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100% ;
+}
+.body3{
+    background-image: url("../View/asset/Not\ Stonks.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100% ;
+}
