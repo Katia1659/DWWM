@@ -1,7 +1,7 @@
 <?php
 
 require ('../modele/functions.php');
-
+session_start();
 $listPlaces = array(
     'Place_1',
     'Place_2',
@@ -23,7 +23,7 @@ $listPlaces = array(
 
 
 
-$listStag = readFileToArray('../modele/listStag.txt');
+$listStag = readFileToArray('../controller/listStag.txt');
 
 
 $listStagPlaces = generateStagPlaces($listPlaces, $listStag);
@@ -33,13 +33,19 @@ $listStagPlaces = generateStagPlaces($listPlaces, $listStag);
 
 
 
-$filePath = saveListStagToFile($listStagPlaces);
+$filePath = saveListStagToJson($listStagPlaces);
 
 
 $listStagPlaces = jsonToArray($filePath);
 
 
 
-$listStagPlaces = changementPlaces($listStagPlaces);
-print_r($listStagPlaces);
+$listStagPlaces = placeStagRotate($listStagPlaces);
 
+
+$_SESSION['$listStagPlaces'] = $listStagPlaces;
+
+
+header('Location: ../view/affichage.php');
+
+// print_r($_SESSION['$listStagPlaces']);

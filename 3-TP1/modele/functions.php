@@ -44,7 +44,7 @@ function randomizePlacesStag(array $listStagPlaces): array
 
 // Fonction afin de créer un fichier qui sauvegarde les nouvelles places avec la date dans le titre
 
-function saveListStagToFile(array $listStagPlaces): string
+function saveListStagToJson(array $listStagPlaces): string
 {
     $date = date('d-m-y h-i-s');
     if (!is_dir('Save')) {
@@ -61,16 +61,18 @@ function saveListStagToFile(array $listStagPlaces): string
 //saveListStagToFile($listStagPlaces);
 function jsonToArray(string $filePath): array
 {
-    if (file_exists('./Save/Backup.json')) {
-        $filePath = './Save/Backup.json';
+    if (file_exists('../controller/Save/Backup.json')) {
+        $filePath = '../controller/Save/Backup.json';
     }
     
     $json = file_get_contents($filePath);
     return json_decode($json, true);
 }
 
-function changementPlaces(array $listStagPlaces): array
+// Change de place chaque stagiaire, le décale d'une place vers la gauche
+function placeStagRotate(array $listStagPlaces): array
 {
+
     $keys = array_keys($listStagPlaces);
     $values = array_values($listStagPlaces);
     $last_value = array_pop($values);
@@ -78,9 +80,8 @@ function changementPlaces(array $listStagPlaces): array
 
     $listStagPlaces =  array_combine($keys, $values);
     $saveJson = json_encode($listStagPlaces);
-    file_put_contents('./Save/Backup.json', $saveJson);
+    file_put_contents('../controller/Save/Backup.json', $saveJson);
 
     return $listStagPlaces;
 }
-
 
