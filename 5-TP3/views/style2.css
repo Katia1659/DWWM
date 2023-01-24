@@ -1,0 +1,11 @@
+.bouton {
+    display: flex;
+    justify-content: center;
+
+}
+
+input {
+    border-radius: 50px;
+    background-color: blue;
+    color: white;
+}
