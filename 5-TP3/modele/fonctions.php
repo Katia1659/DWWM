@@ -30,12 +30,8 @@ function randomizePlacesStag(array $listStagePlaces): array {
 // fonction passant un fichier texte au format json
 
 function saveListStagToJson(array $listStagPlaces ): void {
-    date_default_timezone_set('Europe/Paris');
-    $date = date('j-m-y H-i-s');
-    if (!is_dir('save')) {
-        mkdir('save');
-    }
-    $fichier = 'save\save.json';
+   
+    $fichier = 'save\Backup.json';
     $json = json_encode($listStagPlaces);
     file_put_contents($fichier, $json);
     

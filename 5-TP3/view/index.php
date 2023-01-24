@@ -13,7 +13,7 @@
     <form enctype="multipart/form-data" action="../Controller/executeFonc.php" method="post">
      <input class="file" name="file" type="file" /> 
     <div class="button">
-      <input class="submit" name="submit" type="submit" value="valider" />
+      <input class="submit" name="submit" type="submit" value="valider" require />
     </form>
   </div>
 </div>
