@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Salle </title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./asset/style.css">
 </head>
 
 <body>
@@ -194,7 +194,7 @@
 
         <div class="div18">
 
-                <a href="../controller/execute.php" method="get"> <img src="./lemonarque" alt="LeMonarque" width="150px" > </a>
+                <a href="../controller/execute.php" method="get"> <img src="./asset/lemonarque" alt="LeMonarque" width="150px" > </a>
 
         </div>    
 
