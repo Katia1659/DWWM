@@ -63,3 +63,22 @@ function placesStagRotate(string $listPlaceStag): array
         return $echange;
     }
 }
+
+//FONCTION POUR CHANGER UNE DATE EN AGE 
+function getAgeFromDate(string $date) : int {
+    $age = date('Y') - date('Y', strtotime($date)); 
+    return $age; 
+}
+
+
+//FONCTION QUI PERMET DE SAVOIR SI ON PAYE DES IMPOTS A PARIS CELON L'EXERCICE 24 
+function verifImpotParis(int $age, string $sexe) : bool {
+if (($sexe == "h") and ($age > 20)) {
+   return true;
+} elseif (($sexe == "f") and ($age > 17 and $age < 36)) {
+   return true;
+} else {
+   return false;
+}
+}
+
