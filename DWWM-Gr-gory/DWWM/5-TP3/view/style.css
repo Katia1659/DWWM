@@ -1,0 +1,75 @@
+body{
+    background-color: rgb(117, 146, 201);
+    border: 1px black solid;
+}
+
+.haut{
+    display: flex;
+    flex-direction: row;
+}
+
+.tableau{
+    border-top: 10px rgb(255, 255, 255) solid;
+    width: 30%;
+}
+
+.cadre{
+    margin-left: 15%;
+    margin-right: 8%;
+    padding: 30px;
+    font-size: 1.5em;
+    border: 5px black solid;
+    display: flex;
+    width: fit-content;
+    border-radius: 15px;
+}
+
+table{
+    font-size: 1.5em;
+   border: 5px rgb(0, 0, 0) solid;
+   border-radius: 21px;
+}
+
+td{
+    text-align: center;
+    border-radius: 15px;
+    width: 200px;
+    height: 100px;
+    background-color: beige;
+}
+
+.ligne1 {
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5em;
+    margin-bottom: 15em;
+}
+
+.ligne1 :nth-child(1) {
+    order: 2;
+}
+
+.ligne1 :nth-child(2) {
+    order: 1;
+}
+
+.ligne1 :nth-child(3) {
+    order: 3;
+}
+
+.ligne2 {
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    margin: 1.2em;
+}
+
+.btn {
+    font-size: 150%;
+    width: 200px;
+    height: 100px;
+    color: rgb(253, 253, 253);
+    background-color: darkorange;
+    border-radius: 15px;
+}
