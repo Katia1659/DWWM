@@ -13,7 +13,7 @@
 <body class="bcg">
 
     <?php session_start(); ?>
-    <h1>Bien joué tu n'as rien a payer <?php echo $_SESSION['nom'] . " " . $_SESSION['prenom']; ?></h1>
+    <h1>Bien joué tu n'as rien à payer <?php echo $_SESSION['nom'] . " " . $_SESSION['prenom']; ?></h1>
     <div class="pos">
         <img src="../Assets/dollarfall.gif" alt="">
     </div>
