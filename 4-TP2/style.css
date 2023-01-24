@@ -1,0 +1,84 @@
+.logoImpot{
+    width: 400px;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+.imgImpots{
+  width: 400px;
+  margin-left: 70%;
+}
+body{
+    background-color: rgb(255, 255, 255);
+}
+.containeurUn{
+    display: flex;
+    
+    margin-top: 2%;
+    background-color: rgb(212, 212, 212);
+    width: 100%;
+    height: 500px;
+}
+.containeurDeux{
+    margin-left: 170px;
+    margin-top: 5%;
+    width: 245px;
+    height: 310px;
+    background-color: aliceblue;
+    border-radius: 22px;
+    background: #e0e0e0;
+    box-shadow:  16px 16px 42px #b8b8b8,
+             -16px -16px 42px #ffffff;
+    
+}
+.boutonNom {
+    margin-top: 7%;
+    margin-left: 5%;
+    max-width: 210px;
+    height: 50px;
+    border-radius: 7px;
+    border: 0;
+    outline: auto grey;
+    padding-inline: 15px;
+    font-size: 16px;
+    transform: all 200ms;
+  }
+  
+  .boutonNom:focus {
+    text-decoration: underline 6px;
+    box-shadow: 0 0 50px rgb(255, 255, 255);
+    border: 1px solid grey;
+  }
+  .boutonPrenom {
+    margin-top: 5%;
+    margin-left: 5%;
+    max-width: 210px;
+    height: 50px;
+    border-radius: 7px;
+    border: 0;
+    outline: auto grey;
+    padding-inline: 15px;
+    font-size: 16px;
+    transform: all 200ms;
+  }
+  
+  .boutonPrenom:focus {
+    text-decoration: underline 6px;
+    box-shadow: 0 0 50px rgb(255, 255, 255);
+    border: 1px solid grey;
+  }
+.legend{
+    font-size: medium;
+    text-align: center;
+    margin-top: 4%;
+}
+.radio{
+    margin-left: 15%;
+}
+.date{
+    margin-top: 6%;
+    margin-left: 20%;
+}
+.boutonSend{
+  margin-top: 4%;
+  margin-left: 4px;
+}
