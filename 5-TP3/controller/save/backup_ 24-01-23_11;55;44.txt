@@ -1,0 +1,47 @@
+Place_1
+ => NAim
+
+Place_2
+ => MOMOH
+
+Place_3
+ => RIOME
+
+Place_4
+ => DJAD
+
+Place_5
+ => NOAH
+
+Place_6
+ => LILY
+
+Place_7
+ => ADEM
+
+Place_8
+ => MASSI
+
+Place_9
+ => KADER
+
+Place_10
+ => RIADH
+
+Place_11
+ => RIMA
+
+Place_12
+ => KARIM
+
+Place_13
+ => LYDIA
+
+Place_14
+ => MAGHI
+
+Place_15
+ => DIFF
+
+Place_16 => BIGO
+
