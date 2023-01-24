@@ -1,0 +1,16 @@
+
+/*Grid*/
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    ". logo ."
+    ". content ."
+}
+.logo { grid-area: logo; }
+.content {
+    grid-area: content;
+    text-align: center;
+}

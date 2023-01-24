@@ -1,0 +1,40 @@
+p{
+    margin: 0;
+}
+
+/*Grid */
+.contenants {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    ". LOGO ."
+    ". FORM .";
+}
+.LOGO { grid-area: LOGO; }
+.FORM { grid-area: FORM; }
+
+
+/*Formulaire*/
+.input{
+    width: 42em;
+    height: auto;
+    margin-left: 2.5em;
+    text-align: center;
+}
+.centrer{
+    text-align: center;
+    font-weight: bold;
+}
+.marginRadioButton{
+    margin-left: 19.2em;
+}
+.divMargeT{
+    margin-top: 0.5em;
+}
+.button{
+    width: 10em;
+    height: 2em;
+    margin-left: 18.5em;
+}
