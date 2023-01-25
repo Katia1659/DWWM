@@ -11,8 +11,11 @@ for ($i = 0; $i < 16; $i++) {
     $tabPlaces[$i] = "Place_$a";
 }
 
+// lecture du fichier téléchargé
+$chemin = $_FILES['file']['tmp_name'];
+
 //Création d'un tableau pour les noms 
-$listStag = readFileToArray('../controller/listStag.txt');
+$listStag = readFileToArray($chemin);
 
 // LANCEMENT DES FONCTIONS
 //Création d'un tableau pour les places 
@@ -28,6 +31,12 @@ $tabFinal = placesStagRotate($listPlaceStag);
 print_r($tabFinal);
 
 
-
+//envoi du tableau final 
 $_SESSION['$listPlaceStag'] = $tabFinal;
 header('Location: ../view/affichage.php');
+
+
+
+
+//change un fichier en fichier CSV
+fileEnfileCsv('../controller/save2.json');

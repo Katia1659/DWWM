@@ -63,3 +63,40 @@ function placesStagRotate(string $listPlaceStag): array
         return $echange;
     }
 }
+
+function fileEnfileCsv(string $json) : void
+{
+    $formeTableau = array();
+    $nouveautableau = array();
+
+    $fichier = file_get_contents($json);
+
+    $decode = json_decode($fichier, true);
+    
+
+    $listValues = array_values($decode);
+    $listKeys = array_keys($decode);
+    for ($i = 0; $i < 16; $i++) {
+        $formeTableau[] = array($listKeys[$i] . " " . $listValues[$i]);
+    }
+
+    $i = 0;
+    foreach ($formeTableau as $key) {
+        $i++;
+        $nouveautableau[$i] = str_replace(" ", ";", $key);
+    }
+
+    $fpn = fopen('extraction_Stagiaire.csv', 'w');
+
+    foreach ($nouveautableau as $fields) {
+        fputcsv($fpn, $fields);
+    }
+
+    fclose($fpn);
+
+   
+}
+
+
+
+

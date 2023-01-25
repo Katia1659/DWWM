@@ -13,6 +13,10 @@ body {
     grid-row-gap: 0px;
 }
 
+.enregistre{
+    grid-area: 12 / 7 / 11 / 6;
+}
+
 .div1 {
     grid-area: 1 / 4 / 2 / 7;
 }
@@ -237,3 +241,4 @@ body {
     border-radius: 370px;
     border: 2px dashed black; 
 }
+
