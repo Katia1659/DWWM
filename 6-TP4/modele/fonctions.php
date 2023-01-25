@@ -57,10 +57,33 @@ function placesStagRotate(string $listStagPlaces) : array  {
     return $listStagPlaces;   
 } 
 
-function modeleFunction(String $message): String
-{
-    return "Je suis dans le Modele, et le message est : ".$message; 
-}
+function ListStageCSV($file) :void {
 
+    $contain = file_get_contents($file);
+    $tab = json_decode($contain, true);
+    $csv = 'extraction_Stagiaire.csv';
+
+    $key = array_keys($tab);
+    $value = array_values($tab);
+
+    for ($i=0; $i < count($tab) ; $i++) {
+        $tabCsv[] = array($key[$i].' '. $value[$i]);
+    }
+
+    $i = 0;
+    foreach ($tabCsv as $key) {
+        $i++;
+        $newTab[$i] = str_replace(" ", ";", $key);
+    }
+
+    $fileCsv = fopen($csv, 'w');
+
+    foreach ($newTab as $i) {
+        fputcsv($fileCsv, $i);
+    }
+
+    fclose($fileCsv);
+
+}
 
 ?>

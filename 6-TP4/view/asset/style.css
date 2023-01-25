@@ -8,7 +8,7 @@ body {
 .parent1 {
 display: grid;
 grid-template-columns: repeat(7, 1fr);
-grid-template-rows: repeat(7, 0.5fr);
+grid-template-rows: repeat(7, 0.4fr);
 grid-column-gap: 0px;
 grid-row-gap: 0px;
 }
@@ -45,12 +45,12 @@ grid-row-gap: 0px;
 
 .div16 { grid-area: 4 / 1 / 5 / 2; }
 
-.div17 { grid-area: 4 / 4 / 6 / 5; }
+.div17 { grid-area: 4 / 4 / 6 / 5; 
+    color: black;}
 
 .div18 { grid-area: 7 / 5 / 8 / 7; }
 
-
-
+.div19 { grid-area: 7 / 7 / 7 / 6; }
 
 img{ 
     border: solid #2b7bb49e;
@@ -93,13 +93,26 @@ img:hover {
 }
 
 
-.btnindex {
+.div17 {
     font-size: xx-large;
     text-decoration: none;
     padding: 15%;
 }
 
-.btnindex:hover{
+.div17:hover{
 
     color: #2b7bb4ee;
+}
+
+.btntelecharger {
+    border: solid;
+    border-radius: 15px;
+    background-color: #2b7bb49e;
+    width: 150%;
+    height: 100%;
+    box-shadow: 5px 5px 5px;
+}
+
+.btntelecharger:hover {
+    background-color: #2b7bb459;
 }

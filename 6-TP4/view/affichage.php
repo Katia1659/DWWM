@@ -204,7 +204,14 @@
 
          </a>
 
-    </div>
+ 
+
+        <form action="../controller/executeExtraction.php" method="get" class="div19">
+             <input  class="btntelecharger" type="submit" value="CLIQUE ICI POUR TELECHARGER 
+            EN FORMAT CSV, TQT IL Y A PAS DE VIRUS"> </input> 
+        </form>
+   </div>
+
 
 </body>
 
