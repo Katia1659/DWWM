@@ -1,7 +1,7 @@
 <?php
 
 require ('../modele/functions.php');
-
+session_start();
 $listPlaces = array(
     'Place_1',
     'Place_2',
@@ -20,29 +20,32 @@ $listPlaces = array(
     'Place_15',
     'Place_16'
 );
+//On stocke le fichier temporairement
 
 $filePath = $_FILES['file']['tmp_name'];
- $listStag = readFileToArray($filePath);
+$listStag = readFileToArray($filePath);
 
 
 $listStagPlaces = generateStagPlaces($listPlaces, $listStag);
 
-
+$_SESSION['maListe']=$listStagPlaces;
 //$listStagPlaces = randomizePlacesStag($listStagPlaces);
 
 
-
-$filePath = saveListStagToFile($listStagPlaces);
+// On enregistre le fichier et on le passe en format .json
+$filePath = saveListStagToJson($listStagPlaces);
 
 
 $listStagPlaces = jsonToArray($filePath);
 
 
 
-$listStagPlace = placesStagRotate($listStagPlaces);
-// print_r($listStagPlaces);
-
-$_SESSION['$listStagPlaces'] = $listStagPlace;
+$listStagPlaces = placeStagRotate($listStagPlaces);
 
 
-header('Location: ../views/affichage(1).php');
+$_SESSION['$listStagPlaces'] = $listStagPlaces;
+
+
+header('Location: ../view/affichage.php');
+
+// print_r($_SESSION['$listStagPlaces']);
