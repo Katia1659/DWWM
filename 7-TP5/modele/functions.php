@@ -1,5 +1,4 @@
 <?php
-
 // FONCTION TABLEAU POUR LES NOMS 
 function readFileToArray(string $filePath): array
 {
@@ -64,8 +63,6 @@ function placesStagRotate(string $listPlaceStag): array
     }
 }
 
-
-//FONCTION POUR TELECHARGER UN FICHIER EN FICHIER CSV 
 function fileEnfileCsv(string $json) : void
 {
     $formeTableau = array();
@@ -75,6 +72,7 @@ function fileEnfileCsv(string $json) : void
 
     $decode = json_decode($fichier, true);
     
+
     $listValues = array_values($decode);
     $listKeys = array_keys($decode);
     for ($i = 0; $i < 16; $i++) {
@@ -95,6 +93,7 @@ function fileEnfileCsv(string $json) : void
 
     fclose($fpn);
 
+   
 }
 
 
