@@ -85,38 +85,6 @@ function placeStagRotate (string $listPlaceStag) : array {
 
 //-----------------------------------------------------------------
 
-// function generateCsv($listPlaceStag) {
-//     $recup = file_get_contents('../modele/Backup.json');
-//     $file = (json_decode($recup, true));
-
-//     $key = array_keys($file);
-//     $value = array_values($file);
-    
-//     $fichier = array();
-    
-//     for ($i=0; $i < count($key)  ; $i++) { 
-//         $fichier[$i] = ( $key[$i].";". $value[$i] );
-        
-//     }
-    
-//     $nvxfichier = str_replace(' ', ';', $fichier);
-
-//     $fichiercsv = '../modele/Stag.csv';
-//     $versCsv = fopen($fichiercsv, 'w');
-    
-//     $data = array();
-//     foreach ($nvxfichier as $key => $value) {
-//      $data = fputcsv($versCsv, $nvxfichier);
-//      $nvxfichier = str_replace(',', PHP_EOL, $nvxfichier);   
-//     }
- 
-//     foreach ($nvxfi as $key => $value) {
-//         # code...
-//     }
-    
-//     return $data;
-
-// }
 
 function ListStageCSV($file) :void {
 
