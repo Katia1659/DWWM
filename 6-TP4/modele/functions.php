@@ -82,7 +82,7 @@ function placesStagRotate(string $filePath): array
 
 function saveListStagToFileCsv (string $jsonFile):void{
   $jsonFile=file_get_contents('json/jFile.json');
-  $fileName = "save/backupCsv.csv";
+  $fileName = "save/extraction_stagiare.csv";
   $jsontab=json_decode($jsonFile,true);
   $i=0;
     foreach ($jsontab as $place => $nomStag) {
