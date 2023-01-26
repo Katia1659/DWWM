@@ -61,13 +61,14 @@ return $test2;
 
 ///////////////////////FONCTION 7/////////////////////////////  function generateCsv
 function generateCsv(string $json) : string{
-    $jsondata = file_get_contents($json);
+    $temp = '';
+    $jsondata = file_get_contents($json,true);
     $tabjson = json_decode($jsondata);
     foreach ($tabjson as $key => $value) {
         $keytemp = $key;
-        $temp = $keytemp.";".str_replace(" ", ";", $value).PHP_EOL;
-        $name = '../modele/Backup.csv';
-        $fichier = file_put_contents($name,$temp,FILE_APPEND );
+        $temp = $temp.$keytemp.";".str_replace(" ", ";", $value).PHP_EOL;
     }
-    return $fichier;
+    $name = '../modele/Backup.csv';
+    file_put_contents($name,$temp,true);
+    return $temp;
 }

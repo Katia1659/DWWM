@@ -73,3 +73,15 @@ td{
     background-color: darkorange;
     border-radius: 15px;
 }
+
+.lignebas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.inpdl {
+    height: 40px;
+    background-color: darkorange;
+    border-radius: 15px;
+}
