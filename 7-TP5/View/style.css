@@ -1,0 +1,25 @@
+.container {
+    display: grid; 
+    grid-template-columns: 150px 150px 150px 150px 150px 150px 150px 150px 150px; 
+    grid-template-rows: 150px 150px 150px 150px 150px 150px 150px 150px 150px; 
+    gap: 0px 100px; 
+    grid-template-areas: 
+      ". . . . . . . . ."
+      ". . . . . . . . ."
+      ". insert . select . update . delete ."
+      ". . . . . . . . ."
+      ". . . . . . . . ."
+      ". . . . . . . . ."
+      ". . . . . . . . ."
+      ". . . . . . . . ."
+      ". . . . . . . . ."; 
+  }
+  .insert { grid-area: insert; }
+  .Binsert {
+  }
+
+  .select { grid-area: select; }
+
+  .update { grid-area: update; }
+
+  .delete { grid-area: delete; }
