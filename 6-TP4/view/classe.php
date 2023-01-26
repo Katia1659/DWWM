@@ -24,7 +24,7 @@
             </tr>
             <div>
                 <form action="../controller/executeFunctions1.php" method="get">
-
+                    
                     <input class="btn" type="submit" value="MELANGER">
                     <input name="nom" type="hidden" value="class1" />
                 </form>
@@ -67,21 +67,21 @@
             </tr>
         </table>
     </div>
-    <div class="lignebas">
 
-        
-        
+    
+    <div class="lignebas">
         <form enctype="multipart/form-data" action="../Controller/execute.php" method="post">
-            
-            <input class="file" name="file" type="file" />
+        <label for="file" class="label-file" >Choisir un fichier texte</label>
+<input id="file" class="input-file" accept=".txt" type="file">
             <div class="button">
-                <input class="submit" name="file" type="submit" value="Envoyer nouveaux noms" />
+                <input class="inpdl" name="file" type="submit" value="Envoyer nouveaux noms" />
             </div>
         </form>
-        
         <form action="../controller/executeGenerateCsv.php" method="get">
-            <input class="inpdl" type="submit" value="Telecharger">
+            <input class="inpdl" type="submit" value="telecharger placement">    
         </form>
     </div>
 </body>
+
+
 </html>

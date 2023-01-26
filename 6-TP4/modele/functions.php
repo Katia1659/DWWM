@@ -60,15 +60,15 @@ return $test2;
 }
 
 ///////////////////////FONCTION 7/////////////////////////////  function generateCsv
-function generateCsv(string $json) : string{
-    $temp = '';
-    $jsondata = file_get_contents($json,true);
-    $tabjson = json_decode($jsondata);
-    foreach ($tabjson as $key => $value) {
+function generateCsv(string $listStagPlaces) : string {
+    $json = file_get_contents($listStagPlaces);
+    $tab = json_decode($json, true);
+    $temp = 'Place;Nom;Prenom'.PHP_EOL;
+    foreach ($tab as $key => $value) {
         $keytemp = $key;
-        $temp = $temp.$keytemp.";".str_replace(" ", ";", $value).PHP_EOL;
+        $temp = $temp.$keytemp.";".str_replace(" ",";", $value).PHP_EOL;
     }
     $name = '../modele/Backup.csv';
-    file_put_contents($name,$temp,true);
-    return $temp;
+    $fichier = file_put_contents($name, $temp);
+    return $fichier;
 }

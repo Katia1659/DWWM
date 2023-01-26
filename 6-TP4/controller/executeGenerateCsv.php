@@ -1,7 +1,6 @@
 <?php
 include('../modele/functions.php');
 generateCsv('../modele/Backup.json');
-
 $file = '../modele/Backup.csv';
 
 if (file_exists($file)) {
@@ -17,4 +16,5 @@ if (file_exists($file)) {
 }
 
 header('Location:../view/classe.php');
+
 ?>

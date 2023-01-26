@@ -44,6 +44,7 @@ td{
     justify-content: space-between;
     margin-top: 5em;
     margin-bottom: 15em;
+    align-items: center;
 }
 
 .ligne1 :nth-child(1) {
@@ -76,12 +77,31 @@ td{
 
 .lignebas {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;
+   
 }
 
 .inpdl {
-    height: 40px;
+    color: rgb(253, 253, 253);
     background-color: darkorange;
     border-radius: 15px;
+        height: 22px;
+        font-weight: bold;
+}
+
+.label-file {
+    
+    cursor: pointer;
+    color: rgb(253, 253, 253);
+    background-color: darkorange;
+    border-radius: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 2px black solid;
+}
+
+
+.input-file {
+    display: none;
 }
