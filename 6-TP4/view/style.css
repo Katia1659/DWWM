@@ -1,0 +1,96 @@
+body {
+    background-image: url(./Photo/Fond.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bulle {
+    width: 20px;
+}
+tr {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 12%;
+}
+.place_1{
+    position: absolute;
+    padding-top: 14%;
+    padding-left: 26%;
+}
+.place_2{
+    position: absolute;
+    padding-top: 14%;
+    padding-left: 33.5%;
+}
+.place_3{
+    position: absolute;
+    padding-top: 26%;
+    padding-left: 33.5%;
+}
+.place_4{
+    position: absolute;
+    padding-top: 25.5%;
+    padding-left: 26%;
+}
+.place_5{
+    position: absolute;
+    padding-top: 32%;
+    padding-left: 41.5%;
+}
+.place_6{
+    position: fixed;
+    padding-top: 40%;
+    padding-left: 41.5%;
+}
+.place_7{
+    position: absolute;
+    padding-top: 40%;
+    padding-left: 46.5%;
+}
+.place_8{
+    position: absolute;
+    padding-top: 32%;
+    padding-left: 46.5%;
+}
+.place_9{
+    position: absolute;
+    padding-top: 33%;
+    padding-left: 68%;
+}
+.place_10{
+    position: absolute;
+    padding-top: 41%;
+    padding-left: 68%;
+}
+.place_11{
+    position: absolute;
+    padding-top: 41%;
+    padding-left: 72%;
+}
+.place_12{
+    position: absolute;
+    padding-top: 33%;
+    padding-left: 72%;
+}
+.place_13{
+    position: absolute;
+    padding-top: 22%;
+    padding-left: 76%;
+}
+.place_14 {
+    position: absolute;
+    padding-top: 22%;
+    padding-left: 71%;
+}
+.place_15 {
+    position: absolute;
+    padding-top: 10%;
+    padding-left: 71%;
+}
+.place_16{
+    display: flex;
+  position: absolute;
+  padding-top: 10%;
+  padding-left: 76%;
+}
