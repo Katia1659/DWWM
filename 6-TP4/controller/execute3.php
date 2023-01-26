@@ -4,7 +4,7 @@ include '../modele/functions.php';
 session_start();
 $_SESSION['$fichier']=saveListStagToFileCsv($_SESSION['jsonFile']);
 
-$file='save\backupCsv.csv';
+$file='save\extraction_stagiare.csv';
 
  
      // definir le header
