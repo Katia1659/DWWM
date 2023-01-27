@@ -1,6 +1,4 @@
 <?php
-include "../Modele/DBManagement.php";
-include "../modele/functions.php";
 
 function insertStagiaires(array $listStag):bool{
     //Chaine de connexion à la base de donnée
@@ -9,6 +7,7 @@ function insertStagiaires(array $listStag):bool{
     $sql = "INSERT INTO stagiaire (nom, prenom, place) VALUES (?,?,?)";
     $stmt= $bdd->prepare($sql);
     $status = $stmt->execute($listStag);
+
     return $status;
 }
 ?>
