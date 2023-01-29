@@ -1,25 +1,41 @@
 .container {
     display: grid; 
     grid-template-columns: 150px 150px 150px 150px 150px 150px 150px 150px 150px; 
-    grid-template-rows: 150px 150px 150px 150px 150px 150px 150px 150px 150px; 
-    gap: 0px 100px; 
+    grid-template-rows: 150px 150px 150px 150px; 
+    gap: 0px 25px; 
     grid-template-areas: 
-      ". . . . . . . . ."
-      ". . . . . . . . ."
-      ". insert . select . update . delete ."
-      ". . . . . . . . ."
-      ". . . . . . . . ."
-      ". . . . . . . . ."
-      ". . . . . . . . ."
-      ". . . . . . . . ."
-      ". . . . . . . . ."; 
+    ". insert . . select . . . ."
+    ". . . . . . . . ."
+    ". update . . delete . . . .";   
   }
-  .insert { grid-area: insert; }
-  .Binsert {
+
+  .container {
+     background-image: url("../View/Image/body-background.jpg");
+     background-position:center;
+     background-repeat:no-repeat;
+  
+  }
+  
+  .insert { grid-area: insert;}
+  .Binsert {background-color: rgb(34, 34, 85);
+  color: azure; width: 250px; height: 150px;font-size: 50px;}
+  
+  .Binsert:hover {
+    background-color: azure;
+    color: rgb(34, 34, 85);
+    
   }
 
   .select { grid-area: select; }
+  .Bselect {background-color: mediumslateblue;width: 250px; height: 150px; font-size: 50px;}
+  .Bselect:hover {background-color: azure; color: rgb(34, 34, 85);}
 
   .update { grid-area: update; }
+  .Bupdate {background-color: mediumslateblue;width: 250px; height: 150px;font-size: 50px;}
+  .Bupdate:hover {background-color: azure; color: rgb(34, 34, 85);}
+
 
   .delete { grid-area: delete; }
+  .Bdelete {background-color: rgb(34, 34, 85); color:azure;width: 250px; height: 150px;font-size: 50px;}
+  .Bdelete:hover {background-color: azure; color: rgb(34, 34, 85);}
+ 

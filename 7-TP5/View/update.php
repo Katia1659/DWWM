@@ -7,7 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <form action="../Controller/execute.php" method="get">
+    <form action="../Controller/executeUpdate.php" method="get">
+    <label for="id">id</label>
+    <input name="id" type="text" />
+    </br>	  
     <label for="nom">nom</label>
     <input name="nom" type="text" />
     </br>	
@@ -19,6 +22,11 @@
     <input name="place" type="text" />
     </br>	
     <input type="submit" value="envoyer" />
-</form> -->
+</form>
+<div class="home">   
+      <form action="../View/index.php" method="post">
+        <button class = "Bindex" name="submit" type="submit">HOME</button>
+      </form>   
+  </div>
 </body>
 </html>

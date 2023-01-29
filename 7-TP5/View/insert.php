@@ -13,5 +13,11 @@
             <input class="submit" name="submit" type="submit" value="valider" />
         </form>
     </div>
+
+    <div class="home">   
+      <form action="../View/index.php" method="post">
+        <button class = "Bindex" name="submit" type="submit">HOME</button>
+      </form>   
+  </div>
 </body>
 </html>
