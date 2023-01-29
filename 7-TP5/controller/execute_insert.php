@@ -20,7 +20,6 @@ for ($i = 0; $i < sizeof($tabNom); $i++) {
     $nom = $tabNom[$i];
     $prenom = $tabPrenom[$i];
     $place = $tabPlace[$i];
-
     $tabStag = array($nom, $prenom, $place);
 
     $status = insertStagiaires($tabStag);

@@ -122,8 +122,6 @@ function tableaunom(array $newTableau )  : array {
 
 function tableauPrenom(array $newTableau )  : array {
    
-
-
     $nomPrenom = array_values($newTableau);
     $nomPrenom = implode(' ', $nomPrenom);
     $separate = explode(' ', $nomPrenom);
