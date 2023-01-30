@@ -14,9 +14,9 @@
         <h1>Gestion de BDD stagiaires</h1>
     </header>
 
-    <form enctype="multipart/form-data" action="../Controller/execute.php" method="get">
+    <form enctype="multipart/form-data" action="../Controller/executeInsert.php" method="post">
         
-<input id="file" class="input-file" accept=".txt" type="file">
+<input name="file" id="file" class="file"  type="file">
             <div class="button">
                 <input class="inpdl" name="file" type="submit" value="Envoyer nouveaux noms" />
             </div>

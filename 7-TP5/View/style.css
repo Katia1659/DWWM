@@ -19,13 +19,58 @@
 }
 
 header{
+    margin: 0%;
     background-color: black;
     color:white;
     padding: 25px;
     display: flex;
     justify-content: center;
+    flex-direction: row;
 }
 
 body{
     background-image: url(SGBD-base-de-données.jpg);
+    
+}
+
+.table{
+    
+    background-color: aliceblue;
+    border-radius: 20px;
+    margin-top: 5%;
+    font-size: 13px;
+}
+
+.bord{
+    text-align: center;
+    border-bottom: 1px black solid;
+    width: 50px;
+}
+
+.bord2{
+    text-align: center;
+    border-bottom: 4px black solid;
+    width: 50px;
+}
+
+.buttonrtr{
+   display: flex;
+   align-items: center;
+   padding: 15px;
+    background-color: black;
+    color: cyan;
+    border-radius: 15px;
+    font-size: 30px;
+}
+
+.centre{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+.marge {
+    margin-left: 15%;
+    margin-right: 15%;
 }
