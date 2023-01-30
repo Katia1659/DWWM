@@ -9,30 +9,23 @@
     <title>Page d'acceuil</title>
 </head>
 <header>
-    <h1>Gestion de BDD stagiaires</h1>
+<div class="btnnb">
+<a class="centre" href="../View/index.html">
+                
+                <button class="buttonrtr">Retourner a l'index</button>
+                </a>
+</div>
+
+    <div>
+        <h1>Gestion de BDD stagiaires</h1>
+    </div>
+    <div class="btnnb">
+    </div>
 </header>
 <body>
+<form action="../Controller/executeSelect.php" method="get"></form>
 <?php
-  $host = 'localhost';
-  $dbname = 'DWWM_2023';
-  $username = 'root';
-  $password = '';
-    
-  $dsn = "mysql:host=$host;dbname=$dbname"; 
-  // récupérer tous les utilisateurs
-  $sql = "SELECT * FROM stagiaire";
-   
-  try{
-   $pdo = new PDO($dsn, $username, $password);
-   $stmt = $pdo->query($sql);
-   
-   if($stmt === false){
-    die("Erreur");
-   }
-   
-  }catch (PDOException $e){
-    echo $e->getMessage();
-  }
+session_start();
 
 ?>  
 <div class="marge">
@@ -46,21 +39,24 @@
             <th class="bord2">PLACE</th>
         </tr>
         
-        <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
-            <tr>
-                <td class="bord"><?php echo htmlspecialchars($row['ID']); ?></td>
-                <td class="bord"><?php echo htmlspecialchars($row['NOM']); ?></td>
-                <td class="bord"><?php echo htmlspecialchars($row['PRENOM']); ?></td>
-                <td class="bord"><?php echo htmlspecialchars($row['PLACE']); ?></td>
+        <tr>
+        <?php
+        
+        print_r($_SESSION);
+        // for ($i=0; $i < 16; $i++) { 
+
+        //     echo $_SESSION['stag']['ID'];
+        // } ?>
+        //         <td class="bord"><?php echo $_SESSION($row['ID']); ?></td>
+        //         <td class="bord"><?php echo htmlspecialchars($row['NOM']); ?></td>
+        //         <td class="bord"><?php echo htmlspecialchars($row['PRENOM']); ?></td>
+        //         <td class="bord"><?php echo htmlspecialchars($row['PLACE']); ?></td>
             </tr>
-            <?php endwhile; ?>
+            
             
         </table>
     </div>
         
-        <a class="centre" href="../View/index.html">
-                
-            <button class="buttonrtr">Retourner a l'index</button>
-            </a>
+    
 </body>
 </html>

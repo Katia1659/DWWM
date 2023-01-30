@@ -12,6 +12,16 @@ for ($i=0; $i < count($listStag); $i++) {
     return $status;
 }
 
+///////////////////function select////////////
+function selectStagiaire(string $sql):PDOStatement {
 
+    //Chaine de connexion à la base de donnée
+    $bdd = new PDO('mysql:host=localhost;dbname=dwwm_2023;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));    
+   
+    $stmt= $bdd->query($sql);
+    
 
+    return $stmt;
+}
+    
 ?>

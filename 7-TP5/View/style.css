@@ -18,23 +18,27 @@
     color: rgb(255, 167, 4);
 }
 
+.case:hover {
+    color: rgb(255, 0, 0);
+}
+
 header{
     margin: 0%;
     background-color: black;
     color:white;
-    padding: 25px;
     display: flex;
     justify-content: center;
     flex-direction: row;
+    align-items: center;
+    height: 100px;
+    text-decoration: none;
 }
 
 body{
-    background-image: url(SGBD-base-de-données.jpg);
-    
+    background-image: url(SGBD-base-de-données.jpg);   
 }
 
 .table{
-    
     background-color: aliceblue;
     border-radius: 20px;
     margin-top: 5%;
@@ -55,22 +59,42 @@ body{
 
 .buttonrtr{
    display: flex;
+   padding: 10px;
    align-items: center;
-   padding: 15px;
     background-color: black;
-    color: cyan;
-    border-radius: 15px;
+    border-radius: 20px;
+    color: cyan;  
     font-size: 30px;
 }
 
 .centre{
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
     text-decoration: none;
+    border: 2px cyan solid;
+    border-radius: 15px;
 }
 
 .marge {
     margin-left: 15%;
     margin-right: 15%;
+}
+
+.head1 {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 100px;
+}
+
+.head2{
+    width: 50%;
+}
+
+.btnnb{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 100px;
+    text-decoration: none;
 }

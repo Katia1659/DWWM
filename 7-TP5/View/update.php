@@ -9,7 +9,16 @@
     <title>Page d'acceuil</title>
 </head>
 <header>
-    <h1>Gestion de BDD stagiaires</h1>
+    <div class="btnnb">
+        <a class="centre" href="../View/index.html">
+            <button class="buttonrtr">Retourner a l'index</button>
+        </a>
+    </div>
+    <div>
+        <h1>Gestion de BDD stagiaires</h1>
+    </div>
+    <div class="btnnb">
+    </div>
 </header>
 <body>
 <?php
@@ -59,10 +68,7 @@
     </div>
         
        <div>
-       <a class="centre" href="../View/index.html">
-                
-                <button class="buttonrtr">Retourner a l'index</button>
-                </a>
+       
 <form action="executeUpdate.php" method="get"></form>
 <input type="text" name="ID" id="ID" value="ID">
        </div>

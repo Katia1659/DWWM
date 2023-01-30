@@ -10,9 +10,18 @@
 </head>
 
 <body>
-    <header>
+<header>
+    <div class="btnnb">
+        <a class="centre" href="../View/index.html">
+            <button class="buttonrtr">Retourner a l'index</button>
+        </a>
+    </div>
+    <div>
         <h1>Gestion de BDD stagiaires</h1>
-    </header>
+    </div>
+    <div class="btnnb">
+    </div>
+</header>
 
     <form enctype="multipart/form-data" action="../Controller/executeInsert.php" method="post">
         
