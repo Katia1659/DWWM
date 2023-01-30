@@ -11,7 +11,7 @@
 
 <body>
     <header>
-
+   
 
         <!-- Background image -->
         <div class="p-5 text-center bg-image" style="
@@ -30,9 +30,49 @@
                         <h4 class="mb-3" style="margin-top: 10px;">Regarder</h4>
                     </div>
                 </div>
+                
             </div>
-        </div>
-        <!-- Background image -->
+            
+            
+         
+        <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Place</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Prenom</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>$_SESSION['nomPlace_1']</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+    </div>
+  </tbody>
+</table>
+
+
+
+
+
+
+
     </header>
 
 

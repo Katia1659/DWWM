@@ -10,4 +10,13 @@ function insertStagiaires(array $listStag):bool{
 
     return $status;
 }
+
+
+
+
+	
+
+
+
+
 ?>

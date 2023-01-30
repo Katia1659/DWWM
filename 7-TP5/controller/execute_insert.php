@@ -30,3 +30,5 @@ if ($status) {
 } else {
     echo "insert KO!!!";
 }
+
+?>
