@@ -109,3 +109,36 @@ file_put_contents($CSV,$tabCSV);
 
 
 }
+
+function arrayToCSVcombineArray(array $listPlaces, array $listStag): array
+{
+
+
+$tableau = array_combine($listPlaces, $listStag);
+
+
+
+
+ $i = 0;
+ $handle = fopen('tabInCSV.csv','r+');
+ $delimiter = ',';
+ $enclosure = ' " ';
+
+ //Concaténation
+ foreach ($tableau as $place => $nomStag) {
+ 
+     $tabCSV[1]='place'.';'.str_replace(" ",";",'NOM PRENOM')."\n";
+     $tabCSV[$i]=$place.';'.str_replace(" ",";",$nomStag)."\n";
+     $i++;
+     fputcsv($handle,$place,$delimiter,$enclosure);
+ }
+
+ rewind($handle);
+ while (!feof($handle)) {
+      $contents .= fread($handle, 8192);
+ }
+ fclose($handle);
+ echo $contents;  
+
+
+}
