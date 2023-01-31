@@ -24,18 +24,61 @@
                     <div class="text-white">
                         <h1 class="mb-3">Rubrique</h1>
                         <a class="btn btn-outline-light btn-lg" href="./insert.php" role="button">Ajouter</a>
-                        <a class="btn btn-outline-light btn-lg" href="./select.php" role="button">Regarder</a>
+                        <a class="btn btn-outline-light btn-lg" href="../controller/execute_select.php" role="button">Regarder</a>
                         <a class="btn btn-outline-light btn-lg" href="./update.php" role="button">Modifier</a>
                         <a class="btn btn-outline-light btn-lg" href="./delete.php" role="button">Supprimer</a>
                         <h4 class="mb-3" style="margin-top: 10px;">Modifier</h4>
                     </div>
                 </div>
             </div>
+
+
+
+
+            
+            <form class="row g-3">
+  <div class="col-md-4">
+    <label for="validationServer01" class="form-label">First name</label>
+    <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationServer02" class="form-label">Last name</label>
+    <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+ 
+
+  
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input is-invalid" type="checkbox" value="NOM" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+
+    </div>
+    <div class="form-check">
+      <input class="form-check-input is-invalid" type="checkbox" value="PRENOM" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+</form>
         </div>
         <!-- Background image -->
     </header>
 
 
+
+
+
+
+
+
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>

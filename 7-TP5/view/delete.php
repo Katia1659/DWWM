@@ -24,7 +24,7 @@
                     <div class="text-white">
                         <h1 class="mb-3">Rubrique</h1>
                         <a class="btn btn-outline-light btn-lg" href="./insert.php" role="button">Ajouter</a>
-                        <a class="btn btn-outline-light btn-lg" href="./select.php" role="button">Regarder</a>
+                        <a class="btn btn-outline-light btn-lg" href="../controller/execute_select.php" role="button">Regarder</a>
                         <a class="btn btn-outline-light btn-lg" href="./update.php" role="button">Modifier</a>
                         <a class="btn btn-outline-light btn-lg" href="./delete.php" role="button">Supprimer</a>
                         <h4 class="mb-3" style="margin-top: 10px;">Supprimer</h4>
@@ -32,7 +32,6 @@
                 </div>
             </div>
         </div>
-        <!-- Background image -->
     </header>
 
 

@@ -30,5 +30,5 @@ if ($status) {
 } else {
     echo "insert KO!!!";
 }
-
+header('location:../view/insert.php')
 ?>
