@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,66 +12,68 @@
 <header>
     <div class="btnnb">
         <a class="centre" href="../View/index.html">
+
             <button class="buttonrtr">Retourner a l'index</button>
         </a>
     </div>
+
     <div>
         <h1>Gestion de BDD stagiaires</h1>
     </div>
     <div class="btnnb">
     </div>
 </header>
+
 <body>
-<?php
-  $host = 'localhost';
-  $dbname = 'DWWM_2023';
-  $username = 'root';
-  $password = '';
-    
-  $dsn = "mysql:host=$host;dbname=$dbname"; 
-  // récupérer tous les utilisateurs
-  $sql = "SELECT * FROM stagiaire";
-   
-  try{
-   $pdo = new PDO($dsn, $username, $password);
-   $stmt = $pdo->query($sql);
-   
-   if($stmt === false){
-    die("Erreur");
-   }
-   
-  }catch (PDOException $e){
-    echo $e->getMessage();
-  }
+    <form action="../Controller/executeSelect.php" method="get"></form>
 
-?>  
-<div class="marge">
+    <div class="marge">
 
-    <table class="table">
-        
-        <tr>
-            <th class="bord2">ID</th>
-            <th class="bord2">NOM</th>
-            <th class="bord2">PRENOM</th>
-            <th class="bord2">PLACE</th>
-        </tr>
-        
-        <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
+        <table class="table">
+
             <tr>
-                <td class="bord"><?php echo htmlspecialchars($row['ID']); ?></td>
-                <td class="bord"><?php echo htmlspecialchars($row['NOM']); ?></td>
-                <td class="bord"><?php echo htmlspecialchars($row['PRENOM']); ?></td>
-                <td class="bord"><?php echo htmlspecialchars($row['PLACE']); ?></td>
+                <th class="bord2">ID</th>
+                <th class="bord2">NOM</th>
+                <th class="bord2">PRENOM</th>
+                <th class="bord2">PLACE</th>
             </tr>
-            <?php endwhile; ?>
-            
+
+            <?php
+            session_start();
+            for ($i = 0; $i < count($_SESSION['stag']); $i++) {
+                echo '<tr>';
+                echo '<td class="bord">' . $_SESSION['stag'][$i]['ID'] . '</td>';
+                echo '<td class="bord">' . $_SESSION['stag'][$i]['NOM'] . '</td>';
+                echo '<td class="bord">' . $_SESSION['stag'][$i]['PRENOM'] . '</td>';
+                echo '<td class="bord">' . $_SESSION['stag'][$i]['PLACE'] . '</td>';
+                echo '</tr>';
+            }
+            ?>
+
+
         </table>
     </div>
-        
-       <div>
-       
-<form action="executeUpdate.php" method="get"></form>
-<input type="text" name="ID" id="ID" value="ID">
-       </div>
+    <div>
+        <form class="formupdate" action="../Controller/executeUpdate.php" method="post">
+            <div>
+                <label class="textorange" for="id">ID a modifier : </label>
+                <input type="text" name="id" id="id">
+            </div>
+            <div>
+                <label class="textorange" for="nom">Nom a modifier : </label>
+                <input type="text" name="nom" id="nom">
+            </div>
+            <div>
+                <label class="textorange" for="prenom">Prénom a modifier : </label>
+                <input type="text" name="prenom" id="prenom">
+            </div>
+            <div>
+                <input type="submit" value="Update">
+            </div>
+
+        </form>
+    </div>
+
 </body>
+
 </html>

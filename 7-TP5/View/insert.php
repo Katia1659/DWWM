@@ -24,10 +24,10 @@
 </header>
 
     <form enctype="multipart/form-data" action="../Controller/executeInsert.php" method="post">
-        
-<input name="file" id="file" class="file"  type="file">
-            <div class="button">
-                <input class="inpdl" name="file" type="submit" value="Envoyer nouveaux noms" />
+        <div class="btnbas">
+        <label class="btninp" for="file">Choisir un fichier</label>
+<input class="input-file" name="file" id="file" class="file"  type="file" >
+                <input class="btninp" name="file" type="submit" value="Envoyer nouveaux noms" />
             </div>
         </form>
 

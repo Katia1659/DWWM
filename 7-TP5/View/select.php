@@ -24,10 +24,7 @@
 </header>
 <body>
 <form action="../Controller/executeSelect.php" method="get"></form>
-<?php
-session_start();
 
-?>  
 <div class="marge">
 
     <table class="table">
@@ -39,19 +36,17 @@ session_start();
             <th class="bord2">PLACE</th>
         </tr>
         
-        <tr>
         <?php
-        
-        print_r($_SESSION);
-        // for ($i=0; $i < 16; $i++) { 
-
-        //     echo $_SESSION['stag']['ID'];
-        // } ?>
-        //         <td class="bord"><?php echo $_SESSION($row['ID']); ?></td>
-        //         <td class="bord"><?php echo htmlspecialchars($row['NOM']); ?></td>
-        //         <td class="bord"><?php echo htmlspecialchars($row['PRENOM']); ?></td>
-        //         <td class="bord"><?php echo htmlspecialchars($row['PLACE']); ?></td>
-            </tr>
+        session_start();
+                for ($i=0; $i < count($_SESSION['stag']) ; $i++) {
+                    echo '<tr>';
+                    echo '<td class="bord">' . $_SESSION['stag'][$i]['ID']. '</td>';
+                    echo '<td class="bord">' . $_SESSION['stag'][$i]['NOM']. '</td>';
+                    echo '<td class="bord">' . $_SESSION['stag'][$i]['PRENOM']. '</td>';
+                    echo '<td class="bord">' . $_SESSION['stag'][$i]['PLACE']. '</td>';
+                    echo '</tr>';
+                }
+                ?>
             
             
         </table>
