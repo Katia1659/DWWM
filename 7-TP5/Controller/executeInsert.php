@@ -27,25 +27,28 @@ $listPlaces = array(
 $filePath = 'Liste.txt';
 $listStag = readFileToArray($filePath);
 
-$tabCompiled = generateStagPlaces($listPlaces,$listStag);
+$data = 'tabInCSV.csv';
+
+$result = separateInfo($data);
+print_r($result);
+
+// $tabCompiled = arrayToCSVcombineArray($listPlaces,$listStag);
 
 
 
 
-$nom = $_GET['nom'];
-$prenom = $_GET['prenom'];
-$place = $_GET['place'];
+// $nom = $_GET['nom'];
+// $prenom = $_GET['prenom'];
+// $place = $_GET['place'];
 
-// readFileToArray('Liste.txt');
+// $tabStag = array($nom ,$prenom ,$place);
 
-$tabStag = array($nom ,$prenom ,$place);
+// $status = insertStagiaires($tabStag);
 
-$status = insertStagiaires($tabStag);
-
-if ($status) {
-    echo "insert ok!!!";
-} else {
-    echo "insert KO!!!";
-}
+// if ($status) {
+//     echo "insert ok!!!";
+// } else {
+//     echo "insert KO!!!";
+// }
 
 ?>

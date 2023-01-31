@@ -1,5 +1,5 @@
-.home {background-image: url("../View/Image/home.png");
-    background-position:center;
-background-repeat:no-repeat;
+#logo {
+background-position:center;
+
 width: 50px;
 height:50px;}

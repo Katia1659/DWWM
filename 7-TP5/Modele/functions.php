@@ -110,35 +110,65 @@ file_put_contents($CSV,$tabCSV);
 
 }
 
-function arrayToCSVcombineArray(array $listPlaces, array $listStag): array
-{
+// function arrayToCSVcombineArray(array $listPlaces, array $listStag): array
+// {
 
 
-$tableau = array_combine($listPlaces, $listStag);
+// $tableau = array_combine($listPlaces, $listStag);
 
 
 
 
- $i = 0;
- $handle = fopen('tabInCSV.csv','r+');
- $delimiter = ',';
- $enclosure = ' " ';
+//  $i = 0;
+//  $handle = fopen('tabInCSV.csv','r+');
+//  $delimiter = ',';
+//  $enclosure = ' " ';
 
- //Concaténation
- foreach ($tableau as $place => $nomStag) {
  
-     $tabCSV[1]='place'.';'.str_replace(" ",";",'NOM PRENOM')."\n";
-     $tabCSV[$i]=$place.';'.str_replace(" ",";",$nomStag)."\n";
-     $i++;
-     fputcsv($handle,$place,$delimiter,$enclosure);
- }
+//  //Concaténation
+//  foreach ($tableau as $place => $nomStag) {
+ 
+//      $tabCSV[1]='place'.';'.str_replace(" ",";",'NOM PRENOM')."\n";
+//      $tabCSV[$i]=$place.';'.str_replace(" ",";",$nomStag)."\n";
+//      $i++;
+//      fputcsv($handle,$place,$delimiter,$enclosure);
+//  }
 
- rewind($handle);
- while (!feof($handle)) {
-      $contents .= fread($handle, 8192);
+//  rewind($handle);
+//  while (!feof($handle)) {
+//       $contents .= fread($handle, 8192);
+//  }
+//  fclose($handle);
+//  echo $contents;  
+
+ function arrayToCSVcombineArray(array $listPlaces, array $listStag): void
+ {
+     $tableau = array_combine($listPlaces, $listStag);
+ 
+     $handle = fopen('tabInCSV.csv', 'w');
+$delimiter = ',';
+ $enclosure = '"';
+ 
+ fputcsv($handle, ['place', 'nom' ,'prenom'], $delimiter, $enclosure);
+ 
+ foreach ($tableau as $place => $nomStag) {
+     fputcsv($handle, [$place, $nomStag], $delimiter, $enclosure);
  }
+ 
  fclose($handle);
- echo $contents;  
+ }
 
-
+ function separateInfo($data) {
+ $result = [];
+ foreach ($data as $row) {
+     $columns = explode(',', $row);
+     $place = trim($columns[0]);
+     $full_name = trim($columns[1], '" ');
+     $name_parts = explode(' ', $full_name);
+     $nom = $name_parts[0];
+     $prenom = $name_parts[1];
+     $result[] = [$place, $nom, $prenom];
+ }
+ return $result;
 }
+

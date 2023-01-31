@@ -14,10 +14,7 @@
 
 
 
-<div class="home">   
-      <form action="../View/index.php" method="post">
-        <button class = "home" name="submit" type="submit">HOME</button>
-      </form>   
+<a href="index.php" class="home"><img src="Image/home.png" id="logo"></a>
   </div>
 </body>
 </html>
