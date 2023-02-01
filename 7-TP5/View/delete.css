@@ -1,0 +1,25 @@
+h1{
+    display: flex;
+    justify-content: center;
+    font-style: normal;
+    color : rgb(252, 0, 0);
+}
+
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    /* background: linear-gradient(to bottom right, lightblue, white); */
+    /* background-color: lightblue; */
+    background-image: url("../Assets/date.png") ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+th{
+    width: 20rem;
+ 
+}
+.centre{
+    margin-left: 7em;
+}
