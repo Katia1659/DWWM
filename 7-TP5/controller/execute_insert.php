@@ -2,6 +2,7 @@
 include "../modele/functions.php";
 include "../Modele/DBManagement.php";
 
+//Creation du tableau des places 
 $tabPlace = array();
 
 for ($i = 0; $i < 16; $i++) {
@@ -9,26 +10,22 @@ for ($i = 0; $i < 16; $i++) {
     $tabPlace[$i] = "Place_$a";
 }
 
-
+//lancement du téléchargement du dossier "nom prenom" 
 $fichier = readFileToArray($_FILES['file']['tmp_name']);
+
+// LANCEMENT DES fonctions pour créer les tableau nom, prenom 
 $tabNom = tableauNom($fichier);
 $tabPrenom = tableauPrenom($fichier);
 
 
+//Ajout des tableaux, ligne par par dans la BDD
 for ($i = 0; $i < sizeof($tabNom); $i++) {
 
     $nom = $tabNom[$i];
     $prenom = $tabPrenom[$i];
     $place = $tabPlace[$i];
     $tabStag = array($nom, $prenom, $place);
-
     $status = insertStagiaires($tabStag);
 }
 
-if ($status) {
-    echo "insert ok!!!";
-} else {
-    echo "insert KO!!!";
-}
-header('location:../view/insert.php')
 ?>

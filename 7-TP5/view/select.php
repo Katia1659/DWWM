@@ -5,8 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Regarder</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="stylesheet" href="../view/style.css">
 </head>
 
@@ -36,7 +35,7 @@
 
 
 
-      <table class="table table-dark">
+      <table class="table table-dark mt-2 border opacity-75" style="width: 70%" >
         <thead>
           <tr>
             <th scope="col">Place</th>
@@ -45,20 +44,24 @@
           </tr>
         </thead>
         <tbody>
+
+          <div>
+            <tr>
+              <td>
+                <?php echo $_SESSION['place0']; ?>
+              </td>
+              <td>
+                <?php echo $_SESSION['nom0']; ?>
+              </td>
+              <td>
+                <?php echo $_SESSION['prenom0']; ?>
+              </td>
+            </tr>
+          </div>
+
           <tr>
             <td>
-              Place_1
-            </td>
-            <td>
-              <?php echo $_SESSION['nom0']; ?>
-            </td>
-            <td>
-              <?php echo $_SESSION['prenom0']; ?>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Place_2
+              <?php echo $_SESSION['place1']; ?>
             </td>
             <td>
               <?php echo $_SESSION['nom1']; ?>
@@ -69,7 +72,7 @@
           </tr>
           <tr>
             <td>
-              Place_3
+              <?php echo $_SESSION['place2']; ?>
             </td>
             <td>
               <?php echo $_SESSION['nom2']; ?>
@@ -80,7 +83,7 @@
           </tr>
           <tr>
             <td>
-              Place_4
+              <?php echo $_SESSION['place3']; ?>
             </td>
             <td>
               <?php echo $_SESSION['nom3']; ?>
@@ -91,7 +94,7 @@
           </tr>
           <tr>
             <td>
-              Place_5
+              <?php echo $_SESSION['place4']; ?>
             </td>
             <td>
               <?php echo $_SESSION['nom4']; ?>
@@ -102,7 +105,7 @@
           </tr>
           <tr>
             <td>
-              Place_6
+              <?php echo $_SESSION['place5']; ?>
             </td>
             <td>
               <?php echo $_SESSION['nom5']; ?>
@@ -113,7 +116,7 @@
           </tr>
           <tr>
             <td>
-              Place_7
+              <?php echo $_SESSION['place6']; ?>
             </td>
             <td>
               <?php echo $_SESSION['nom6']; ?>
@@ -124,7 +127,7 @@
           </tr>
           <tr>
             <td>
-              Place_8
+              <?php echo $_SESSION['place7']; ?>
             </td>
             <td>
               <?php echo $_SESSION['nom7']; ?>
@@ -135,7 +138,7 @@
           </tr>
           <tr>
             <td>
-              Place_9
+              <?php echo $_SESSION['place8']; ?>
             </td>
             <td>
               <?php echo $_SESSION['nom8']; ?>
@@ -146,7 +149,7 @@
           </tr>
           <tr>
             <td>
-              Place_10
+              <?php echo $_SESSION['place9']; ?>
             </td>
             <td>
               <?php echo $_SESSION['nom9']; ?>
@@ -157,7 +160,7 @@
           </tr>
           <tr>
             <td>
-              Place_11
+              <?php echo $_SESSION['place10']; ?>
             </td>
             <td>
               <?php echo $_SESSION['nom10']; ?>
@@ -168,7 +171,7 @@
           </tr>
           <tr>
             <td>
-              Place_12
+              <?php echo $_SESSION['place11']; ?>
             </td>
             <td>
               <?php echo $_SESSION['nom11']; ?>
@@ -179,7 +182,7 @@
           </tr>
           <tr>
             <td>
-              Place_13
+              <?php echo $_SESSION['place12']; ?>
             </td>
             <td>
               <?php echo $_SESSION['nom12']; ?>
@@ -189,7 +192,7 @@
             </td>
           </tr>
           <td>
-            Place_14
+            <?php echo $_SESSION['place13']; ?>
           </td>
           <td>
             <?php echo $_SESSION['nom13']; ?>
@@ -199,7 +202,7 @@
           </td>
           </tr>
           <td>
-            Place_15
+            <?php echo $_SESSION['place14']; ?>
           </td>
           <td>
             <?php echo $_SESSION['nom14']; ?>
@@ -209,7 +212,7 @@
           </td>
           </tr>
           <td>
-            Place_16
+            <?php echo $_SESSION['place15']; ?>
           </td>
           <td>
             <?php echo $_SESSION['nom15']; ?>
@@ -234,9 +237,7 @@
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 
 </html>

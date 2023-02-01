@@ -13,7 +13,7 @@
     <header>
 
 
-        <!-- Background image -->
+       
         <div class="p-5 text-center bg-image" style="
       background-image: url('https://img.hebus.com/hebus_2012/06/26/1340673301_58909.jpg');
       height: 1000px;
@@ -32,7 +32,7 @@
                 </div>
             </div>
         </div>
-        <!-- Background image -->
+    
     </header>
 
 

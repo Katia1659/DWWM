@@ -3,25 +3,14 @@ include "../Modele/DBManagement.php";
 include "../modele/functions.php";
 
 
+//Réception des informations venu du front 
+$nomOuPrenom = ($_GET['nomOuPrenom']);
+$nouveauNomOuPrenom = ($_GET['nouveau']);
+$ancienNomOuPrenom = ($_GET['ancien']);
+$place = ($_GET['place']);
 
-$nomOuPrenom = $_GET radio 
+//Lancement de la function pour modifier une information de la BDD 
+changerInformation($nomOuPrenom, $ancienNomOuPrenom, $nouveauNomOuPrenom, $place);
+header('location:../view/index.php');
 
-
-if (radio = NOM) {
-    $ancienNomOuPrenom = $_GET en majuscule
-} else {
-    $ancienNomOuPrenom = $_GET une majuscuk puis une minucule 
-}
-
-
-if (radio = NOM) {
-    $ancienNomOuPrenom = $_GET  en majuscule
-} else {
-    $ancienNomOuPrenom = $_GET une majuscule puis une minucule 
-}
-
-
-changerInformation($nomOuPrenom, $ancienNomOuPrenom, $nouveauNomOuPrenom);
-
-
-// ?>
+// 

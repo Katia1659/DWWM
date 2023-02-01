@@ -89,7 +89,7 @@ function fileEnfileCsv(string $json) : void
     foreach ($nouveautableau as $fields) {
         fputcsv($fpn, $fields);
     }
-
+    
     fclose($fpn);
 
 }
@@ -97,13 +97,10 @@ function fileEnfileCsv(string $json) : void
 
 function tableaunom(array $newTableau )  : array {
    
-
-
     $nomPrenom = array_values($newTableau);
     $nomPrenom = implode(' ', $nomPrenom);
     $separate = explode(' ', $nomPrenom);
 
-   
     $noms = array();
     foreach ($separate as $key => $val) {
         if ($key % 2 == 0) {
