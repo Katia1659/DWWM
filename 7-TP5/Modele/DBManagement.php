@@ -24,27 +24,33 @@ function selectStagiaire() :  array
 }
 
 
-function changerInformation(string $nomOuPrenom, string $choixPrenom, string $modifPrenom, int $id ): void
+function changerInformation(string $nomOuPrenom, string $modifPrenom, int $id ): void
 {
     $bdd = new PDO('mysql:host=localhost;dbname=dwwm_2023;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
-    $nbmodifs = $bdd->exec("UPDATE stagiaire SET $nomOuPrenom = '$modifPrenom' WHERE $nomOuPrenom = '$choixPrenom' and place = 'Place_$id'");
+    $nbmodifs = $bdd->exec("UPDATE stagiaire SET $nomOuPrenom = '$modifPrenom' WHERE place = 'Place_$id'");
 
     
 }
 
-function supprimerInformation($place) 
+function supprimerInformation($place)
 {
 $bdd = new PDO('mysql:host=localhost;dbname=dwwm_2023;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 $nb_modifs = $bdd->exec("DELETE FROM stagiaire WHERE PLACE = 'Place_$place'");
 
 }
+
+
+
+function deleteTout()
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=dwwm_2023;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    $bdd->exec("DELETE FROM stagiaire");
+}
+
+
 ?>
-
-
-
-
 
 
 

@@ -29,6 +29,9 @@ $listPlaces = array(
 // $listStagPlaces = generateStagPlaces($listPlaces, $listStag);
 
 // $listStagPlaces = array($nom ,$prenom ,$place);
+
+deleteTout();
+
 $place = $listPlaces;
 
 

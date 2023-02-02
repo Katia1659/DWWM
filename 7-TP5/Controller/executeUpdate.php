@@ -5,13 +5,12 @@ include "../modele/functions.php";
 session_start();
 
 
-$nomOuPrenom = $_POST['modif'];
-$choixPrenom = $_POST['choix']; 
+$nomOuPrenom = $_POST['modif']; 
 $modifPrenom = $_POST['replace']; 
 $id = $_POST['id']; 
 
 
-changerInformation($nomOuPrenom, $choixPrenom, $modifPrenom, $id);
+changerInformation($nomOuPrenom, $modifPrenom, $id);
 
 header('Location: ../View/index.php');
 

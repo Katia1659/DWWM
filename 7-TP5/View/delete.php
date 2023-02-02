@@ -26,23 +26,23 @@
 
     <table>
 
-<tr>
-  <th><strong>Prenom </strong></th>
-  <th><strong>Nom</strong></th>
-  <th><strong>Place</strong></th> <br>
-</tr>
-<?php  for ($i = 0; $i < count($_SESSION["donneesStag"]); $i++)  {?>
+        <tr>
+            <th><strong>Prenom </strong></th>
+            <th><strong>Nom</strong></th>
+            <th><strong>Place</strong></th> <br>
+        </tr>
+        <?php for ($i = 0; $i < count($_SESSION["donneesStag"]); $i++) { ?>
 
 
-<tr>
-  <td><?php  echo $_SESSION['donneesStag'][$i]['PRENOM']?></td>
-  <td><?php  echo $_SESSION['donneesStag'][$i]['NOM']?></td>
-  <td><?php  echo $_SESSION['donneesStag'][$i]['PLACE']?></td><br>
-</tr>
+            <tr>
+                <td><?php echo $_SESSION['donneesStag'][$i]['PRENOM'] ?></td>
+                <td><?php echo $_SESSION['donneesStag'][$i]['NOM'] ?></td>
+                <td><?php echo $_SESSION['donneesStag'][$i]['PLACE'] ?></td><br>
+            </tr>
 
-<?php   } ?>
+        <?php   } ?>
 
-</table>
+    </table>
 
 
 

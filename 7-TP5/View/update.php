@@ -27,18 +27,13 @@
             <label for="nom"></label>
             <input id="nom" name="id" type="text" placeholder="Saisissez la place" required />
 
-            <div class="bouton">
-                <p>Saisissez le nom ou le prénom que vous souhaitez modifier</p>
-                <label for="nom"></label>
-                <input id="nom" name="choix" type="text"  required /> <br> <br>
-            </div>
 
             <div class="bouton">
                 <p>Saisissez par quel nom/prénom vous souhaitez le remplacer</p>
                 <label for="nom"></label>
                 <input id="nom" name="replace" type="text"  required /> <br>
             </div>
-            
+
                 <input type="submit" value="Envoyer" />
             </form>
     </div>
