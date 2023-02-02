@@ -9,8 +9,8 @@ if ($statut) {
 } else {
     echo "KO!!!";
 }
-
-array_to_table($maListe);
-
+// $filePath = $maListe;
+// $data = rewriteData($filePath);
+// generateTable($data);
 
 header("Location: ../View/select.php");

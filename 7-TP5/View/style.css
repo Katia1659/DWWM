@@ -14,9 +14,11 @@
      align-items: center;
   } */
 
- .fill {background-image: url("../View/Image/body-background.jpg");
-    max-height : 2000px;
-    width : 2000px;
+ .fill { /*background-image: url("../View/Image/body-background.jpg"); */
+    max-height : 100%;
+    width : 100%;
+    background-repeat:no-repeat;
+    background-size: cover
  }
 /* .fill img {
   width: 100%;

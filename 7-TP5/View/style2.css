@@ -14,6 +14,10 @@
   writing-mode: horizontal-tb;
 }
 
+body {
+  background-color: black;
+}
+
 input {
     margin-left: 5%;
     margin-bottom: 15px;

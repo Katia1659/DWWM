@@ -8,8 +8,8 @@
 <body>
 
 <div class=fill>
-  <img src="../View/Image/body-background.jpg" alt="" class=fill>
-</div>
+  <!-- <img src="../View/Image/body-background.jpg" alt="" class=fill> -->
+ <style> .fill {background-image: url("../View/Image/body-background.jpg")}</style>
 <div class="container">
 
   <div class="insert">   
@@ -38,6 +38,6 @@
   </div>
  
   </div>
-
+</div>
 </body>
 </html>

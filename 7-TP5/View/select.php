@@ -20,6 +20,5 @@
 
   </div>
 
-  <?php array_to_table($maListe); ?>
 </body>
 </html>

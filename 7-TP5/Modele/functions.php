@@ -192,21 +192,42 @@ function readData (String $filePath): array {
   }
 
 
-function array_to_table($maListe) 
-{   
-   echo "<table>";
+  function rewriteData(String $filePath): array {
+    $lines = readFileToArray($filePath);
+    $data = [];
+    
+    foreach ($lines as $key => $line) {
+      list($lastName, $firstName) = explode(' ', $line);
+      $data[] = [
+        "Name" => $firstName . ' ' . $lastName,
+        "Place" => "Place_" . ($key + 1)
+      ];
+    }
+    
+    return $data;
+  }
 
-   // Table header
-        foreach ($maListe[0] as $key=>$row) {
-            echo "<th>".$key."</th>";
-        }
 
-    // Table body
-       foreach ($maListe as $row) {
-           echo "<tr>";
-           foreach ($row as $element) {
-                 echo "<td>".$element."</td>";
-           } 
-          echo "</tr>";
-       } 
-   echo "</table>";}
+
+
+
+  function generateTable($data) {
+    echo "<table>";
+    echo "<tr>";
+    // Display the header row
+    foreach ($data[0] as $key => $value) {
+      echo "<th>" . $key . "</th>";
+    }
+    echo "</tr>";
+    
+    // Display the data rows
+    foreach ($data as $row) {
+      echo "<tr>";
+      foreach ($row as $value) {
+        echo "<td>" . $value . "</td>";
+      }
+      echo "</tr>";
+    }
+    
+    echo "</table>";
+  }
