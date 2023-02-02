@@ -3,7 +3,7 @@
 require ('../model/functions.php');
 $bJson = '../controller/Save/Save.json';
 $date = datee();
-$dir = "../Save$date.csv";
+$dir = "../Save/Save$date.csv";
 $save = tabCsv( $bJson, $dir);
 
     $file = $save;

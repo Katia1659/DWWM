@@ -1,0 +1,83 @@
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10%;
+    margin-top: 5%;
+    margin-left: 30%;
+    
+}
+.navbar {
+/* Created with https://www.css-gradient.com */
+background: rgb(91, 89, 214);
+background: -webkit-radial-gradient(bottom right, rgb(52, 47, 212), rgba(23, 35, 104, 1.0));
+background: -moz-radial-gradient(bottom right, rgba(1, 1, 1, 1.0), rgba(23, 35, 104, 1.0));
+background: radial-gradient(to top left, rgba(1, 1, 1, 1.0), rgba(23, 35, 104, 1.0));
+}
+.logo {
+    width: 5%;
+}
+html {
+    height: 100%;
+                
+    background: rgba(87, 229, 224, 1.0);
+    background: -webkit-radial-gradient(bottom right, rgba(87, 229, 224, 1.0), rgba(111, 67, 202, 1.0));
+    background: -moz-radial-gradient(bottom right, rgba(87, 229, 224, 1.0), rgba(111, 67, 202, 1.0));
+    background: radial-gradient(to top left, rgba(87, 229, 224, 1.0), rgba(111, 67, 202, 1.0));
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.body {
+    height: 100%;
+                
+    background: rgba(87, 229, 224, 1.0);
+    background: -webkit-radial-gradient(bottom right, rgba(87, 229, 224, 1.0), rgba(111, 67, 202, 1.0));
+    background: -moz-radial-gradient(bottom right, rgba(87, 229, 224, 1.0), rgba(111, 67, 202, 1.0));
+    background: radial-gradient(to top left, rgba(87, 229, 224, 1.0), rgba(111, 67, 202, 1.0));
+    background-repeat: no-repeat;
+    background-size: contain;
+} 
+
+.nav-link ,.navbar-brand {
+    color: white;
+    display: flex;
+    gap: 1%;
+}
+.navbarAccueil {
+    margin-top: 1%;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    margin-left: 15%;
+    margin-bottom: 0%;
+    background: rgba(26, 103, 204, 0.5);
+    height: 50px;
+    width: 70%;
+    color: white;
+
+}
+.div2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    
+}
+table{
+    background-color: rgba(1, 93, 230, 0.171);
+    width: 90%;
+    height: 100%;
+    border: 10px,solid, black;
+    border-radius: 2%;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+.table {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 5%;
+}
+th {
+    background-color: rgba(248, 248, 255, 0.562);
+}

@@ -87,12 +87,15 @@ function placesStagRotate(string $bJson) : array
     file_put_contents($bJson, $saveJson);
     return $listStagPlaces;
 }
+
 function datee(){
     $jour = date('d-m-y');
     $heure = date('h-i-s');
     $date = "$jour'_'$heure";
     return $date;
 }
+
+
 function tabCsv(string $bJson, string $dir){
     $json = file_get_contents($bJson);
     $listStagPlaces = json_decode($json, true);
