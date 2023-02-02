@@ -16,6 +16,8 @@ $table = generateStagPlaces($postes, $table);
 //fonction pour faire tableau multidimensionnel
 $table = generateMulti($table);
 
+$table = randomizePlacesStag($table);
+
 //Fonction pour insérer dans la bdd
 insertStagiaires($table);
 header('Location: ../view/insertDone.php');

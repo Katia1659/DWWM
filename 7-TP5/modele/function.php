@@ -151,4 +151,20 @@ function deleteAllStagiaire(): bool
     return $status;
 }
 
+//================================================ FONCTION 9 ===============================================================
+
+//fonction pour changer les places en aléatoires
+function randomizePlacesStag(array $listStagPlaces) : array {
+    $new = array();
+    $values = array();
+    //on créer un tableau avec juste les value et on les mélanges
+    $values = array_values($listStagPlaces);
+    shuffle($values);
+
+    //on recréer un tableau avec les key et les value
+    $new = array_combine(array_keys($listStagPlaces),$values);
+    return $new;
+}
+
+
 ?>
