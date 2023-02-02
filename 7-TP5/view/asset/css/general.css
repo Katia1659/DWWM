@@ -1,0 +1,105 @@
+body{
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23250000' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%234b0000' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23700000' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23960000' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23BB0000' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover; 
+    color: white;   
+    /* background: linear-gradient(to right,
+    rgb(129, 6, 6) 15%, rgb(170, 11, 11) 30%, rgb(206, 51, 4) 50%, rgb(255, 94, 0) 70%, rgb(255, 166, 0) 80%, gold 90%); */
+    
+}
+
+.menuIndex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 58rem;
+}
+
+.menuInsert{       
+    height: 58rem;
+    padding-top: 20%;    
+    padding-left: 40%;
+}
+
+.formulaire{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+    width: 30%;
+    margin-left: 35%;
+    margin-bottom: 5%;
+}
+
+.formulaireRadio{
+    margin-bottom: 7%;
+}
+
+
+.bouton{
+    width: 100px;
+    height: 50px;     
+}
+
+.validInsert{
+    width: 310px;
+    height: 50px; 
+    margin-top: 5px;
+}
+
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    height: 100px;
+}
+
+.boutonNav{
+    margin-top: 25%;
+    margin-right: 25px;          
+}
+
+.tableau{
+    display: flex;
+    flex-direction: column;     
+    color: white;
+    margin-left: 34%;
+    border: 1px white solid;
+    border-radius: 5px; 
+    width: 550px;           
+}
+
+.th{
+    width: 150px;
+    text-align: center; 
+            
+}
+
+h1{
+    text-align: center;      
+}
+
+.label{
+    margin-bottom: 10px;
+}
+
+#submitUpdate{
+    margin-top: 20px;
+    width: 200px;
+}
+
+#idUpdate{
+    margin-bottom: 20px;
+}
+
+#idDelete{
+    margin-bottom: 30px;
+}
+
+#submitDelete{
+    margin-top: 5%;
+}
+
+#formInsertDone{
+    margin-top: 24em;
+}
