@@ -10,6 +10,8 @@ $nb_modifs = $bdd->exec("DELETE FROM stagiaire WHERE 16");
 
 $listStag = readFileToArray($_FILES['file']['tmp_name']);
 
+$listStag = randomizePlacesStag($listStag);
+
 $listPlaces = array(
     'Place_1',
     'Place_2',
