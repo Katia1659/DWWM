@@ -1,7 +1,7 @@
 <?php
 include('../Modele/DBManagement.php');
-updateStagiaire();
 session_start();
+updateStagiaire();
 $_SESSION['stag'] = selectStagiaire();
 header('location:../View/update.php');
 ?>

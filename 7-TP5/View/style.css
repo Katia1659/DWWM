@@ -3,10 +3,25 @@
     height: 100px;
 }
 
+.icon2 {
+    width: 50px;
+    height: 50px;
+    color: cyan;
+    margin: 10px;
+}
+
+.icon2:hover {
+    width: 50px;
+    height: 50px;
+    transition: 1s;
+    color: rgb(212, 0, 255);
+    margin: 10px;
+}
+
 .ligneicon {
     display: flex;
     justify-content: space-around;
-    margin-top: 200px;
+    margin-top: 275px;
 }
 
 .case{
@@ -20,6 +35,11 @@
     border-radius: 15px;
     padding: 10px;
     background-color:rgb(255,136,0, 0.3);
+    -webkit-transform: rotate(0deg) scale(1);
+	transform: rotate(0deg) scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+  
 }
 
 .case2{
@@ -33,13 +53,15 @@
 
 .case2:hover {
     color: rgb(255, 136, 0);
-
 }
 
 .case:hover {
     color: rgb(255, 136, 0);
     background-color:rgb(255, 0, 0,0.3);
     border: 5px rgb(255, 136, 0) solid;
+    -webkit-transform: rotate(360deg) scale(1.5);
+	transform: rotate(360deg) scale(1.5);
+ 
 }
 
 header{
@@ -59,22 +81,24 @@ body{
 }
 
 .table{
-    background-color: aliceblue;
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 20px;
     margin-top: 5%;
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .bord{
     text-align: center;
-    border-bottom: 1px black solid;
     width: 50px;
+    border: 1px black solid;
 }
 
-.bord2{
+.bord2{ 
     text-align: center;
-    border-bottom: 4px black solid;
     width: 50px;
+    font-size: 18px;
+    border: 1px black solid;
 }
 
 .buttonrtr{
@@ -87,10 +111,26 @@ body{
     font-size: 30px;
 }
 
+.buttonrtr:hover{
+    transition: 1s;
+    color: rgb(212, 0, 255);
+}
+
+.nbmillieu{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
 .centre{
     text-decoration: none;
     border: 2px cyan solid;
     border-radius: 15px;
+}
+
+.centre:hover{
+    transition: 1s;
+    border-color: rgb(212, 0, 255);
 }
 
 .marge {
@@ -117,6 +157,7 @@ body{
     flex-direction: row;
     height: 100px;
     text-decoration: none;
+    justify-content: center;
 }
 
 .btninp{
@@ -131,6 +172,12 @@ body{
      width: fit-content;
      margin: 20px;
     
+}
+
+.btninp:hover{
+    transition: 1s;
+    color: rgb(212, 0, 255);
+    border-color: rgb(212, 0, 255);
 }
 
 .input-file {
@@ -154,7 +201,6 @@ body{
 }
 
 .textorange{
-    color: rgb(0, 0, 0);
     font-size: x-large;
 }
 
@@ -163,4 +209,15 @@ padding: 15px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+}
+
+.inpcentre{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.resizeselect{
+    width: 189px;
+    height: 30px;
 }
