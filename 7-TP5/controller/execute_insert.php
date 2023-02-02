@@ -10,8 +10,15 @@ for ($i = 0; $i < 16; $i++) {
     $tabPlace[$i] = "Place_$a";
 }
 
+deleteTout();
+
 //lancement du téléchargement du dossier "nom prenom" 
 $fichier = readFileToArray($_FILES['file']['tmp_name']);
+
+$fichier = json_encode($fichier);
+$fichier = placesStagRotate($fichier);
+
+
 
 // LANCEMENT DES fonctions pour créer les tableau nom, prenom 
 $tabNom = tableauNom($fichier);
@@ -27,5 +34,5 @@ for ($i = 0; $i < sizeof($tabNom); $i++) {
     $tabStag = array($nom, $prenom, $place);
     $status = insertStagiaires($tabStag);
 }
-
+header('location:../view/index.php')
 ?>

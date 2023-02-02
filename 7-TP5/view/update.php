@@ -15,10 +15,9 @@
 
     <!-- Background image -->
     <div class="p-5 text-center bg-image" style="
-      background-image: url('https://img.hebus.com/hebus_2012/06/26/1340673301_58909.jpg');
-      height: 1000px;
-   
-    ">
+      background-image: url('');
+      height: 1000px;">
+      
       <div class="mask" style="background-color: rgba(0, 0, 0, 0.6); margin-top: 30px;">
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white">
@@ -32,15 +31,7 @@
         </div>
       </div>
 
-
-
-
       <form action="../controller/execute_update.php" method="get" class="center">
-
-        <div class="question1">
-          <label for="ancien" class="text-light pe-4 mt-3" >Votre ancien : </label>
-          <input type="text" id="ancien" name="ancien" placeholder="" required>
-        </div>
 
         <div class="question2">
           <label for="nouveau" class="text-light pe-2 mt-3">Votre nouveau : </label>

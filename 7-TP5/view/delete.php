@@ -15,11 +15,11 @@
 
         <!-- Background image -->
         <div class="p-5 text-center bg-image" style="
-      background-image: url('https://img.hebus.com/hebus_2012/06/26/1340673301_58909.jpg');
-      height: 1000px;
-   
-    ">
-            <div  style="background-color: rgba(0, 0, 0, 0.6); margin-top: 30px;">
+      background-image: url('');
+      height: 1000px; background-size:cover">
+
+
+            <div style="background-color: rgba(0, 0, 0, 0.6); margin-top: 30px;">
                 <div class="d-flex justify-content-center align-items-center h-100">
                     <div class="text-white">
                         <h1 class="mb-3">Rubrique</h1>
@@ -38,7 +38,9 @@
 
                     <label for="place" class="text-light pe-2">Quelle place voulez vous supprimer : </label>
                     <input type="int" id="place" name="place" placeholder="" required>
-
+                    <div class="validation text-light pe-2 mt-3 ">
+                        <button type="submit" class="btn text-light border ">OK</button>
+                    </div>
                 </form>
             </div>
 
