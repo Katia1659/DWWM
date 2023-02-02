@@ -8,9 +8,18 @@
     <title>Document</title>
 </head>
 <body>
+<div class="block">
 
+<form enctype="multipart/form-data" action="../Controller/executeSelect.php" method="post">
+
+<!-- <input class="file" name="file" type="file" />  -->
+
+            <button class="button" style="vertical-align:middle"><span>SELECT </span></button>
+</form>
 <a href="index.php" class="home"><img src="Image/home.png" id="logo"></a>
 
   </div>
+
+  <?php array_to_table($maListe); ?>
 </body>
 </html>

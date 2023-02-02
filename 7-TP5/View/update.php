@@ -8,24 +8,37 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="../Controller/executeUpdate.php" method="get">
-    <label for="id">id</label>
-    <input name="id" type="text" />
-    </br>	  
-    <label for="nom">nom</label>
-    <input name="nom" type="text" />
-    </br>	
-    <label for="prenom">prenom</label>
-    <input name="prenom" type="text" />
+<div class="block">
+    <form action="../Controller/executeUpdate.php" method="post">
+
+    <label for="nom"><strong>id</strong></label>
+    <input name="id" type="text" placeholder="ID ?" />
+    </br>
+
+    <input type="radio" id="modif" name="modif" value="PRENOM" checked>
+            <label for="femme">Prenom</label>
+
+            <input type="radio" id="modif" name="modif" value="NOM">
+            <label for="homme">Nom</label> <br><br>
+
+    <label for="newNom"><strong>Ancien nom/prenom</strong></label>
+    <input name="ancienNom" type="text" placeholder="Nouveau nom ?" />
     </br>	
 
-    <label for="place">place</label>
-    <input name="place" type="text" />
+
+    <!-- <label for="prenom"><strong>prenom</strong></label>
+    <input name="prenom" type="text" placeholder="Prénom à changer ?"/>
+    </br> -->
+    
+    <label for="newPrenom"><strong>Nouveau nom/prenom</strong></label>
+    <input name="newNom" type="text" placeholder="Nouveau prénom ?" />
     </br>	
-    <input type="submit" value="envoyer" />
+
+  <!-- <span> <input class="button" type="submit" value="envoyer" /></span> -->
+  <button class="button" style="vertical-align:middle"><span>ENVOYER </span></button>
 </form>
 
 <a href="index.php" class="home"><img src="Image/home.png" id="logo"></a>
-
+</div>
 </body>
 </html>

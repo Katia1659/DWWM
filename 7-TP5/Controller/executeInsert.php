@@ -1,10 +1,16 @@
 <?php
-include "../Modele/DBManagement.php";
-include "../Modele/functions.php";
+include_once "../Modele/DBManagement.php";
+include_once "../Modele/functions.php";
 
 session_start();
 
-$listPlaces = array(
+
+$tab = $_FILES['file']['tmp_name'];
+
+
+
+$listPlaces = array (
+    
     'Place_1',
     'Place_2',
     'Place_3',
@@ -20,35 +26,18 @@ $listPlaces = array(
     'Place_13',
     'Place_14',
     'Place_15',
-    'Place_16'
+    'Place_16',
+
 );
 
+$listeUpload = readData($tab);
 
-$filePath = 'Liste.txt';
-$listStag = readFileToArray($filePath);
+$status = insertStagiaires($listeUpload);
 
-$data = 'tabInCSV.csv';
+if ($status) {
+    echo "ok!!!";
+} else {
+    echo "KO!!!";
+}
 
-$result = separateInfo($data);
-print_r($result);
-
-// $tabCompiled = arrayToCSVcombineArray($listPlaces,$listStag);
-
-
-
-
-// $nom = $_GET['nom'];
-// $prenom = $_GET['prenom'];
-// $place = $_GET['place'];
-
-// $tabStag = array($nom ,$prenom ,$place);
-
-// $status = insertStagiaires($tabStag);
-
-// if ($status) {
-//     echo "insert ok!!!";
-// } else {
-//     echo "insert KO!!!";
-// }
-
-?>
+header("Location: ../View/index.php");

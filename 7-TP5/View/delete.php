@@ -8,13 +8,22 @@
     <title>Document</title>
 </head>
 <body>
-<label for="">ID de la ligne à supprimer :</label> <br>
 
-<input type="text" placeholder="n°ID?" name="nomFamille"> </input><br>
+  <div class="block">
+<form action="../Controller/executeDelete.php" method="post">
+<label for="">Nom ou prénom de la ligne à supprimer :</label> <br>
 
 
+
+<input type="text" placeholder="ID ?" id="id" name="id"> </input><br>
+
+<button class="button" style="vertical-align:middle"><span>ENVOYER </span></button>
+<!-- <input type="submit" value="envoyer" /> -->
+</form>
 
 <a href="index.php" class="home"><img src="Image/home.png" id="logo"></a>
   </div>
+</div>
+
 </body>
 </html>

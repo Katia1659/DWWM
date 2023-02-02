@@ -8,10 +8,12 @@
     <title>Document</title>
 </head>
 <body>
+<div class="block">
     <div class="insert">   
-        <form enctype="multipart/form-data" action="../controller/executeInsert.php" method="post">
+        <form enctype="multipart/form-data" action="../Controller/executeInsert.php" method="post">
             <input class="file" name="file" type="file" /> 
-            <input class="submit" name="submit" type="submit" value="valider" />
+            <button class="button" style="vertical-align:middle"><span>VALIDER </span></button>
+            <!-- <input class="submit" name="submit" type="submit" value="valider" /> -->
         </form>
     </div>
 
@@ -22,5 +24,6 @@
       <div class="home">
       <a href="index.php" class="home"><img src="Image/home.png" id="logo"></a>
   </div>
+</div>
 </body>
 </html>

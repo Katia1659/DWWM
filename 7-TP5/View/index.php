@@ -7,6 +7,9 @@
 </head>
 <body>
 
+<div class=fill>
+  <img src="../View/Image/body-background.jpg" alt="" class=fill>
+</div>
 <div class="container">
 
   <div class="insert">   
@@ -18,13 +21,13 @@
 
   <div class="select">   
       <form action="../View/select.php" method="post">
-        <button class = "Bselect" name="submit" type="submit"> SELECT</button>
+        <button class = "Bselect" name="submit" type="submit">SELECT</button>
       </form>
   </div>
 
   <div class="update">   
       <form action="../View/update.php" method="post">
-        <button class = "Bupdate" name="submit" type="submit"> UPDATE</button>
+        <button class = "Bupdate" name="submit" type="submit">UPDATE</button>
       </form>
   </div>
 

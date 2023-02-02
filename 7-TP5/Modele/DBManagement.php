@@ -1,59 +1,22 @@
 <?php
 
-function insertStagiaires(array $listStag):String{
+include_once 'functions.php';
+
+function insertStagiaires(array $listStag):bool{
     //Chaine de connexion à la base de donnée
     $bdd = new PDO('mysql:host=localhost;dbname=dwwm_2023;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
     foreach ($listStag as $key => $value) {
 
-   
     $sql = "INSERT INTO stagiaire (nom, prenom, place) VALUES (?,?,?)";
     $stmt= $bdd->prepare($sql);
-    $status = $stmt->execute($listStag); }
+    $status = $stmt->execute($value); }
+
     return $status;
 }
-
-function selectStagiaires(int $id):String{
+function selectStagiaires():array{
     $bdd = new PDO('mysql:host=localhost;dbname=dwwm_2023;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-    $sql = "SELECT*FROM stagiaire WHERE id = $id";
-    $stmt= $bdd->prepare($sql);
-}
-
-function updateStagiaires(String $nom, String $prenom, int $id):String{
-    $bdd = new PDO('mysql:host=localhost;dbname=dwwm_2023;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-    $sql = "UPDATE*FROM stagiaire SET nom = $nom, prenom = $prenom WHERE id = $id" ;
-    $stmt= $bdd->prepare($sql);
-}
-
-
-function deleteStagiaires(int $id):String {
-    $bdd = new PDO('mysql:host=localhost;dbname=dwwm_2023;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-    $sql = "DELETE*FROM stagiaire WHERE id = $id";
-    $stmt= $bdd->prepare($sql);
-}
-
-include 'Functions.php';
-
-function connexion()
-{
-    return new PDO('mysql:host=localhost;dbname=dwwm_2023;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-}
-
-
-function insertStagiaires(array $listStag): bool
-{
-    //Chaine de connexion à la base de donnée
-    $bdd = connexion();
-    foreach ($listStag as $key => $value) {
-        $sql = "INSERT INTO stagiaire (nom, prenom, place) VALUES (?,?,?)";
-        $stmt = $bdd->prepare($sql);
-        $status = $stmt->execute($value);
-    }
-    return $status;
-}
-
-function selectstagiares (): array {
-    $bdd=connexion();
+    
     $sql = "SELECT * FROM stagiaire";
     $stmt= $bdd->prepare($sql);
     $stmt ->execute();
@@ -61,12 +24,29 @@ function selectstagiares (): array {
     return $maListe;
 }
 
-function UpdateStagiares (int $id, String $nom, String $prenom): bool {
-    $bdd=connexion();
-    $sql = "UPDATE*FROM stagiaire SET nom = $nom, prenom = $prenom WHERE id = $id" ;
-    $stmt = $bdd -> prepare($sql);
-    $statut = $stmt -> execute();
-    return $statut;   
+function updateStagiaires( int $id, String $choix, String $ancienNom, string $newNom): void{
+    $bdd = new PDO('mysql:host=localhost;dbname=dwwm_2023;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
+    $bdd->exec("UPDATE stagiaire SET $choix = '$newNom' WHERE $choix = '$ancienNom' and ID = '$id'");
 }
-?>
+
+
+function deleteStagiaires(int $id):void {
+    $bdd = new PDO('mysql:host=localhost;dbname=dwwm_2023;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
+    $bdd->exec("DELETE FROM stagiaire WHERE id = '$id'");
+    
+}
+
+
+function truncateStagiaires():bool {
+    $bdd = new PDO('mysql:host=localhost;dbname=dwwm_2023;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
+    $sql = "TRUNCATE TABLE stagiaire";
+    $stmt= $bdd->prepare($sql);
+    $statut = $stmt -> execute();
+    return $statut; 
+}
+
+
 

@@ -87,6 +87,7 @@ function placeStagRotate(array $listStagPlaces): array
 
 //////////////////////////////////////////////////////
 
+//Prend un fichier .json et le transforme en .csv
 function jsonToCSV(string $saveLastJson) : void
 {
     //Va chercher la dernière sauvegarde du .json
@@ -110,65 +111,102 @@ file_put_contents($CSV,$tabCSV);
 
 }
 
-// function arrayToCSVcombineArray(array $listPlaces, array $listStag): array
-// {
+    
+// function insertprenom($listStagPlaces){
 
 
-// $tableau = array_combine($listPlaces, $listStag);
+//     $newTableau = $listStagPlaces;
+    
+//         $k = array_keys($newTableau);
+//         $v = array_values($newTableau);
+    
+//         $v = implode(' ', $v);
+//         $separate = explode(' ', $v);
+    
+    
+//             $prenoms = array();
+//             $noms = array();
+//             foreach($separate as $key => $val) {
+//         if($key % 2 == 0) {
+//             $noms[] = $val;
+//         } else {
+//             $prenoms[] = $val;
+//         }
+    
+//     }
+    
+//     return $prenoms;
+    
+//     }
+    
+//     function insertnom($listStagPlaces){
+    
+    
+//         $newTableau = $listStagPlaces;
+    
+//             $k = array_keys($newTableau);
+//             $v = array_values($newTableau);
+    
+//             $v = implode(' ', $v);
+//             $separate = explode(' ', $v);
+    
+    
+//                 $prenoms = array();
+//                 $noms = array();
+//                 foreach($separate as $key => $val) {
+//             if($key % 2 == 0) {
+//                 $noms[] = $val;
+//             } else {
+//                 $prenoms[] = $val;
+//             }
+    
+//         }
+//         return $noms;
+//         }
+//     //
+function readData (String $filePath): array {
+    $tab = readFileToArray($filePath);
+    
+    $i=0;
+    $j=0;
+
+    foreach ($tab as $key => $value) {
+       $tab[$i]=explode(' ',$value);
+       $i++;
+    }
+    for ($i=0; $i < sizeof($tab) ; $i++) { 
+        foreach ($tab[$i] as $key => $value) {
+            if ($key == 0){
+                $nom [$i]= $value;
+            }else{
+                $prenom[$i]=$value;
+            }   
+        }
+        $tabStag[$i] = array(
+            $nom[$i],
+            $prenom[$i],
+            "Place_".$j++
+        );
+    }
+      return $tabStag;
+  }
 
 
+function array_to_table($maListe) 
+{   
+   echo "<table>";
 
+   // Table header
+        foreach ($maListe[0] as $key=>$row) {
+            echo "<th>".$key."</th>";
+        }
 
-//  $i = 0;
-//  $handle = fopen('tabInCSV.csv','r+');
-//  $delimiter = ',';
-//  $enclosure = ' " ';
-
- 
-//  //Concaténation
-//  foreach ($tableau as $place => $nomStag) {
- 
-//      $tabCSV[1]='place'.';'.str_replace(" ",";",'NOM PRENOM')."\n";
-//      $tabCSV[$i]=$place.';'.str_replace(" ",";",$nomStag)."\n";
-//      $i++;
-//      fputcsv($handle,$place,$delimiter,$enclosure);
-//  }
-
-//  rewind($handle);
-//  while (!feof($handle)) {
-//       $contents .= fread($handle, 8192);
-//  }
-//  fclose($handle);
-//  echo $contents;  
-
- function arrayToCSVcombineArray(array $listPlaces, array $listStag): void
- {
-     $tableau = array_combine($listPlaces, $listStag);
- 
-     $handle = fopen('tabInCSV.csv', 'w');
-$delimiter = ',';
- $enclosure = '"';
- 
- fputcsv($handle, ['place', 'nom' ,'prenom'], $delimiter, $enclosure);
- 
- foreach ($tableau as $place => $nomStag) {
-     fputcsv($handle, [$place, $nomStag], $delimiter, $enclosure);
- }
- 
- fclose($handle);
- }
-
- function separateInfo($data) {
- $result = [];
- foreach ($data as $row) {
-     $columns = explode(',', $row);
-     $place = trim($columns[0]);
-     $full_name = trim($columns[1], '" ');
-     $name_parts = explode(' ', $full_name);
-     $nom = $name_parts[0];
-     $prenom = $name_parts[1];
-     $result[] = [$place, $nom, $prenom];
- }
- return $result;
-}
-
+    // Table body
+       foreach ($maListe as $row) {
+           echo "<tr>";
+           foreach ($row as $element) {
+                 echo "<td>".$element."</td>";
+           } 
+          echo "</tr>";
+       } 
+   echo "</table>";}

@@ -1,41 +1,53 @@
 .container {
-    display: grid; 
-    grid-template-columns: 150px 150px 150px 150px 150px 150px 150px 150px 150px; 
-    grid-template-rows: 150px 150px 150px 150px; 
-    gap: 0px 25px; 
-    grid-template-areas: 
-    ". insert . . select . . . ."
-    ". . . . . . . . ."
-    ". update . . delete . . . .";   
-  }
+  display: grid; 
+  grid-template-columns: 150px 150px 150px 150px 150px 150px 150px 150px 150px; 
+  grid-template-rows: 150px 150px 150px 150px 150px; 
+  gap: 0px 0px; 
+}
 
-  .container {
-     background-image: url("../View/Image/body-background.jpg");
-     background-position:center;
-     background-repeat:no-repeat;
-  
-  }
-  
-  .insert { grid-area: insert;}
+.background { grid-area: 1 / 1 / 6 / 10; }
+
+
+  /* .body {
+     
+     justify-content: center;
+     align-items: center;
+  } */
+
+ .fill {background-image: url("../View/Image/body-background.jpg");
+    max-height : 2000px;
+    width : 2000px;
+ }
+/* .fill img {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+
+  background-position: center;
+} */
+
+
+  .insert { grid-area: 2 / 4 / 3 / 5; }
   .Binsert {background-color: rgb(34, 34, 85);
-  color: azure; width: 250px; height: 150px;font-size: 50px;}
+  color: azure; width: 250px; height: 150px;font-size: 50px;border-radius: 30px;}
   
   .Binsert:hover {
     background-color: azure;
     color: rgb(34, 34, 85);
+    box-shadow: 15px 10px 10px black;
     
   }
 
-  .select { grid-area: select; }
-  .Bselect {background-color: mediumslateblue;width: 250px; height: 150px; font-size: 50px;}
-  .Bselect:hover {background-color: azure; color: rgb(34, 34, 85);}
+  .select { grid-area:  2 / 6 / 3 / 7; }
+  .Bselect {background-color: mediumslateblue;width: 250px; height: 150px; font-size: 50px; border-radius: 30px;}
+  .Bselect:hover {background-color: azure; color: rgb(34, 34, 85);box-shadow: 15px 10px 10px black;}
 
-  .update { grid-area: update; }
-  .Bupdate {background-color: mediumslateblue;width: 250px; height: 150px;font-size: 50px;}
-  .Bupdate:hover {background-color: azure; color: rgb(34, 34, 85);}
+  .update { grid-area: 4 / 4 / 5 / 5; }
+  .Bupdate {background-color: mediumslateblue;width: 250px; height: 150px;font-size: 50px;border-radius: 30px;}
+  .Bupdate:hover {background-color: azure; color: rgb(34, 34, 85);box-shadow: 15px 10px 10px black;}
 
 
-  .delete { grid-area: delete; }
-  .Bdelete {background-color: rgb(34, 34, 85); color:azure;width: 250px; height: 150px;font-size: 50px;}
-  .Bdelete:hover {background-color: azure; color: rgb(34, 34, 85);}
+  .delete { grid-area: 4 / 6 / 5 / 7;  }
+  .Bdelete {background-color: rgb(34, 34, 85); color:azure;width: 250px; height: 150px;font-size: 50px;border-radius: 30px;}
+  .Bdelete:hover {background-color: azure; color: rgb(34, 34, 85);box-shadow: 15px 10px 10px black;}
  
