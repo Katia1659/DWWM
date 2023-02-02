@@ -1,0 +1,116 @@
+.containeurUn{
+    width: 100%;
+    height: 150px;
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    justify-content:space-around;
+    
+}
+.containeurDeux{
+    margin-top: 10%;
+    display: flex;
+    justify-content:space-around;
+    
+
+}
+.img{
+    width: 11%;
+}
+.containeurTrois{
+    width: 100%;
+    height: 80px;
+    margin-top: -3%;
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    justify-content:space-around;
+}
+.containerButton{
+    height: 130px;
+    width: 100%;
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    justify-content:center;
+}
+.formulaire{
+
+    margin-left: 2%;
+    height: 80px;
+    width: 350px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 1%;
+    background-color: aliceblue;
+    border-radius: 22px;
+    background: #e0e0e0;
+    box-shadow:  16px 16px 42px #b8b8b8,
+             -16px -16px 42px #ffffff;
+}
+.file{
+    margin-top: 2%;
+    margin-left: 4%;
+}
+.submit{
+    margin-top: 2%;
+    margin-left: 4%;
+}
+body{
+    background-color: rgb(49, 48, 48);
+}
+.containeurTableau{
+    margin-top: 5%;
+    margin-left: 25%;
+    width: 50%;
+    height: 610px;
+    display: flex;
+    justify-content: center ;
+
+}
+button {
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #c5c5c5,
+                -6px -6px 12px #ffffff;
+   }
+   
+   button:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5,
+                inset -4px -4px 12px #ffffff;
+   }
+.containeurDeuxTableau{
+    width: 500px; 
+    margin-top: 2%;
+}
+.containeurUpdate{
+    display: flex;
+    justify-content: space-between ;
+    width: 50%;
+    
+}
+.containeurFormulaire{
+
+    width: 100%;
+    display: flex;
+    justify-content: center ;
+    margin-top: 6%;
+    
+}
+.formulaireButton{
+    display: flex;
+    justify-content: center ;
+   
+    height: 50%;
+
+}
+.h1{
+    border-radius: 5px;
+    width: 25%;
+    margin-top: 10%;
+    margin-left: 35%;
+    text-align: center;
+    background-color: #f3f3f3;
+}
