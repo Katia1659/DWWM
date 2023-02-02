@@ -26,7 +26,7 @@ for ($i = 0; $i < 16; $i++) {
     $temp = [$valeurs[0], $valeurs[1], $valeurs[2]];
     $utilisateurs[$i] = $temp;
 }
- 
+deleteAllStagiaire();
 insertStagiaires($utilisateurs);
 header('location:../View/index.html')
 
