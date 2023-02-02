@@ -93,3 +93,19 @@ function deleteStagiraires(array $listStag) : bool {
     }
     return $status;
 }
+
+
+//----------------------------------------------------------------
+
+// fonction changeant les valeurs aleatoirement du tableau
+
+function randomizePlacesStag ( array $listStagPlace) : array {
+    $temp = array();
+    $temp = array_values($listStagPlace);
+    shuffle($temp);
+    $new = array_combine(array_keys($listStagPlace), $temp);
+    return $new;
+
+}
+
+//----------------------------------------------------------------

@@ -12,6 +12,7 @@ $recup = $_FILES['file']['tmp_name'];
 //met le fichier en tableau
 $files = readFileToArray($recup);
 
+$files = randomizePlacesStag($files);
 
 //creation des places
 $places = array();
