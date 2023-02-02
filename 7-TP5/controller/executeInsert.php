@@ -2,6 +2,10 @@
 include '../modele/BDManagement.php';
 session_start();
 
+$bdd = new PDO('mysql:host=localhost;dbname=dwwm_2023;charset=utf8mb4', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
+$nb_modifs = $bdd->exec("DELETE FROM stagiaire WHERE 16");
+
 //recupere le fichier
 $recup = $_FILES['file']['tmp_name'];
 
