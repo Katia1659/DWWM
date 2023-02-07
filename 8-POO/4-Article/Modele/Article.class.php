@@ -7,6 +7,8 @@ private $designation;
 private $prixHT;
 private $tauxTVA;
 
+
+// Initialisation des attributs.
 public function __construct($reference, $designation, $prixHT, $tauxTVA)
 {
     $this -> reference = $reference;
@@ -98,24 +100,26 @@ return $this;
 }
 
 
-public function calculerPrixTTC(){
+// Creation des methodes de calcul et d'affichage
+public function calculerPrixTTC()    {
     $prixHT = $this -> getPrixHT();
     $tauxTVA = $this -> getTauxTVA();
     $prixTTC = $prixHT + ($prixHT*$tauxTVA/100);
-    echo "Le prix TTC est : " . $prixTTC;
+    return $prixTTC;
 }
 
-public function afficherArticle(){
+
+public function afficherArticle() {
     $prixHT = $this -> getPrixHT();
-    $tauxTVA = $this -> getTauxTVA();
     $designation = $this -> getDesignation();
     $reference = $this -> getReference();
-    echo "Le taux TVA est : " . $tauxTVA . "%" . "\n"."\n" . "Réference : " . $reference . "\n". "Désignation : " . $designation. "\n" . "Prix HT : ". $prixHT;
+    $tauxTVA = $this -> getTauxTVA();
+    $prixTTC = $this -> calculerPrixTTC();
+    echo "Réference : $reference \nDésignation : $designation \nPrix HT : $prixHT \nLe prix TTC est : $prixTTC \n\n";
 }
 
 
 }
-
 
 
 ?>

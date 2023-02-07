@@ -2,14 +2,15 @@
 
 include "../Modele/Rectangle.class.php";
 
-echo "Insérer la largeur du rectangle : ";
-$larg = readline("");
-echo "Insérer la longueur du rectangle : ";
-$long = readline("");
+// Demande des données à l'utilisateur
+$larg = readline("Insérer la largeur du rectangle : ");
 
+$long = readline("Insérer la longueur du rectangle : ");
+
+// Instanciation de l'objet
 $rectangle = new Rectangle($long, $larg);
 
-
+// Affectation des méthode
 $perimetre = $rectangle -> perimetre();
 echo "\n";
 $surface = $rectangle -> aire();
@@ -25,13 +26,14 @@ if ($carre == true){
 
 echo "\n";
 
-echo "Insérer la largeur du rectangle : ";
-$largDeux = readline("");
-echo "Insérer la longueur du rectangle : ";
-$longDeux = readline("");
+// Demande des données à l'utilisateur
+$largDeux = readline("Insérer la largeur du rectangle : ");
+
+$longDeux = readline("Insérer la longueur du rectangle : ");
 
 $rectangleDeux = new Rectangle($longDeux, $largDeux);
 
+// Affichage du résultat 
 $resultat = $rectangleDeux -> afficherRectangle();
 if ($carre == true){
     echo "Il s'agit d'un carré";

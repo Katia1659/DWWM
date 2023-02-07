@@ -3,17 +3,17 @@
 include_once "../modele/Point.class.php";
 
 // Demande des données à l'utilisateur
-echo "Insérer une abscisse: ";
-$abs = readline("");
-echo "Insérer une ordonnée: ";
-$ord = readline("");
+
+$abs = readline("Insérer une abscisse: ");
+
+$ord = readline("Insérer une ordonnée: ");
 
 // Instanciation de l'objet
 $point = new Point($abs, $ord);
 
 //
-$point -> getAbs($abs);
-$point -> getOrd($ord);
+$point -> getAbs();
+$point -> getOrd();
 
 // Affectation de la méthode
 $norme = $point -> norme();

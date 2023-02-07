@@ -4,6 +4,8 @@ Class Rectangle {
     private $longueur;
     private $largeur;
 
+
+// Initialisation des attributs.
 public function __construct($longueur, $largeur)
 {
     $this -> longueur = $longueur ;
@@ -52,7 +54,7 @@ public function __construct($longueur, $largeur)
         return $this;
     }
 
-
+// Creation de la méthode calculant le perimetre du rectangle
 public function perimetre(){
     $long = $this -> getLongueur();
     $larg = $this -> getLargeur();
@@ -60,12 +62,15 @@ public function perimetre(){
      echo "Le périmétre est ".$perimetre; 
 }
 
+// Creation de la méthode calculant l'aire du rectangle
 public function aire(){
     $long = $this -> getLongueur();
     $larg = $this -> getLargeur();
     $aire = $long * $larg;
     echo "La surface est ". $aire;
 }
+
+// Creation de la méthode calculant si le rectangle est carré 
 
 public function estCarre() {
     if($this-> longueur == $this -> largeur){
@@ -75,6 +80,8 @@ public function estCarre() {
     }
 }
 
+
+// Creation de la méthode d'affichage
 public function afficherRectangle () {
 
 

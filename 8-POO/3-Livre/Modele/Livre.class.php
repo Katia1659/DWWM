@@ -66,14 +66,15 @@ Class Livre {
         return $this;
     }
 
-
+// Initialisation des attributs.
     public function __construct($titre, $auteur, $prix){
         $this -> titre = $titre ;
         $this -> auteur = $auteur ;
         $this -> prix = $prix ;
     }
 
-    public function afficher(){
+// Creation des méthodes d'affichage
+    public function afficher() {
         $titre = $this -> getTitre();
         $auteur = $this -> getAuteur();
         $prix = $this -> getPrix();

@@ -2,30 +2,32 @@
 
 include "../Modele/Livre.class.php";
 
-echo "Donner le titre : ";
-$titre = readline("");
-echo "Donner l'auteur : ";
-$auteur = readline("");
-echo "Donner le prix : ";
-$prix = readline("");
+echo "Livre 1 : " . "\n";
 
+// Demande des données à l'utilisateur
+$titre = readline("Donner le titre : ");
+$auteur = readline("Donner l'auteur : ");
+$prix = readline("Donner le prix : ");
+
+// Instanciation de l'objet
 $livreUn = new Livre ($titre, $auteur, $prix);
 
-
-
+// Affichage des résultats
 $dataUn = $livreUn -> afficher();
 
 
+echo "Livre 2 : " . "\n";
 
-echo "Donner le titre : ";
-$titreDeux = readline("");
-echo "Donner l'auteur : ";
-$auteurDeux = readline("");
-echo "Donner le prix : ";
-$prixDeux = readline("");
+// Demande des données à l'utilisateur
+$titre = readline("Donner le titre : ");
+$auteur = readline("Donner l'auteur : ");
+$prix = readline("Donner le prix : ");
 
-$livreDeux = new Livre ($titreDeux, $auteurDeux, $prixDeux);
+// Instanciation de l'objet
+$livreDeux = new Livre ($titre, $auteur, $prix);
 
-$dataDeux = $livreDeux -> afficherDeux();
+// Affichage des résultats
+$livre -> afficherDeux();
+
 
 ?>
