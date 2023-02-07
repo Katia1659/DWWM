@@ -1,54 +1,27 @@
 <?php
 include_once "../modele/Article.class.php";
 
-echo "donnez le taux de TVA ";
-$tauxTva = readline("");
-$reference = 0;
-$designation = "";
-$prixHt = 0;
-$prixTtc = 0;
+$tva = readline("Donner la TVA : ");
+echo "la tva est de $tva % \n";
 
-$Article1 = new Article($reference, $designation, $prixHt, $tauxTva, $prixTtc);
+echo "Article 1 :\n";
+$reference = readline("Donner la référence : ");
+$designation = readline("Donner la désignation : ");
+$prixHt = readline("Donner le prix HT : ");
 
-echo "Le taux de TVA est".$tauxTva."\n"."\n";
-echo "Article 1"."\n"."\n";
-$afficherArticle = $Article1->afficherArticle();
+$article1 = new Article($reference, $designation, $prixHt, $tva);
+echo $article1->afficherArticle();
 
+for ($i = 2; $i <= 4; $i++) {
 
-echo "Article 2"."\n"."\n";
-echo "Donner la reference ";
-$reference = readline("");
-echo "Donner la designation ";
-$designation = readline("");
-echo "Donner le prix HT ";
-$prixHt = readline("");
+    echo "Article $i :\n";
+    $reference = readline("Donner la référence : ");
+    $designation = readline("Donner la désignation : ");
+    $prixht = readline("Donner le prix HT : ");
 
-$Article2 = new Article($reference, $designation, $prixHt, $tauxTva, $prixTtc);
-
-$afficherArticle = $Article2->afficherArticle();
-
-echo "Article 3"."\n"."\n";
-echo "Donner la reference ";
-$reference = readline("");
-echo "Donner la designation ";
-$designation = readline("");
-echo "Donner le prix HT ";
-$prixHt = readline("");
-
-$Article3 = new Article($reference, $designation, $prixHt, $tauxTva, $prixTtc);
-
-$afficherArticle = $Article3->afficherArticle();
-
-$reference = 111;
-$designation = "ATA";
-$prixHt = 100;
-$prixTtc = 120;
-
-$Article4 = new Article($reference, $designation, $prixHt, $tauxTva, $prixTtc);
-
-echo "Article 4"."\n"."\n";
-$afficherArticle = $Article4->afficherArticle();
-
+    $article[$i] = new Article($reference, $designation, $prixht, $tva);
+    $article[$i]->afficherArticle();
+}
 
 
 

@@ -1,41 +1,33 @@
 <?php
 
+// creation de la class
 class Article {
 
+    //creation des attribut
     private $reference;
     private $designation;
     private $prixHt;
     private $tauxTva;
-    private $prixTtc;
 
-    public function __construct($reference, $designation, $prixHt, $tauxTva, $prixTtc){
+//creation de mathod construct
+    public function __construct($reference, $designation, $prixHt, $tauxTva){
         $this->reference = $reference;
         $this->designation = $designation;
         $this->prixHt = $prixHt;
         $this->tauxTva = $tauxTva;
-       
-        
     
     }
-
-    public function calculerPrixTtc($prixHt, $tau):int{
-        $prixHt = $this->getPrixHt();
-        $tauxTva = $this->getTauxTva();
-        $prixTtc = ($prixHt*$tauxTva/100);
+//creation de mathod calculerPrixTtc
+    public function calculerPrixTtc(){
+        
+        $prixTtc = $this->prixHt + ($this->prixHt * $this->tauxTva / $this->tauxTva);
         return $prixTtc;
     }
-
-    public function afficherArticle():void{
-        $reference = $this->getReference();
-        $designation = $this->getDesignation();
-        $prixHt = $this->getPrixHt();
-        
-        echo $message = "reference ".$reference."\n"."designation".$designation."\n"."prixHt".$prixHt."\n"."prixTtc est 0"."\n";
-
+//creation de mathod afficherArticle
+    public function afficherArticle(){
+        $prixTtc = $this->calculerPrixTtc();
+        echo "Référence : $this->reference \nDesignation : $this->designation \nLe prixHt : $this->prixHt \nLe prix TTC est $prixTtc \n\n";
     }
-
-
-    
 
     /**
      * Get the value of reference
