@@ -1,6 +1,6 @@
 <?php
 
-class Rectangle
+Class Rectangle
 {
     private $longueur;
     private $largeur;
