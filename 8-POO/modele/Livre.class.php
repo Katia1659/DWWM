@@ -1,32 +1,24 @@
 <?php
 
 class Livre
-{
-
+{//ATTRIBUTS
     public $titre;
     public $auteur;
     public $prix;
 
-    public function Livre($titre, $auteur, $prix)
+    //CONTRUCTION
+    public function __construct($titre, $auteur, $prix)
     {
-
         $this->titre = $titre;
         $this->auteur = $auteur;
         $this->prix = $prix;
     }
-
-
-    function afficher()
+    // METHODE D'AFFICHAGE 
+    function afficher() : void
     {
-      echo "Le titre : $this->titre, l'auteur : $this->auteur, le prix : $this->prix ";
+      echo "Le titre : $this->titre \nl'auteur : $this->auteur \nle prix : $this->prix \n\n";
     }
-
-
-
-
-
-
-
+     // GET ET SET 
     /**
      * Get the value of titre
      */

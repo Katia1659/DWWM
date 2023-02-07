@@ -6,7 +6,7 @@ class Rectangle
     public $longueur;
     public $largeur;
 
-    //CONTRUCT
+    //CONTRUCTION
     public function __construct($long, $larg)
     {
         $this->longueur = $long;
@@ -49,9 +49,9 @@ class Rectangle
 
         //SAVOIR S4IL S'AGIT D'UN CARRE
         if ($this->estCarre() == true) {
-            echo "Il s'agit d'un carré";
+            echo "Il s'agit d'un carré \n";
         } else {
-            echo "Ce n'est pas un carré";
+            echo "Ce n'est pas un carré \n";
         }
     }
 
