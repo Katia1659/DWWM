@@ -1,6 +1,7 @@
 <?php
 
 class Article {
+
     private $reference;
     private $designation;
     private $prixHt;
@@ -12,10 +13,12 @@ class Article {
         $this->designation = $designation;
         $this->prixHt = $prixHt;
         $this->tauxTva = $tauxTva;
-        $this->PrixTtc = $prixTtc;
+       
+        
+    
     }
 
-    public function calculerPrixTtc():int{
+    public function calculerPrixTtc($prixHt, $tau):int{
         $prixHt = $this->getPrixHt();
         $tauxTva = $this->getTauxTva();
         $prixTtc = ($prixHt*$tauxTva/100);
@@ -26,11 +29,13 @@ class Article {
         $reference = $this->getReference();
         $designation = $this->getDesignation();
         $prixHt = $this->getPrixHt();
-        $prixTtc = $this->getPrixTtc();
-        $message = "reference:".$reference."\n"."Designation".$designation."\n"."Donner le prix HT :".$prixHt."\n"."Le prix TTC est".$prixTtc."\n";
-        echo $message ;
+        
+        echo $message = "reference ".$reference."\n"."designation".$designation."\n"."prixHt".$prixHt."\n"."prixTtc est 0"."\n";
+
     }
 
+
+    
 
     /**
      * Get the value of reference
@@ -111,6 +116,8 @@ class Article {
 
         return $this;
     }
-}
+    }
+
+  
 
 ?>

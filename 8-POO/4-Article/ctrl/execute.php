@@ -1,31 +1,57 @@
 <?php
 include_once "../modele/Article.class.php";
 
-echo "Donnez le taux de TVA pour tous les articles : ";
+echo "donnez le taux de TVA ";
 $tauxTva = readline("");
-echo "Le taux de TVA est ".$tauxTva."%"."\n";
-echo "Article 1"."\n";
-echo "Donner la reference"."\n";
-$reference = readline("");
-echo "Donner la designation"."\n";
-$designation = readline("");
-echo "le prixHt";
-$prixHt = readline("");
+$reference = 0;
+$designation = "";
+$prixHt = 0;
 $prixTtc = 0;
 
+$Article1 = new Article($reference, $designation, $prixHt, $tauxTva, $prixTtc);
+
+echo "Le taux de TVA est".$tauxTva."\n"."\n";
+echo "Article 1"."\n"."\n";
+$afficherArticle = $Article1->afficherArticle();
 
 
-$Article = new Article($tauxTva, $reference, $designation, $prixHt, $prixTtc);
+echo "Article 2"."\n"."\n";
+echo "Donner la reference ";
+$reference = readline("");
+echo "Donner la designation ";
+$designation = readline("");
+echo "Donner le prix HT ";
+$prixHt = readline("");
 
-$Article->setReference($reference);
-$Article->setDesignation($designation);
-$Article->setPrixHt($prixHt);
-$Article->setTauxTva($tauxTva);
+$Article2 = new Article($reference, $designation, $prixHt, $tauxTva, $prixTtc);
 
-$calculerPrixTtc = $Article->calculerPrixTtc();
-$afficherArticle = $Article->afficherArticle();
+$afficherArticle = $Article2->afficherArticle();
 
-echo $afficherArticle;
+echo "Article 3"."\n"."\n";
+echo "Donner la reference ";
+$reference = readline("");
+echo "Donner la designation ";
+$designation = readline("");
+echo "Donner le prix HT ";
+$prixHt = readline("");
+
+$Article3 = new Article($reference, $designation, $prixHt, $tauxTva, $prixTtc);
+
+$afficherArticle = $Article3->afficherArticle();
+
+$reference = 111;
+$designation = "ATA";
+$prixHt = 100;
+$prixTtc = 120;
+
+$Article4 = new Article($reference, $designation, $prixHt, $tauxTva, $prixTtc);
+
+echo "Article 4"."\n"."\n";
+$afficherArticle = $Article4->afficherArticle();
+
+
+
+
 
 
 
