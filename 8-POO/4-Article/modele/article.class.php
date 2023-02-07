@@ -1,10 +1,12 @@
 <?php
+//Créer la classe Article caractérisée par les attributs : 
+//                      Référence, Désignation, PrixHT, TauxTVA.
     Class Article{
         private $reference;
         private $designation;
         private $prixHt;
         private $tauxTva;
-        
+      //Ajouter le constructeur suivants : renseigner la référence et la désignation 
         public function __construct($reference,$designation){
             $this->reference = $reference;
             $this->designation = $designation;
@@ -18,10 +20,8 @@
                 $tauxTva = $this->getTauxTva();
                 $valeurCalcul = $prixHt + ($prixHt * $tauxTva/100);
                 return $valeurCalcul;
-                // $valeurCalculee = $this->prixHt + ($this->prixHt*$this->tauxTva/100);
-                // return $valeurCalculee;
         }
-        //methode pour afficher le prix
+        //methode pour afficher l article et le prix ttc
         public function afficherArticle(){
                 $reference = $this->getReference();
                 $designation = $this->getDesignation();

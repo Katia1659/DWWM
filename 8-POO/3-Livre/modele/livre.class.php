@@ -1,17 +1,18 @@
 <?php
-
+//Définir une classe Livre avec les attributs suivants : Titre, Auteur (Nom complet), Prix.
 Class Livre{
     private $titre;
     private $auteur;
     private $prix;
     
-
+//Définir un constructeur permettant d’initialiser
+//les attributs de la méthode par des valeurs saisies par l’utilisateur
     public function __construct($titre,$auteur,$prix) {
         $this->titre = $titre;
         $this->auteur = $auteur;
         $this->prix = $prix;
     } 
-    // methode affichage 
+    // methode affichage permettant d’afficher les informations du livre en cours. 
     public function afficher() {
         $affiche = "Le titre est ".$this->titre."\n"."L'auteur est ".$this->auteur."\n"."le prix est ".$this->prix."\n";
         echo $affiche;

@@ -1,17 +1,16 @@
 <?php
-
+//Définir une classe Point caractérisée par son abscisse et son ordonné.
 Class Point{
     private $abscisse;
     private $ordonne;
 
-
+//Définir le constructeur par défaut 
     public function __construct($abscisse,$ordonne){
-       
+      //et d’initialisation de la classe. 
         $this->abscisse = $abscisse;
         $this->ordonne = $ordonne;
     }
-
-    
+   //Définir à l’aide des getters et les setters les méthodes d’accès aux attributs de la classe.
         /**
          * Get the value of abscisse
          */ 
@@ -51,8 +50,10 @@ Class Point{
 
         return $this;
     }
-    public function Norme(){
 
+    //Définir la méthode Norme ( ) qui retourne la distance entre l’origine du repère et le point en cours.
+    public function Norme(){
+        //recuper les valeurs via get
         $abscisse = $this->getAbscisse();
         $ordonne = $this->getOrdonne();
 

@@ -2,7 +2,7 @@
 
 include_once "../modele/livre.class.php";
 
-// demande d information livre 1
+// demande d information livre 1 donner leur valeur au attribut
 echo "Livre 1 : ";
 echo "\n";
 $titre = readline("donne le titre :");

@@ -1,25 +1,17 @@
 <?php
 include_once "../modele/Point.class.php";
-
-//$taille = new Point(1,2);
-
-//$resulNorm = $taille->Norme();
-
-
-//print_r($taille);
-//print_r($resulNorm);
-
+//demander l bascisse
 $abscisse = readline("donne l abscisse :");
-echo "\n";
 
+//demander l'ordonne
 $ordonne = readline("donne l'ordonne :");
-echo "\n";
 
+//ouverture de la methode point
 $taille = new Point($abscisse,$ordonne);
-
+//calcul de distance entre l’origine du repère et le point en cours.
 $res = $taille->Norme();
-
-echo "resultat " .$res;
+//affichage resultat
+echo "La norme du point (1,2) est : " .$res;
 
 
 
