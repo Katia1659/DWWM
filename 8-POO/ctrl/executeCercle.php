@@ -29,7 +29,7 @@ $point1 = new Point($ord, $abs);
 
 /*LANCEMENT DES METHODES*/
 $point1 -> afficher();
-$cercle1 -> dansLeCercle($abs, $ord);
+$cercle1 -> appartient($abs, $ord);
 
 PHP_EOL;
 

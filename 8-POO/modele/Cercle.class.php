@@ -26,11 +26,11 @@ class Cercle
         echo "CERCLE($this->abscisse,$this->ordonne,$this->rayon)\n";
     }
 
-    public function dansLeCercle($abscisse,$ordonne){
+    public function appartient($abscisse,$ordonne){
         //$result = sqrt(pow($x-$this->x)+pow($y-($this->y)));
-        $powX = pow($abscisse - $this->abscisse,2);
-        $powY = pow($ordonne- $this->ordonne,2);
-        $distance = sqrt($powX + $powY);
+        $powabs = pow($abscisse - $this->abscisse,2);
+        $poword = pow($ordonne- $this->ordonne,2);
+        $distance = sqrt($powabs + $poword);
         if ($distance > $this->rayon){
            echo"Le point n'est pas dans le cercle";
         }
@@ -38,9 +38,6 @@ class Cercle
            echo "Le point est dans le cercle ";
         }
      }
-
-
-
 }  
 
 

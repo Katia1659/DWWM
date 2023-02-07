@@ -21,7 +21,6 @@ class Point
 
     public function afficher() {
         echo "POINT($this->abscisse,$this->ordonne)\n";
-
     }
     
 
