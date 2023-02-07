@@ -12,7 +12,8 @@ $perimetre = $rectangle->perimetre();
 $aire = $rectangle->aire();
 
 //on affiche le resultat
-$texte = afficherCarre();
+$rectangle->afficherRectangle();
+
 
 
 ?>

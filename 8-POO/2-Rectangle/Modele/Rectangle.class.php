@@ -51,7 +51,13 @@ class Rectangle
     $perimetre = $this->perimetre();
     $aire = $this->aire();
 
-        echo "Longueur : $longueur - Largeur : $largeur - Perimetre : $perimetre - Aire : ";
+        echo "Longueur : $longueur - Largeur : $largeur - Perimetre : $perimetre - Aire : $aire".PHP_EOL;
+        if ($this->estCarre()==true) {
+            echo "c'est un carré";
+        }elseif ($this->estCarre()==false) {
+            
+            echo "ce n'est pas un carré";
+        }
         
     }
 
