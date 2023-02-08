@@ -2,7 +2,7 @@
 include_once "../modele/Point.class.php";
 class Cercle
 {//ATTRIBUTS
-    public $centre;
+    public point $centre;
     public $rayon;
 
     //CONTRUCTION
