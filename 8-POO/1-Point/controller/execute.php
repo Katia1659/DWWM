@@ -12,7 +12,7 @@ for ($i = 1; $i <= $nbrPoint; $i++){
     echo "Mettez l\' ordonne du $point: ";
     $ordonne = readline();
     $$point = new Point($abscisse, $ordonne);
-    $norme = $$point->Norme();
+    $norme = $$point->norme();
     $abscisse = $$point->getAbscisse();
     $ordonne = $$point->getOrdonne();
     echo "La norme du point ($abscisse,$ordonne) est : $norme \n \n";

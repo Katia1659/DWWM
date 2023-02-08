@@ -45,7 +45,7 @@ class Point
 
 
     //methods qui calcule la norme du point.
-    public function Norme():float
+    public function norme():float
     {
         $abscisse = $this->getAbscisse();
         $ordonne = $this->getOrdonne();
