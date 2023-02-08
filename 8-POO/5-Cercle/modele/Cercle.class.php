@@ -4,8 +4,7 @@ include "Point.class.php";
 
 class Cercle
 {
-    private $x;
-    private $y;
+    private Point $centre;
     private $rayon;
 
     /**
@@ -14,8 +13,7 @@ class Cercle
 
     public function __construct($x, $y, $rayon)
     {
-        $this->x = $x;
-        $this->y = $y;
+        $this->centre= new Point($x,$y);
         $this->rayon = $rayon;
     }
     /**
@@ -54,7 +52,8 @@ class Cercle
     {
         $xP = $point->getX();
         $yP = $point->getY();
-        $calcule = pow(($xP - $this->x), 2) + pow(($yP - $this->y), 2);
+        $centre = $this->centre;
+        $calcule = pow(($xP - $centre->getX()), 2) + pow(($yP - $centre->getY()), 2);
 
         if (sqrt($calcule) <= $this->rayon) {
             echo "Le point appartient au cercle";
@@ -67,47 +66,15 @@ class Cercle
     public function afficher()
 
     {
-        echo "CERCLE($this->x,$this->y,$this->rayon)";
-    }
+        $centre = $this->centre;
+        echo "CERCLE ( le centre est un ";
+        $centre->afficher(); echo" 
+         , et d'un rayon de:  $this->rayon ) \n";
+        $perimetre= $this->getPerimetre();
+        echo "Le périmètre est : $perimetre \n";
+        $surface = $this->getSurface();
+        echo "La surface est : $surface\n";
 
-    /**
-     * Get the value of x
-     */
-    public function getX()
-    {
-        return $this->x;
-    }
-
-    /**
-     * Set the value of x
-     *
-     * @return  self
-     */
-    public function setX($x)
-    {
-        $this->x = $x;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of y
-     */
-    public function getY()
-    {
-        return $this->y;
-    }
-
-    /**
-     * Set the value of y
-     *
-     * @return  self
-     */
-    public function setY($y)
-    {
-        $this->y = $y;
-
-        return $this;
     }
 
     /**
@@ -126,6 +93,26 @@ class Cercle
     public function setRayon($rayon)
     {
         $this->rayon = $rayon;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of centre
+     */ 
+    public function getCentre()
+    {
+        return $this->centre;
+    }
+
+    /**
+     * Set the value of centre
+     *
+     * @return  self
+     */ 
+    public function setCentre($centre)
+    {
+        $this->centre = $centre;
 
         return $this;
     }

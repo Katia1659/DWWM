@@ -19,7 +19,7 @@ class Point
         return $norme;
     }
     public function afficher(){
-        echo "POINT($this->x,$this->y)";
+     echo "POINT($this->x,$this->y)";
     }
 
     /**

@@ -9,10 +9,7 @@ $rayon= readline("Donner le rayon: ");
 $cercle= new Cercle($x,$y,$rayon);
 
 // Affichage du Cercle:
-$perimetre= $cercle->getPerimetre();
-echo "Le périmètre est : $perimetre \n";
-$surface = $cercle->getSurface();
-echo "La surface est : $surface\n";
+$cercle->afficher();
 
 // creation du point
 $xp = readline("Donner l'abscisse d'une point: ");
