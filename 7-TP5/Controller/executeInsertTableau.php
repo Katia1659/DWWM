@@ -4,6 +4,7 @@ include ("../Modele/functions.php");
 
 $listStag = readFileToArray($_FILES['file']['tmp_name']);
 
+
 session_start();
 
 $listPlaces = array(
@@ -33,7 +34,6 @@ $listPlaces = array(
 deleteTout();
 
 $place = $listPlaces;
-
 
 $nom = returnNom($listStag);
 
