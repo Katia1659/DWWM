@@ -27,7 +27,7 @@ class Cercle
     }
 
     public function appartient($abscisse,$ordonne) : void {
-        //$result = sqrt(pow($x-$this->x)+pow($y-($this->y)));
+      
         $powabs = pow($abscisse - $this->abscisse,2);
         $poword = pow($ordonne- $this->ordonne,2);
         $distance = sqrt($powabs + $poword);
