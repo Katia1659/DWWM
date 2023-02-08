@@ -1,5 +1,4 @@
 <?php
-include_once "../modele/Point.class.php";
 include_once "../modele/Cercle.class.php";
 
 /*POUR LE CERCLE*/
@@ -25,11 +24,11 @@ $abs = readline("X:");
 $ord = readline("Y:");
 
 /*CREACTION DE L'OBJET*/
-$point1 = new Point($ord, $abs);
+ $point1 = new Point($ord, $abs);
 
 /*LANCEMENT DES METHODES*/
 $point1 -> afficher();
-$cercle1 -> appartient($abs, $ord);
+$cercle1 -> appartient($point1);
 
 PHP_EOL;
 

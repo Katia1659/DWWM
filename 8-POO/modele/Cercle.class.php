@@ -1,4 +1,5 @@
 <?php
+include_once "../modele/Point.class.php";
 class Cercle
 {//ATTRIBUTS
     public $abscisse;
@@ -26,8 +27,10 @@ class Cercle
         echo "CERCLE($this->abscisse,$this->ordonne,$this->rayon)\n";
     }
 
-    public function appartient($abscisse,$ordonne) : void {
-      
+    public function appartient(Point $point1) : void {
+        $abscisse = $point1 -> getAbscisse();
+        $ordonne = $point1 -> getOrdonne();
+
         $powabs = pow($abscisse - $this->abscisse,2);
         $poword = pow($ordonne- $this->ordonne,2);
         $distance = sqrt($powabs + $poword);
