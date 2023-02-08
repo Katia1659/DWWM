@@ -1,124 +1,110 @@
-<?php
+ <?php
+include 'Point.class.php';
 
-Class Cercle
+class Cercle
 {
-    private $x;
-    private $y;
-    private $rayon;
 
-    public function __construct($x,$y,$rayon)
-    {
-        $this->x = $x;
-        $this->y = $y;
-        $this->rayon = $rayon;
+    private Point $_centre; //Objet de type Point
+    private int $_rayon; //le rayon : int
 
-    }
+
+public function __construct($x, $y, $rayon)
+{
+    $this->_centre = new Point($x, $y);
+    $this->_rayon = $rayon;
+}
+
+//Calcul du périmétre
+public function getPerimetre() 
+{
     
-     public function getPerimetre() 
-    {
-        
-         $peri = 2*pi()*$this->rayon;
+     $peri = 2*pi()*$this->_rayon;
 
-         return $peri;
-          
-    }
+     return $peri;
+      
+}
 
-     public function getSurface() 
-    {
+//Calcul de la surface
+ public function getSurface() 
+{
 
-        $surface = pi()*pow($this->rayon,2);
+    $surface = pi()*pow($this->_rayon,2);
 
-        return $surface;
-    }
+    return $surface;
+}
 
+//Methode pour savoir si un point appartient à un cercle
+ public function appartient(Point $point) {    
+    
+$xP = $point->getXP();
+$yP = $point->getYP();
 
-     public function appartient() {    
-        
-$xP = readline("X = ");
-$yP = readline("Y = ");
+$centre = $this->_centre;
 
-$calcul = (pow($xP,2) - pow($this->x,2)) + (pow($yP,2) - pow($this->y,2));
+$calcul = ($xP - $centre->getXP())**2 + ($yP -  $centre->getYP())**2;
 
-if ($calcul == pow($this->rayon,2)) 
+if ($calcul < pow($this->_rayon,2)) 
 
 {
-    return "Le point appartient au cercle";
+return "Le point appartient au cercle"."\n";
 
 } else {
 
-    return "Le point n'appartient pas au cercle";
+return "Le point n'appartient pas au cercle"."\n";
 }
 }
 
 
-//Methode pour afficher les infos de l'article
-    public function afficher($xP,$yP)
+//Methode pour afficher
+public function afficher()
 
-   { 
+{ 
+    $centre = $this->_centre;
+    echo "Le périmétre est: ".$this->getPerimetre()."\n";
 
-    return "POINT(".$xP.",".$yP.")";
- 
-   } 
+    
+    echo "La surface est : ".$this->getSurface()."\n";
+return "CERCLE(".$centre->afficher().",".$this->_rayon.")"."\n";
 
-       /**
-     * Get the value of x
+} 
+
+    /**
+     * Get the value of _centre
      */ 
-    public function getX()
+    public function get_centre()
     {
-        return $this->x;
+        return $this->_centre;
     }
 
     /**
-     * Set the value of x
+     * Set the value of _centre
      *
      * @return  self
      */ 
-    public function setX($x)
+    public function set_centre($_centre)
     {
-        $this->x = $x;
+        $this->_centre = $_centre;
 
         return $this;
     }
 
     /**
-     * Get the value of y
+     * Get the value of _rayon
      */ 
-    public function getY()
+    public function get_rayon()
     {
-        return $this->y;
+        return $this->_rayon;
     }
 
     /**
-     * Set the value of y
+     * Set the value of _rayon
      *
      * @return  self
      */ 
-    public function setY($y)
+    public function set_rayon($_rayon)
     {
-        $this->y = $y;
+        $this->_rayon = $_rayon;
 
         return $this;
     }
-
-  /**
-   * Get the value of rayon
-   */ 
-  public function getRayon()
-  {
-    return $this->rayon;
-  }
-
-  /**
-   * Set the value of rayon
-   *
-   * @return  self
-   */ 
-  public function setRayon($rayon)
-  {
-    $this->rayon = $rayon;
-
-    return $this;
-  }
-   }
-
- 
+}

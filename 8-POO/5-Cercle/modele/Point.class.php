@@ -1,6 +1,6 @@
 <?php 
 
-Class Cercle
+Class Point
 {
     private $xP;
     private $yP;
@@ -11,7 +11,13 @@ Class Cercle
         $this->yP = $yP;
 
     }
+    public function afficher()
 
+    { 
+ 
+     return "POINT(".$this->xP.",".$this->yP.")";
+    
+    } 
 
     /**
      * Get the value of xP
