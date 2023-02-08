@@ -23,9 +23,13 @@ Class Point{
     return $norme;
     }
 
+    //on defini la methode afficher
     public function afficherPoint():void{
-        echo "Point($this->abscisse,$this->ordonee)";
+        echo "POINT($this->abscisse,$this->ordonee)";
     }
+
+
+    ////////////////////////////Getter and Setter/////////////////////////////
 
     /**
      * Get the value of abscisse
@@ -43,7 +47,6 @@ Class Point{
     public function setAbscisse($abscisse)
     {
         $this->abscisse = $abscisse;
-
         return $this;
     }
 
@@ -63,7 +66,6 @@ Class Point{
     public function setOrdonee($ordonee)
     {
         $this->ordonee = $ordonee;
-
         return $this;
     }
 }
