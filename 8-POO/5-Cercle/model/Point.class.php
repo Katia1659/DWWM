@@ -1,41 +1,59 @@
 <?php
-class Point{
-    private float $x ;
-    private float $y ;
-    public function __construct($x,$y){
-        $this ->x = $x;
-        $this ->y =$y;
-}
-    /**
-    * @return float
-    */
-    public function getX(): float
+/*création d'un classe Cercle avec differentes methodes pour différents calaculs*/
+class Point
+{
+    private $abcisse;
+    private $ordonnee;
+
+    public function __construct($x, $y)
     {
-        return $this->x;
+        $this->abcisse = $x;
+        $this->ordonnee = $y;
+    }
+    /**
+     * Get the value of abcisse
+     */
+    public function getAbcisse()
+    {
+        return $this->abcisse;
     }
 
     /**
-    * @param float $x
-    */
-    public function setX(float $x): void
+     * Set the value of abcisse
+     *
+     * @return  self
+     */
+    public function setAbcisse($abcisse)
     {
-        $this->x = $x;
+        $this->abcisse = $abcisse;
+
+        return $this;
     }
 
     /**
-    * @return float
-    */
-    public function getY(): float
+     * Get the value of ordonnee
+     */
+    public function getordonnee()
     {
-        return $this->y;
+        return $this->ordonnee;
     }
 
     /**
-    * @param float $y
-    */
-    public function setY(float $y): void
+     * Set the value of ordonnee
+     *
+     * @return  self
+     */
+    public function setordonnee($ordonnee)
     {
-        $this->y = $y;
+        $this->ordonnee = $ordonnee;
+
+        return $this;
     }
 
+    public function afficher()
+    {
+        $x = $this->getAbcisse();
+        $y = $this->getordonnee();
+        echo "POINT($x,$y)\n";
+    }
 }
