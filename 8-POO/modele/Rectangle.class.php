@@ -7,7 +7,7 @@ class Rectangle
     public $largeur;
 
     //CONTRUCTION
-    public function __construct($long, $larg)
+    public function __construct(float $long, float $larg)
     {
         $this->longueur = $long;
         $this->largeur = $larg;

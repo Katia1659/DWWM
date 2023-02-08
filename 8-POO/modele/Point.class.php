@@ -19,7 +19,7 @@ class Point
         return $reponse;
     }
 
-    public function afficher() {
+    public function afficher() : void { 
         echo "POINT($this->abscisse,$this->ordonne)\n";
     }
     
@@ -32,7 +32,6 @@ class Point
     {
         return $this->abscisse;
     }
-
     /**
      * Set the value of abscisse
      *
@@ -44,10 +43,6 @@ class Point
 
         return $this;
     }
-
-
-
-
     /**
      * Get the value of ordonne
      */
@@ -55,7 +50,6 @@ class Point
     {
         return $this->ordonne;
     }
-
     /**
      * Set the value of ordonne
      *

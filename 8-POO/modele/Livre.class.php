@@ -7,7 +7,7 @@ class Livre
     public $prix;
 
     //CONTRUCTION
-    public function __construct($titre, $auteur, $prix)
+    public function __construct(string $titre, string $auteur, float $prix)
     {
         $this->titre = $titre;
         $this->auteur = $auteur;

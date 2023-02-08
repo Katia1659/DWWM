@@ -6,27 +6,27 @@ class Cercle
     public $rayon;
 
     //CONTRUCTION
-    public function __construct($ord, $abs, $ray){
+    public function __construct(float $ord, float $abs, float $ray){
         $this->abscisse = $abs;
         $this->ordonne = $ord;
         $this->rayon = $ray;
     }
 
-    public function getPerimetre(){
+    public function getPerimetre() : void {
         $peri = 2 * pi() * $this->rayon;
         echo "Le périmétre est : $peri \n";
     }
 
-    public function getSurface(){
+    public function getSurface() : void {
         $Surf = $this->rayon * $this->rayon * pi();
         echo "La surface est : $Surf \n";
     }
 
-    public function afficher(){
+    public function afficher() : void {
         echo "CERCLE($this->abscisse,$this->ordonne,$this->rayon)\n";
     }
 
-    public function appartient($abscisse,$ordonne){
+    public function appartient($abscisse,$ordonne) : void {
         //$result = sqrt(pow($x-$this->x)+pow($y-($this->y)));
         $powabs = pow($abscisse - $this->abscisse,2);
         $poword = pow($ordonne- $this->ordonne,2);

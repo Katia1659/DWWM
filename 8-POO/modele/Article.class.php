@@ -7,7 +7,7 @@ class Article
     private $tauxTva;
 
     //CONTRUCTION
-    public function __construct($ref, $des, $prixht, $tva)
+    public function __construct( string $ref, string $des, float $prixht, float $tva)
     {
         $this->reference = $ref;
         $this->designation = $des;
@@ -16,7 +16,7 @@ class Article
     }
 
     // CALCUL DU PRIX TTC
-    function calculerPrixTtc()
+    function calculerPrixTtc() : float
     {
         $reponse = $this->prixHt + ($this->prixHt * $this->tauxTva / $this->tauxTva);
         return $reponse;
@@ -24,7 +24,7 @@ class Article
     }
 
     //AFFICHAGE DES REF DE L'ARTICLE EN UTILISANT LA FONCTION DE CALCUL TTC
-    function afficherArticle()
+    function afficherArticle() : void
     {
         $ttc = $this->calculerPrixTtc();
         echo "Référence : $this->reference \nDesignation : $this->designation \nLe prixHt : $this->prixHt \nLe prix TTC est $ttc \n\n";
