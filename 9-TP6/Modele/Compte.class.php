@@ -2,28 +2,71 @@
 include_once "../Modele/Client.class.php";
 
 Class Compte {
-    private Client $client;
-    private float $solde=0;
+    private Client $possesseur;
     private static $id;
+    private int $code;
+    private float $solde=0;
 
-    public function __construct($cin, $nom, $prenom, $tel )
+    // Initialisation des attributs.
+    public function __construct(Client $client)
     {
-        $this -> client = new Client ($cin, $nom, $prenom, $tel);
-        $this :: $id++;    
+        $this -> possesseur = $client;
+        self :: $id++;    
+        $this -> code = self :: $id;
     }
 
+
+    // Création de la méthode d'affichage
     public function afficher()
     {
        echo "Détails du compte : \n***********************************\n" ; 
-       echo "Numéro de compte : ". $this -> getId() ."\n"; 
+       echo "Numéro de compte : ". $this -> getCode() ."\n"; 
        echo "Solde de compte : " . $this -> getSolde() ."\n";
        echo "Propriétaire du compte : \n" ;
-       $this -> getClient() -> afficher() ; 
+       $this -> getPossesseur() -> afficherCompte() ; 
        echo "\n***********************************" ; 
     }
 
-    public function crediter() {
-        $this -> 
+    // Création de la méthode de calcul
+    public function crediter($newSolde) {
+        $this -> solde = $this -> solde + $newSolde;
+        echo "Opération bien effectué \n";
+    }
+
+    // Création de la méthode de calcul
+    public function crediterCpt (Compte $possesseur, $newSolde) {
+        $this -> solde = $this -> solde + $newSolde;
+        $soldeCpt = $possesseur -> getSolde();
+        $soldeMaj = $soldeCpt - $newSolde;
+        $possesseur = $possesseur -> setSolde($soldeMaj);
+        echo "Opération bien effectué \n";
+
+    }
+
+    // Création de la méthode de calcul
+    public function debiterCpt (Compte $possesseur, $newSolde) {
+        $this -> solde = $this -> solde - $newSolde;
+        $soldeCpt = $possesseur -> getSolde();
+        $soldeMaj = $soldeCpt + $newSolde;
+        $possesseur = $possesseur -> setSolde($soldeMaj);
+        echo "Opération bien effectué \n";
+
+    }
+
+    // Création de la méthode de calcul
+    public function debiter ($soldeDbt) {
+        $this -> solde = $this -> solde - $soldeDbt;
+        echo "Opération bien effectué \n";
+    }
+
+// Création de la méthode d'affichage
+    public function resume (){
+        $this -> afficher() ;
+    }
+
+    // Création de la méthode d'affichage
+    public static function nbCompte(){
+        echo "Le nombre de comptes crées est : ". self :: $id ;
 
     }
 
@@ -35,28 +78,65 @@ Class Compte {
 
 
 
-
-
-
-
+    
 
 
     /**
-     * Get the value of client
+     * Get the value of posesseur
      */ 
-    public function getClient()
+    public function getPossesseur()
     {
-        return $this->client;
+        return $this->possesseur;
     }
 
     /**
-     * Set the value of client
+     * Set the value of posesseur
      *
      * @return  self
      */ 
-    public function setClient($client)
+    public function setPossesseur($possesseur)
     {
-        $this->client = $client;
+        $this->possesseur = $possesseur;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of id
+     */ 
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set the value of id
+     *
+     * @return  self
+     */ 
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of code
+     */ 
+    public function getCode()
+    {
+        return $this->code;
+    }
+
+    /**
+     * Set the value of code
+     *
+     * @return  self
+     */ 
+    public function setCode($code)
+    {
+        $this->code = $code;
 
         return $this;
     }
@@ -80,29 +160,6 @@ Class Compte {
 
         return $this;
     }
-
-    /**
-     * Get the value of id
-     */ 
-    public function getId()
-    {
-        return $this ::$id;
-    }
-
-    /**
-     * Set the value of id
-     *
-     * @return  self
-     */ 
-    public function setId($id)
-    {
-        $this->id = $id;
-
-        return $this;
-    }
-
-    
-
 }
 
 

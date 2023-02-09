@@ -16,7 +16,9 @@ class Client
         $this->tel = $tel;
     }
 
-    public function afficher()
+
+    // création de la fonction d'affichage
+    public function afficherCompte()
     {
         echo "CIN : " . $this->cin . "\n" . "NOM : " . $this->nom . "\n" . "Prénom : " . $this->prenom . "\n" . "Tél : " . $this->tel;
     }
