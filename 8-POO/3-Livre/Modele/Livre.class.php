@@ -15,6 +15,7 @@ Class Livre{
         $this->prix = $prix;
     }
 
+    //on cree la fonction afficher livre
     public function afficherLivre():void{
         $titre = $this->getTitre();
         $auteur = $this->getAuteur();
