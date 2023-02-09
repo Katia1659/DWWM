@@ -3,23 +3,23 @@ include_once "../Model/Client.class.php";
 //On définie la class Compte
 class Compte{
     //On définie les attributs de la class compte
-    private static $code;
+    private static int $code;
     private $proprietaire;
-    private $solde = 0;
-    private $numCompte;
+    private int $solde = 0;
+    private int $numCompte;
 //On initialise la class à l'aide de __construct
-public function __construct($cin,$nom,$prenom,$tel){
+public function __construct(int $cin,string $nom,string $prenom,int $tel){
     $this->incrementation();
     $this->numCompte = $this::$code;
     $this->proprietaire = new Client($cin,$nom,$prenom,$tel);
 }
 //On définie ses méthodes 
 //Ici on crée une méthodes pour incrémenté $code
-public function incrementation(){
+public function incrementation():int{
         $this::$code++;
 }
 //On définie la méthode pour l'affichage.
-public function affichage(){
+public function affichage():void{
     $cin = $this->proprietaire->getCin();
     $nom = $this->proprietaire->getNom();
     $prenom = $this->proprietaire->getPrenom();

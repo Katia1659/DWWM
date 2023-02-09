@@ -2,12 +2,12 @@
 //On définie la class Client
 class Client{
     //On définie les attributs de la class
-    private $cin;
-    private $nom;
-    private $prenom;
-    private $tel;
+    private int $cin;
+    private string $nom;
+    private string $prenom;
+    private int $tel;
 //On initialise à l'aide de __construct
-public function __construct($cin,$nom,$prenom,$tel){
+public function __construct(int $cin,string $nom,string $prenom,int $tel){
     $this->cin = $cin;
     $this->nom = $nom;
     $this->prenom = $prenom;
@@ -16,7 +16,7 @@ public function __construct($cin,$nom,$prenom,$tel){
 
 //On définie les méthodes 
 //La méthode d'affichage.
-public function affichage(){
+public function affichage():void{
     $cin = $this->getCin();
     $nom = $this->getNom();
     $prenom = $this->getPrenom();
