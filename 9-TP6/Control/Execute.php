@@ -1,16 +1,6 @@
 <?php 
 include_once "../Model/Compte.class.php";
-
-
-// $cin = readline("Donnez votre numéro CIN : ");
-// $nom = readline("Donnez votre Nom : ");
-// $prenom = readline("Donnez votre Prénom : ");
-// $tel = readline("Donnez voter numéro de Téléphone : ");
-// $client = new Client($cin,$nom,$prenom,$tel);
-// $affichage = $client->affichage();
-// echo $affichage;
-
-
+//L'éxécuteur afin de faire marcher le programme comme demdander.
 
 echo "╔═══════════════════════════════════════════════════════════╗\n";
 echo "║Compte 1 :                                                  \n";
