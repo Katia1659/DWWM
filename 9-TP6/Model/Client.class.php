@@ -1,5 +1,5 @@
 <?php
-
+// Creation de la class client parent de la class compte qui permet d'envoyer certaines données
 class Client{
     private $cin;
     private $nom;
@@ -13,7 +13,6 @@ class Client{
         $this->tel = $tel;
     }
 
-
     public function affichage(){
         $cin = $this->getCin();
         $nom = $this->getNom();
@@ -21,7 +20,6 @@ class Client{
         $tel = $this->getTel();
         $test = "Propriétaire du compte : \nCIN : $cin \nNom : $nom \n Prénom : $prenom\nTél : $tel\n";
     }
-
 
     /**
      * Get the value of cin

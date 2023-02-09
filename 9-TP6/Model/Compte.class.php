@@ -1,5 +1,6 @@
 <?php
 include_once "../Model/Client.class.php";
+// Creation de la classe compte avec attributs est methodes qui repondent aux demandes
 class Compte{
     private static $code;
     private $proprietaire;
@@ -11,9 +12,11 @@ class Compte{
         $this->numCompte = $this::$code;
         $this->proprietaire = new Client($cin,$nom,$prenom,$tel);
     }
+
     public function incrementation(){
         $this::$code++;
     }
+
     public function affichage(){
         $cin = $this->proprietaire->getCin();
         $nom = $this->proprietaire->getNom();
@@ -23,31 +26,34 @@ class Compte{
         $numCompte = $this->getNumCompte();
         echo "\n\nNuméro de compte : $numCompte\nSolde du compte : $solde\nPropriétaire du compte : \nCIN : $cin \nNom : $nom \nPrénom : $prenom\nTél : $tel\n";
     }
+
     public function numCompte(){
         $code = $this->getCode();
         echo "Compte $code\n";
     }
+
     public function crediter($solde){
         $this->solde +=$solde;
     }
+
     public function debiter($solde){
         $this->solde -=$solde;
     }
+
     public function crediterCpt($somme,$compte){
         $solde = $this->getSolde();
         $newSolde = $solde - $somme;
         $this->solde = $newSolde;
         $compte->solde = $compte->getSolde()+$somme;
         echo "Opération bien effectué\n";
-
     }
+
     public function debiterCpt($somme,$compte){
         $solde = $this->getSolde();
         $newSolde = $solde + $somme;
         $this->solde = $newSolde;
         $compte->solde = $compte->getSolde()-$somme;
         echo "Opération bien effectué\n";
-
     }
 
     /**
