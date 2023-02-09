@@ -17,7 +17,7 @@ Class Client {
 
     public function afficher(){
         echo "CIN : ".$this->cin."\nNom :".$this->nom."\nPrénom :".$this->prenom."\nTél : ".$this->tel;
-        echo "\n****************************";
+        echo "\n****************************\n";
     }
 
     /**
