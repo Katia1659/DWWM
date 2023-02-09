@@ -2,11 +2,13 @@
 
 class Client{
 
+    //declare attributs 
     private $cin;
     private $nom;
     private $prenom;
     private $tel;
 
+    //methode construct
     public function __construct($cin,$nom,$prenom,$tel)
     {
         $this->cin = $cin;
@@ -15,6 +17,7 @@ class Client{
         $this->tel = $tel;
     }
 
+    //methode affiche compte client
     public function afficher(){
         $cin = $this->cin;
         $nom = $this->nom;
@@ -28,10 +31,7 @@ class Client{
 
     
 
-
-
-
-
+    //get et set attributs 
     /**
      * Get the value of cin
      */ 

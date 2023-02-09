@@ -1,11 +1,14 @@
 <?php
 
 class Compte {
+
+    //attributs 
     private Client $_client;
     private float $solde = 0;
     private static $code = 0;
 
 
+    //methodes construct 
     public function __construct($cin,$nom,$prenom,$tel)
     {
         $this->_client = new Client($cin,$nom,$prenom,$tel);
@@ -13,17 +16,20 @@ class Compte {
     }
 
 
+    //methode le nombre de compte crées
     public function afficheNbCompte(){
         $compte = $this-> getCode();
         echo "le nombre de compte crées est : $compte";
     }
 
+    //credite le compte
     public function crediter($somme){
         $this->solde += $somme;
         echo "votre compte à ete crediter";
 
     }
 
+    //vire sur un autre compte
     public function crediterCpt($somme,Compte $compte){
 
         $this->solde += $somme;
@@ -31,23 +37,26 @@ class Compte {
         echo "votre compte à ete crediter";
     }
 
+    //debite un compte
     public function debiter($somme){
         $this->solde -= $somme;
         return "votre compte à ete debiter";
 
     }
 
+    //debite un compte pour crediter un autre 
     public function debiterCpt($somme,Compte $compte){
         $this->solde -= $somme;
         $compte -> solde += $somme;
         echo "votre compte à ete debiter";
     }
 
+    //affiche num compte et le solde dispo
     public function afficher():void{
         $compte = $this::$code;
         $solde = $this->solde;
         echo "\n ************************************ \n";
-        echo "Numéro compte : $compte \n Solde du compte : $solde \n Propritaire du compte : \n";
+        echo "Numéro compte : $compte \nSolde du compte : $solde \n ";
         $this->get_client()->afficher();
     }
 
