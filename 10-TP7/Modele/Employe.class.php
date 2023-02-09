@@ -10,7 +10,7 @@ class Employe
     private $_salaire;
 
     //CONTRUCTION
-    public function __construct(int $matricule, string $nom, string $prenom,  $dateNaissance, $dateEmbauche, float $salaire)
+    public function __construct(int $matricule, string $nom, string $prenom, string $dateNaissance, string $dateEmbauche, float $salaire)
     {
         $this->_matricule = $matricule;
         $this->_nom = $nom;
