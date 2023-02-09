@@ -3,12 +3,12 @@
 
 class Client
 {
-    private $cin;
-    private $nom;
-    private $prenom;
-    private $tel;
+    private string $cin;
+    private string $nom;
+    private string $prenom;
+    private int $tel;
 
-    public function __construct($cin, $nom, $prenom, $tel){
+    public function __construct(string $cin,string $nom,string $prenom,int $tel){
         $this->cin = $cin;
         $this->nom = $nom;
         $this->prenom = $prenom;
