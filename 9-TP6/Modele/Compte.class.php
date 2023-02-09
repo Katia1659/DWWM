@@ -12,7 +12,7 @@ Class Compte {
 
 // On crée la méthode construct qui initialise les attributs de l'objet
 
-    public function __construct($cin, $nom, $prenom, $tel)
+    public function __construct(string $cin, string $nom, string $prenom, string $tel)
     {
         $this->proprietaire = new Client($cin, $nom, $prenom, $tel);
         self::$compteur++;
@@ -35,7 +35,7 @@ Class Compte {
 // On crée la méthode crediterCpt qui permet d'ajouter de l'argent sur un compte, depuis un autre compte
     }
 
-    public function crediterCpt(Compte $compte) {
+    public function crediterCpt(Compte $compte) : void {
 
         echo "Créditer le compte " .$this->code. " à partir du compte " .$compte->getCode()."\n";
 
@@ -57,7 +57,7 @@ Class Compte {
 
 // On crée la méthode débiter qui permet de retirer de l'argent depuis un compte en banque 
 
-    public function debiter() {
+    public function debiter() : void {
 
         $somme =readline("Donner le montant à retirer: ");
 
@@ -70,7 +70,7 @@ Class Compte {
 
 // On crée la méthode debiterCpt qui permet de débiter un compte et ainsi créditer un autre compte
 
-    public function debiterCpt(Compte $compte) {
+    public function debiterCpt(Compte $compte) : void {
 
         echo "Débiter le compte " .$this->code. " et créditer le compte " .$compte->getCode()."\n";
 
@@ -91,7 +91,7 @@ Class Compte {
 
 // On crée une méthode afficheResumeCompte qui permet de voir toutes les données du compte, y compris le solde, le numéro du compte, et les caractéristiques du client
 
-    public function afficheResumeCompte () {
+    public function afficheResumeCompte () : void {
         echo "Détails du compte: \n";
         echo "***************************** \n";
 
@@ -105,7 +105,7 @@ Class Compte {
 
 // On crée une méthode qui permet d'afficher le nombre de comptes crées
 
-    public static function afficherCompteCree(){
+    public static function afficherCompteCree() : void {
 
 
         echo "Le nombre de comptes crées: ". self::$compteur;

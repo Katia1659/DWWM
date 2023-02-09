@@ -6,13 +6,13 @@ Class Employe {
         private string $matricule;
         private string $nom;
         private string $prenom;
-        private $dateNaissance;
-        private $dateEmbauche;
-        private $salaire;
+        private string $dateNaissance;
+        private string $dateEmbauche;
+        private float $salaire;
 
 // On crée la méthode construct qui initialise les attributs de l'objet
 
-        public function __construct(float $matricule, string $nom, string $prenom, string $dateNaissance, string $dateEmbauche, $salaire)
+        public function __construct(float $matricule, string $nom, string $prenom, string $dateNaissance, string $dateEmbauche, float $salaire)
         {
             $this->matricule = $matricule;
             $this->nom = $nom;
@@ -25,7 +25,7 @@ Class Employe {
 // On crée la méthode age qui calcule l'âge de la personne en fonction de sa date de naissance et de la date du jour        
 
 
-        public function age() 
+        public function age() : void
         {
             $aujourdhui = date("Y/m/d");
             $diff = date_diff(date_create($this->dateNaissance), date_create($aujourdhui));
@@ -34,7 +34,7 @@ Class Employe {
 
 // On crée la méthode anciennete qui calcule l'ancienneté de la personne en fonction de sa date d'embauche et de la date du jour
 
-        public function anciennete() 
+        public function anciennete() : void
         {
             $aujourdhui = date("Y/m/d");
             $diff1 = date_diff(date_create($this->dateEmbauche), date_create($aujourdhui));
@@ -44,7 +44,7 @@ Class Employe {
 // On crée la méthode augmentationDuSalaire qui augmente le salaire de l'employé en fonction de son ancienneté
 
 
-        public function augmentationDuSalaire($salaire) 
+        public function augmentationDuSalaire(float $salaire) : void
         {   
             $aujourdhui = date("Y-m-d");
             $diff1 = date_diff(date_create($this->dateEmbauche), date_create($aujourdhui));
@@ -64,7 +64,7 @@ Class Employe {
 
 // On crée la méthode afficheEmploye qui affiche les données de l'employé avant et après augmentation du salaire
 
-        public function afficheEmploye($employe) 
+        public function afficheEmploye() : void
         {
 
             $nomMaj = strtoupper ($this->nom);
@@ -73,9 +73,9 @@ Class Employe {
             echo "Matricule : ".$this->matricule. "\n";
             echo "Nom complet : ".$nomMaj." ".$prenomMajMin. "\n";
             echo "Age : ";
-            echo $employe->age()."\n";
+            echo $this->age()."\n";
             echo "Ancienneté : ";
-            echo $employe->anciennete()."\n";
+            echo $this->anciennete()."\n";
             echo "Salaire : ".$this->salaire."\n \n";
 
             echo "Après application de l'augmentation du salaire \n \n";
@@ -83,10 +83,10 @@ Class Employe {
             echo "Matricule : ".$this->matricule. "\n";
             echo "Nom complet : ".$nomMaj." ".$prenomMajMin. "\n";
             echo "Age : ";
-            echo $employe->age()."\n";
+            echo $this->age()."\n";
             echo "Ancienneté : ";
-            echo $employe->anciennete()."\n";
-            echo $employe->augmentationDuSalaire($this->salaire)."\n";
+            echo $this->anciennete()."\n";
+            echo $this->augmentationDuSalaire($this->salaire)."\n";
         }
         
 

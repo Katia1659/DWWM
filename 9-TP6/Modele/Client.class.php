@@ -3,14 +3,14 @@
 // On initialise la classe Client
 
     Class Client {
-        private $cin;
-        private $nom;
-        private $prenom;
-        private $tel;
+        private string $cin;
+        private string $nom;
+        private string $prenom;
+        private string $tel;
 
 // On crée la méthode construct qui initialise les attributs de l'objet
 
-    public function __construct($cin, $nom, $prenom, $tel)
+    public function __construct(string $cin, string $nom, string $prenom, string $tel)
     {
         $this->cin = $cin;
         $this->nom = $nom;
@@ -20,7 +20,7 @@
 
 // On crée la méthode afficher qui affiche les informations du client
 
-    public function afficher()
+    public function afficher() : void
  {
         echo "CIN : ". $this->cin."\n";
         echo "NOM : ". $this->nom."\n";
