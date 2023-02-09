@@ -46,4 +46,4 @@ $c1->afficher();
 echo "\n";
 $c2->afficher();
 echo "\n";
-$c1->nbrCompte();
+Compte::afficherCompteCree();

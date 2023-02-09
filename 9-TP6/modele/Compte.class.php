@@ -90,7 +90,7 @@ class Compte
         }else{
             $this->solde -= $somme;
             $compte->solde += $somme;
-            echo "Compte $code ,Opération bien effectué.\n";
+            echo "Opération bien effectué.\n";
         }
     }
     public function afficher(){
@@ -98,16 +98,20 @@ class Compte
         $code = $this->numeroCompte;
         $client = $this->getProprietaire();
 
-        echo "********************************\n";
-        echo "Numero de compte : $code\n";
-        echo "Solde: $solde\n";
+        echo " ————————————————————————————————\n";
+        echo "│        Numero de compte :       \n";
+        echo "│              $code              \n";
+        echo " ————————————————————————————————\n";
+        echo "│            SOLDE :             \n";
+        echo "│              $solde              \n";
+        echo " ————————————————————————————————\n";
         echo "proprietaire du compte : \n";
         $client->afficher();
 
     }
 
-    public function nbrCompte(){
-        $compte = Compte::$code;
+    public static function  afficherCompteCree(){
+        $compte = self::$code;
         echo "Le nombre de compte crées: $compte";
     }
 }

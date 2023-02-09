@@ -86,10 +86,11 @@ class Client
         $prenom = $this->getPrenom();
         $tel = $this->getTel();
 
-        echo "CIN : $cin\n";
-        echo "Nom : $nom\n";
-        echo "Prenom : $prenom\n";
-        echo "Tél : $tel\n";
-        echo "********************************\n";
+        echo " ————————————————————————————————\n";
+        echo "│         CIN : $cin              \n";
+        echo "│         Nom : $nom              \n";
+        echo "│        Prenom : $prenom           \n";
+        echo "│         Tél : $tel              \n";
+        echo " ————————————————————————————————\n";
     }
 }
