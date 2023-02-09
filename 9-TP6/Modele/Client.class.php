@@ -9,7 +9,7 @@ class Client
     private $tel;
 
     //CONTRUCTION
-    public function __construct(string $cin, string $nom, string $prenom, int $tel)
+    public function __construct(string $cin, string $nom, string $prenom, string $tel)
     {
         $this->cin = $cin;
         $this->nom = $nom;
