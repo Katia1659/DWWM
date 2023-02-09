@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 
 include 'Point.class.php';
 
@@ -41,10 +42,16 @@ class Cercle{
         }
         
     }
+=======
+class Cercle{
+
+private 
+>>>>>>> 58c6f322d258e35dbdb8b41e7095fc954c2528f9
 
 
 
 
+<<<<<<< HEAD
 
     //get et set attributs
 
@@ -182,4 +189,9 @@ class Cercle{
 //         }
 // }
 
+=======
+}
+
+
+>>>>>>> 58c6f322d258e35dbdb8b41e7095fc954c2528f9
 ?>
