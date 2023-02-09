@@ -90,14 +90,14 @@ class Compte
 
     public function afficher(): void
     {
-        $prop = $this->proprietaire;
+        $proprietaire = $this->proprietaire;
         echo "************************\t
-       Détail de compte:\t
-       ----------------\t
-       Numéro de Compte: $this->numCompte\t
-       Solde de Compte: $this->solde\n";
-        $prop->afficher();
-        echo "***********************\n";
+        Détail de compte:\t
+        ----------------\t
+        Numéro de Compte: $this->numCompte\t
+        Solde de Compte: $this->solde\n";
+        $proprietaire->afficher();
+        echo "************************\n";
     }
 
 

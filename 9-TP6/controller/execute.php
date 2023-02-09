@@ -2,9 +2,19 @@
 
 include "../modele/Compte.class.php";
 
+//  Array qui va etre incrémenter avec les objets Compte.
 $comptes = array();
-$i = 1;
+if ($k!=null)
+{
+    $i=$k;
+}
+else
+{
+    $i = 1;   
+}
 
+
+// Menue dy programme
 do {
     echo "
 ------MENUE------------------\t
@@ -21,7 +31,7 @@ do {
 ";
 
     $choix = readline("--Entrer Votre Réponse: ");
-
+    
     switch ($choix) {
         case 1:
             print " Ajouter un Compte ---------------\n";
@@ -32,13 +42,16 @@ do {
                 $prenom = readline("Donner le prénom: ");
                 $tel = readline("Donner Le numéro de téléphone:  ");
 
+                // instanciation d'objet Compte dans chaque élément 'compt$i' du tableau:
                 $comptes['compte' . $i] = new Compte($cin, $nom, $prenom, $tel);
                 $i++;
                 $rep = readline("vous allez ajouter un nouveaux compte continuer ? (o/n)");
+                $k=$i;
             } while ($rep != 'n');
             break;
         case 2:
             print " Choisir un Compte ---------------\n";
+            // Rappel du nombre des comptes existants 
             echo "il existe " . Compte::$my_compteur . " comptes\t";
             $quest = readline("Entrer le numéro de compte a afficher :");
             if ($quest <= sizeof($comptes)) {
@@ -52,6 +65,7 @@ do {
 
         case 3:
             print "COMPTES ENREGISTREE--------------\n";
+            // boucle foreach pour afficher les éléments Comptes
             foreach ($comptes as $key => $value) {
                 echo $key;
                 echo PHP_EOL;
@@ -64,7 +78,7 @@ do {
 
             $i = readline("Entrer le numéro de compte à crédeter : ");
             $somme = readline(" Entrer la somme à ajouter ");
-
+            // Activation de la méthode crediter!
             $comptes['compte' . $i]->crediter($somme);
             $soldeCompte = $comptes['compte' . $i]->getSolde();
 
@@ -79,6 +93,7 @@ do {
             $somme = readline(" Entrer la somme :");
 
             if ($soldeCompte >= $somme) {
+                // Activation de la méthode debiter!
                 $comptes['compte' . $i]->debiter($somme);
                 $soldeCompte = $comptes['compte' . $i]->getSolde();
                 print "Solde debiter avec succées :)  nouveau solde : $soldeCompte";
@@ -92,12 +107,11 @@ do {
             $j = readline("Entrer le numéro de compte à crediter : ");
             $somme = readline(" Entrer la somme :");
 
-            if ($comptes['compte'.$i]->getSolde() >= $somme) {
-
-                $comptes['compte' . $j]->crediterCpt($comptes['compte' . $i], $somme);
+            if ($comptes['compte' . $i]->getSolde() >= $somme) {
                 
-
-                print "compte n°" . $j . " Solde crediter avec succées :)  nouveau solde : ".$comptes['compte'.$j]->getSolde();
+                // Activation de la méthode crediterCpt()!
+                $comptes['compte' . $j]->crediterCpt($comptes['compte' . $i], $somme);
+                print "compte n°" . $j . " Solde crediter avec succées :)  nouveau solde : " . $comptes['compte' . $j]->getSolde();
             } else {
                 print "Echec Solde insufisant ! :(";
             }
@@ -109,16 +123,19 @@ do {
             $somme = readline(" Entrer la somme :");
 
             if ($comptes['compte' . $j]->getSolde() >= $somme) {
+                // Activation de la méthode debiterCpt()!
                 $comptes['compte' . $j]->debiterCpt($comptes['compte' . $i], $somme);
-                print "compte n°" . $j . " Solde debiter avec succées :)  nouveau solde : ". $comptes['compte' . $j]->getSolde();
+                print "compte n°" . $j . " Solde debiter avec succées :)  nouveau solde : " . $comptes['compte' . $j]->getSolde();
             } else {
                 print "Echec Solde insufisant ! :(";
             }
             break;
-        case 8 :
-            print " Nombre de Comptes Enregistrés est : ".Compte::$my_compteur." comptes";
+        case 8:
+            // Affichage du nombre des comptes
+            print " Nombre de Comptes Enregistrés est : " . Compte::$my_compteur . " comptes";
             break;
-        case 9: 
+        case 9:
+            // Quitter 
             print "A Bientôt";
     }
 } while ($choix != 9);

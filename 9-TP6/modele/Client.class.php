@@ -7,8 +7,11 @@ class Client
     private $nom;
     private $prenom;
     private $telNum;
-    
 
+    /**
+     * Contructeur de la classe Client:
+     */
+    
     public function __construct($cin, $nom, $prenom, $telNum)
     {
         $this->cin = $cin;
