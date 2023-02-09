@@ -3,9 +3,9 @@
 class Client
 {
     private $cin;
-    private String $nom;
-    private String $prenom;
-    private int $tel;
+    private $nom;
+    private $prenom;
+    private $tel;
 
 
 public function __construct($cin,$nom,$prenom,$tel)
@@ -18,7 +18,7 @@ public function __construct($cin,$nom,$prenom,$tel)
 
 public function afficher()
 {
-
+//Affiche les infos du propriétaire du compte
     
 echo "Propriétaire de compte : "."\n";
     echo "CIN : ".$this->cin."\n";

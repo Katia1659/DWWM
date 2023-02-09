@@ -4,84 +4,80 @@ include 'Client.class.php';
 
 class Compte
 {
-    private Client $client;
-    private int $solde;
-    private static int $code;
+    private $numCompte;
+    private $solde;
+    private $client;
+    public static $my_compteur;
 
-
-public function __construct($cin,$nom,$prenom,$tel,$solde,$code)
+public function __construct($cin,$nom,$prenom,$tel)
 {
-    $this->client = new Client ($cin,$nom,$prenom,$tel);
-    $this->solde = $solde;
-    $this::$code++;
-//  $code =  $this->autoIncrement();
-//     Compte::$code;
-}
+    $this->client= new Client ($cin,$nom,$prenom,$tel);
+    $this->solde = 0;
+    self::$my_compteur++;
+    $this->numCompte = self::$my_compteur;
 
-// public function autoIncrement() 
-// {
-//     $this::$code++;
-// }
+}
 
 
 public function afficher(Client $client)
 {
     
-   
-
+   //Affiche toutes les infos du compte
+    
     echo "******************* \n";
-    echo "Numéro de Compte:".$this->code."\n";
+    echo "Numéro de Compte:".$this->numCompte."\n";
     echo "Solde de compte : ".$this->solde."\n";
+    "Compte ".$this->numCompte.":"."\n";
     $client->afficher();
 
 }
 
+//Demande la somme a ajouter à un compte
 public function crediter($somme)
 {
-    $somme += $this->solde;
-    echo $somme;
+    $this->solde= $this->solde + $somme;
+    return $somme;
 }
 
-public function crediterCpt(Compte $compte,$somme)
+//Selectionne les 2 comptes pour effectuer un credit
+public function crediterCpt(Compte $compte, float $somme)
 {
-    $crediter = $somme->crediter();
+    $this->crediter($somme);
    
+   $compte->debiter($somme);
    
-    $debiteur = $compte->getCode();
-   
-    $newSolde = $debiteur-$crediter;
-
-   echo $newSolde;
 }
 
+//Demande la somme a retirer à un compte
 public function debiter($somme) 
 {
-    $somme -= $this->solde;
-    echo $somme;
+    $this->solde= $this->solde - $somme;
+    return $somme;
 }
 
+//Selectionne les 2 comptes pour effectuer un debit
+public function debiterCpt(Compte $compte,float $somme) {
 
-public function debiterCpt(Compte $compte,$somme) {
-
-    $debiter = $somme->debiter();
+    $this->debiter($somme);
    
-   
-    $debiteur = $compte->getCode();
-   
-   $newSolde = $debiter+$debiteur;
-
-   echo $newSolde;
+    $compte->crediter($somme);
 }
 
-public function affichageResumeCompte() {
+//Affiche tout les infos
+public function affichageResumeCompte(Client $client) {
 
-    return "";
 
+    echo "******************* \n";
+    echo "Numéro de Compte:".$this->numCompte."\n";
+    echo "Solde de compte : ".$this->solde."\n";
+    "Compte ".$this->numCompte.":"."\n";
+    $client->afficher();
 
 }
 
+//Affiche le nombre de comptes crées
 public function affichageNbComptes() {
-    return "Le nombre de comptes crées:".$this->code;
+    return self::$my_compteur;
 }
     /**
      * Get the value of solde
@@ -104,22 +100,63 @@ public function affichageNbComptes() {
     }
 
     /**
-     * Get the value of code
+     * Get the value of numCompte
      */ 
-    public function getCode()
+    public function getNumCompte()
     {
-        return $this->code;
+        return $this->numCompte;
     }
 
     /**
-     * Set the value of code
+     * Set the value of numCompte
      *
      * @return  self
      */ 
-    public function setCode($code)
+    public function setNumCompte($numCompte)
     {
-        $this->code = $code;
+        $this->numCompte = $numCompte;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of client
+     */ 
+    public function getClient()
+    {
+        return $this->client;
+    }
+
+    /**
+     * Set the value of client
+     *
+     * @return  self
+     */ 
+    public function setClient($client)
+    {
+        $this->client = $client;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of my_compteur
+     */ 
+    public function getMy_compteur()
+    {
+        return $this->my_compteur;
+    }
+
+    /**
+     * Set the value of my_compteur
+     *
+     * @return  self
+     */ 
+    public function setMy_compteur($my_compteur)
+    {
+        $this->my_compteur = $my_compteur;
 
         return $this;
     }
 }
+ 
