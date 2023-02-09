@@ -20,26 +20,8 @@ class Compte{
         $prenom = $this->proprietaire->getPrenom();
         $tel = $this->proprietaire->getTel();
         $solde = $this->getSolde();
-        $code = $this->getCode();
-        echo "\n\nNuméro de compte : $code\nSolde du compte : $solde\nPropriétaire du compte : \nCIN : $cin \nNom : $nom \nPrénom : $prenom\nTél : $tel\n";
-    }
-    public function affichageResume1(){
-        $cin = $this->proprietaire->getCin();
-        $nom = $this->proprietaire->getNom();
-        $prenom = $this->proprietaire->getPrenom();
-        $tel = $this->proprietaire->getTel();
-        $solde = $this->getSolde();
-        $code = $this->getCode();
-        echo "\n\nNuméro de compte : 1\nSolde du compte : $solde\nPropriétaire du compte : \nCIN : $cin \nNom : $nom \nPrénom : $prenom\nTél : $tel\n";
-    }
-    public function affichageResume2(){
-        $cin = $this->proprietaire->getCin();
-        $nom = $this->proprietaire->getNom();
-        $prenom = $this->proprietaire->getPrenom();
-        $tel = $this->proprietaire->getTel();
-        $solde = $this->getSolde();
-        $code = $this->getCode();
-        echo "\n\nNuméro de compte : 2\nSolde du compte : $solde\nPropriétaire du compte : \nCIN : $cin \nNom : $nom \nPrénom : $prenom\nTél : $tel\n";
+        $numCompte = $this->getNumCompte();
+        echo "\n\nNuméro de compte : $numCompte\nSolde du compte : $solde\nPropriétaire du compte : \nCIN : $cin \nNom : $nom \nPrénom : $prenom\nTél : $tel\n";
     }
     public function numCompte(){
         $code = $this->getCode();
