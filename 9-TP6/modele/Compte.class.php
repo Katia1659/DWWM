@@ -26,12 +26,12 @@ class Compte
     /**
      * Une méthode permettant de crediter() le compte.
      *  prenant une somme en paramètre.
-     * @return float
+     * @return void
      */
-    public function crediter(float $somme): float
+    public function crediter(float $somme): void
     {
-        $newcrédit = $this->solde + $somme;
-        return $newcrédit;
+         $this->solde= $this->solde + $somme;
+       
     }
 
 
@@ -40,38 +40,38 @@ class Compte
      * Une méthode permettant de crediterCpt() le compte,
      *  prenant une somme et un compte en paramètres,
      * créditant le compte et débitant le compte passé en paramètres.
-     * @return float
+     * @return void
      */
-    public function crediterCpt(Compte $compte, $somme): float
+    public function crediterCpt(Compte $compte, $somme): void
     {
-        $newcrédit = $this->solde - $somme;
-        $compte->crediter($somme);
-        return $newcrédit;
+        $this->solde = $this->solde + $somme;
+        $compte->debiter($somme);
+      
     }
 
     /**
      * Une méthode permettant de debiter() le compte, 
      * prenant une somme en paramètre.
-     *  @return float
+     *  @return void
      */
-    public function debiter(float $somme): float
+    public function debiter(float $somme): void
     {
-        $newcrédit = $this->solde - $somme;
-        return $newcrédit;
+        $this->solde  = $this->solde - $somme;
+       
     }
     /**
      * Une méthode permettant de débiterCpt() le compte,
      * prenant une somme et un compte bancaire en paramètres,
      * débitant le compte et créditant le compte passé en paramètres
-     * @return float
+     * @return void
      */
 
-    public function débiterCpt(Compte $compte, $somme): float
+    public function debiterCpt(Compte $compte, $somme): void
     {
-        $compte->debiter($somme);
-        $newcrédit = $this->solde + $somme;
+        $this->debiter($somme);
+        $soldecompte=$compte->getSolde(); 
+        $soldecompte=$soldecompte + $somme;
 
-        return $newcrédit;
     }
     /**	
      * Une méthode qui permet d’afficher le nombre des comptes crées.

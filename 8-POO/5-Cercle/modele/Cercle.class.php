@@ -68,8 +68,8 @@ class Cercle
     {
         $centre = $this->centre;
         echo "CERCLE ( le centre est un ";
-        $centre->afficher(); echo" 
-         , et d'un rayon de:  $this->rayon ) \n";
+        $centre->afficher(); 
+        echo" , et d'un rayon de:  $this->rayon ) \n";
         $perimetre= $this->getPerimetre();
         echo "Le périmètre est : $perimetre \n";
         $surface = $this->getSurface();
