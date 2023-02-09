@@ -69,8 +69,8 @@ class Employe
         echo " ————————————————————————————————\n";
         echo "│     Matricule : $matricule \n";
         echo "│     Nom complet : $nom $prenom\n";
-        echo "│     Age : $age \n";
-        echo "│     Ancienneté : $anciennete \n";
+        echo "│     Age : $age ans\n";
+        echo "│     Ancienneté : $anciennete an(s) \n";
         echo "│     Salaire : $salaire \n";
         echo " ————————————————————————————————\n";
     }
