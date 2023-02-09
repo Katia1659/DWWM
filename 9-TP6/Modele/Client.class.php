@@ -1,12 +1,14 @@
 <?php
 
-
+// On initialise la classe Client
 
     Class Client {
         private $cin;
         private $nom;
         private $prenom;
         private $tel;
+
+// On crée la méthode construct qui initialise les attributs de l'objet
 
     public function __construct($cin, $nom, $prenom, $tel)
     {
@@ -16,12 +18,14 @@
         $this->tel = $tel;
         }
 
+// On crée la méthode afficher qui affiche les informations du client
+
     public function afficher()
  {
-        echo "Donner le CIN : ". $this->cin."\n";
-        echo "Donner le Nom : ". $this->nom."\n";
-        echo "Donner le Prenom : ". $this->prenom."\n";
-        echo "Donner le numéro de téléphone : ". $this->tel."\n";
+        echo "CIN : ". $this->cin."\n";
+        echo "NOM : ". $this->nom."\n";
+        echo "Prénom : ". $this->prenom."\n";
+        echo "Tél : ". $this->tel."\n";
  }
 
  

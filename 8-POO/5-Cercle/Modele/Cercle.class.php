@@ -2,11 +2,13 @@
 
 include '../Modele/Point.class.php';
 
+// Création de la classe Cercle
+
 Class Cercle {
         private Point $centre;
         private $rayon;
     
-    // Création de la méthode construct
+// On crée la méthode construct qui initialise les attributs de l'objet
     
         public function __construct($x, $y, $rayon)
         {
@@ -14,17 +16,21 @@ Class Cercle {
             $this->rayon = $rayon;
         }
 
+        // On crée la méthode getPerimetre qui calcule le périmètre du cercle
 
         public function getPerimetre () : void {
                 $perimetre = 2 * pi() * $this->rayon;
                 echo "Le périmètre est : ". $perimetre;
         }
 
+// On crée la méthode getSurface qui permet de calculer l'aire du cercle
 
         public function getSurface() : void {
         $aire = $this->rayon * $this->rayon * pi(); 
         echo "La surface est : ".$aire;
         }
+
+// On crée la méthode appartient qui permet de savoir si un point donné appartient à un cercle ou non
 
         public function appartient($point) : void {
 
@@ -37,6 +43,8 @@ Class Cercle {
          } else {
         echo "Le point n'appartient pas au cercle"; }
         }
+
+// La méthode afficher permet d'afficher les caractéristiques du cercle.
 
         public function afficher() : void {
                 echo "Cercle( ".$this->centre->getAbcisse() .", ". $this->centre->getOrdonnee().", ".$this->rayon." )";
