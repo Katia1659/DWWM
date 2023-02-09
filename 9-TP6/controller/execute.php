@@ -7,7 +7,7 @@ $i = 1;
 
 do {
     echo "
-
+------MENUE------------------\t
 1- Ajouter un nouveaux compte\t
 2- Afficher un compte\t
 3- Afficher touts les comptes\t
@@ -15,7 +15,8 @@ do {
 5- Debiter un compte\t
 6- Credeter depuis un compte\t
 7- Debiter depuis un compte\t
-8- Quitter le Programme\t
+8- Afficher le nombre de comptes créer\t
+9-Quitter\t
 
 ";
 
@@ -91,27 +92,33 @@ do {
             $j = readline("Entrer le numéro de compte à crediter : ");
             $somme = readline(" Entrer la somme :");
 
-            if ($soldeCompte >= $somme) {
-                $comptes['compte' . $i]->crediterCpt($comptes['compte' . $j], $somme);
-                $soldeCompte = $comptes['compte' . $i]->getSolde();
+            if ($comptes['compte'.$i]->getSolde() >= $somme) {
 
-                print "compte n°" . $i . "Solde debiter avec succées :)  nouveau solde : $soldeCompte";
+                $comptes['compte' . $j]->crediterCpt($comptes['compte' . $i], $somme);
+                
+
+                print "compte n°" . $j . " Solde crediter avec succées :)  nouveau solde : ".$comptes['compte'.$j]->getSolde();
             } else {
                 print "Echec Solde insufisant ! :(";
             }
             break;
         case 7:
             print "Debiter depuis un compte-----------\n";
-            $i = readline("Entrer le numéro de compte à crediter : ");
             $j = readline("Entrer le numéro de compte à debiter : ");
+            $i = readline("Entrer le numéro de compte à crediter : ");
             $somme = readline(" Entrer la somme :");
-            $soldeCompte = $comptes['compte' . $j]->getSolde();
-            if ($soldeCompte >= $somme) {
-                $comptes['compte' . $i]->debiterCpt($comptes['compte' . $j], $somme);
-                print "compte n°" . $j . " Solde debiter avec succées :)  nouveau solde : $soldeCompte";
+
+            if ($comptes['compte' . $j]->getSolde() >= $somme) {
+                $comptes['compte' . $j]->debiterCpt($comptes['compte' . $i], $somme);
+                print "compte n°" . $j . " Solde debiter avec succées :)  nouveau solde : ". $comptes['compte' . $j]->getSolde();
             } else {
                 print "Echec Solde insufisant ! :(";
             }
             break;
+        case 8 :
+            print " Nombre de Comptes Enregistrés est : ".Compte::$my_compteur." comptes";
+            break;
+        case 9: 
+            print "A Bientôt";
     }
-} while ($choix != 8);
+} while ($choix != 9);

@@ -34,22 +34,7 @@ class Compte
        
     }
 
-
-
-    /**
-     * Une méthode permettant de crediterCpt() le compte,
-     *  prenant une somme et un compte en paramètres,
-     * créditant le compte et débitant le compte passé en paramètres.
-     * @return void
-     */
-    public function crediterCpt(Compte $compte, $somme): void
-    {
-        $this->solde = $this->solde + $somme;
-        $compte->debiter($somme);
-      
-    }
-
-    /**
+/**
      * Une méthode permettant de debiter() le compte, 
      * prenant une somme en paramètre.
      *  @return void
@@ -59,6 +44,21 @@ class Compte
         $this->solde  = $this->solde - $somme;
        
     }
+
+    /**
+     * Une méthode permettant de crediterCpt() le compte,
+     *  prenant une somme et un compte en paramètres,
+     * créditant le compte et débitant le compte passé en paramètres.
+     * @return void
+     */
+    public function crediterCpt(Compte $compte,float $somme): void
+    {
+        $this->crediter($somme);
+        $compte->debiter($somme);
+      
+    }
+
+    
     /**
      * Une méthode permettant de débiterCpt() le compte,
      * prenant une somme et un compte bancaire en paramètres,
@@ -66,11 +66,10 @@ class Compte
      * @return void
      */
 
-    public function debiterCpt(Compte $compte, $somme): void
+    public function debiterCpt(Compte $compte,float $somme): void
     {
         $this->debiter($somme);
-        $soldecompte=$compte->getSolde(); 
-        $soldecompte=$soldecompte + $somme;
+        $compte->crediter($somme);
 
     }
     /**	
