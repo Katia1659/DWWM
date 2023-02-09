@@ -13,10 +13,12 @@ class Compte{
         $this->proprietaire = new Client($cin,$nom,$prenom,$tel);
     }
 
+// Le code du compte du prend +1 a chaque nv comptes
     public function incrementation(){
         $this::$code++;
     }
 
+// Affiche certaines infos du compte
     public function affichage(){
         $cin = $this->proprietaire->getCin();
         $nom = $this->proprietaire->getNom();
@@ -27,19 +29,23 @@ class Compte{
         echo "\n\nNuméro de compte : $numCompte\nSolde du compte : $solde\nPropriétaire du compte : \nCIN : $cin \nNom : $nom \nPrénom : $prenom\nTél : $tel\n";
     }
 
+// Affecte le code au compte
     public function numCompte(){
         $code = $this->getCode();
         echo "Compte $code\n";
     }
 
+// Ajoute une somme aux comptes
     public function crediter($solde){
         $this->solde +=$solde;
     }
 
+// Enleve une somme aux comptes    
     public function debiter($solde){
         $this->solde -=$solde;
     }
 
+// Enleve une somme a un comptes pour le donner à l'autre  
     public function crediterCpt($somme,$compte){
         $solde = $this->getSolde();
         $newSolde = $solde - $somme;
@@ -48,6 +54,7 @@ class Compte{
         echo "Opération bien effectué\n";
     }
 
+// Enleve une somme a un comptes et ajoute une somme a un autre  
     public function debiterCpt($somme,$compte){
         $solde = $this->getSolde();
         $newSolde = $solde + $somme;

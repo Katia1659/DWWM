@@ -13,6 +13,7 @@ class Client{
         $this->tel = $tel;
     }
 
+// Methode qui affiche certaines infos du client
     public function affichage(){
         $cin = $this->getCin();
         $nom = $this->getNom();
