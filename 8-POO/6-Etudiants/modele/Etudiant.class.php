@@ -4,7 +4,7 @@ include "Filiere.class.php";
 
 Class Etudiant{
 
-    private static $id = 0;
+    private $id ;
     private $nom;
     private $prenom;
     private $dateNaissance;
@@ -12,18 +12,17 @@ Class Etudiant{
 
     public function __construct( $nom, $prenom, $dateNaissance, Filiere $filiere)
     {
-
-        
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->dateNaissance = $dateNaissance;
         $this->filiere = $filiere;
-        self::$id++;
+        $this->id++;
     }
 
    public function __toString()
    {
-    return "Je suis l'étudiant" . $this->prenom . " " . $this->nom . " ma date de naissance est : " . $this->dateNaissance;
+    return "\t Je suis l'étudiant " . $this->prenom . " " . $this->nom . " ma date de naissance est : " . $this->dateNaissance;
+    
    }
 
     /**

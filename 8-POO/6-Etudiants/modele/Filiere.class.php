@@ -18,7 +18,7 @@ public function __construct($code, $libelle)
 
  public function __toString()
     {
-        return "\tFilière: " . $this->libelle;
+        return "Filière: " . $this->libelle;
     }
 
 
