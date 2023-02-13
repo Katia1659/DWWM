@@ -44,7 +44,7 @@ class Compte {
 
     }
 
-    //debite un compte pour crediter un autre 
+    //debite un compte pour crediter un autre  
     public function debiterCpt($somme,Compte $compte){
         $this->solde -= $somme;
         $compte -> solde += $somme;
