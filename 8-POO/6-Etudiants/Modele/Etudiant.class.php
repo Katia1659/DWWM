@@ -15,7 +15,8 @@ class Etudiant
     public function __construct(string $nom, string $prenom, string $dateNaissance, object $filiere)
     {
         self::$compteur++;
-        $this->id = self::$compteur++;
+        $this->id = self::$compteur;
+
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->dateNaissance = $dateNaissance;

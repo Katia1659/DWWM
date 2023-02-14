@@ -11,11 +11,10 @@ class Filiere
     public function __construct(string $code, string $libelle)
     {
         self::$compteur++;
-        $this->id = self::$compteur++;
+        $this->id = self::$compteur;
         $this->code = $code;
         $this->libelle = $libelle;
     }
-
 
     public function __toString()
     {
