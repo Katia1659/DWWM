@@ -1,11 +1,13 @@
 <?php
 class Filiere
 {
+    //initailisation des attribut
     private static $_compteur;
     private int $_id;
     private string $_code;
     private string $_libelle;
 
+    //construct
     public function __construct(string $code ,string $libelle){
         $this::$_compteur ++;
         $this->_id = $this::$_compteur;
@@ -13,7 +15,7 @@ class Filiere
         $this->_libelle = $libelle;
 
     }
-
+    //method tostring qui permettra l'affichage de l'objet
     public function __toString(){
         $libelle = $this->_libelle;
         return "Filiere ".$this->_id." :" . $libelle.PHP_EOL;

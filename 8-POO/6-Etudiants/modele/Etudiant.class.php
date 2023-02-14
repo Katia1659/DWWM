@@ -1,6 +1,7 @@
 <?php
 class Etudiant
 {
+    //initailisation des attribut
     private static $_id;
     private string $_nom;
     private string $_prenom;
@@ -8,6 +9,7 @@ class Etudiant
     private string $_libelle;
 
 
+    //constructeur
     public function __construct(string $nom,string $prenom,string $date,string $libelle){
         Etudiant::$_id ++;
         $this->_nom = $nom;
@@ -18,6 +20,7 @@ class Etudiant
 
     }
 
+    //method tostring qui permettra l'affichage de l'objet
     public function __toString(){
         $nom = $this->_nom;
         $prenom = $this->_prenom;
