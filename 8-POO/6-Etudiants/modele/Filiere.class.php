@@ -1,20 +1,20 @@
 <?php
 include_once "../modele/Etudiant.class.php";
 class filiere {
-    private $id;
-    private static $code = 0;
-    private $libelle;
+    private int $id;
+    public static $compteurFiliere;
+    private string $code;
+    private string $libelle;
 
-        public function __construct($id, $code, $libelle){
-            $this::$code++;
-            $this->code=self::$code;
-            $this->id;
-            $this->code;
-            $this->libelle;
+        public function __construct(string $code, string $libelle){
+            self::$compteurFiliere++;
+            $this->id = self::$compteurFiliere;
+            $this->code = $code;
+            $this->libelle = $libelle;
         } 
         public function __toString()
         {
-            return $this->code;
+            return "Filiere : ".$this->id." : ".$this->libelle."\n";
         }
 
 

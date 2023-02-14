@@ -1,22 +1,27 @@
 <?php
 class Etudiant{
 
-    private   $id;
+    private int $id;
     private string $nom;
     private string $prenom;
     private $dateNaissance;
+    private $filiere;
+    public static $compteur;
 
-        public function __construct($id, $nom, $prenom, $dateNaissance)
+
+        public function __construct(string $nom, string $prenom, string $dateNaissance, object $filiere)
         {
-            $this->id = $id;
+            self::$compteur++.
+            $this->id = self::$compteur++;
             $this->nom = $nom;
             $this->prenom = $prenom;
             $this->dateNaissance = $dateNaissance;
+            $this->filiere = $filiere;
         }
 
         public function __toString()
         {
-            return "je suis l'etudiant ".$this->nom." ".$this->prenom." ma date de naissance est ".$this->dateNaissance;
+            return "\n".$this->filiere."je suis l'etudiant ".$this->nom." ".$this->prenom." ma date de naissance est ".$this->dateNaissance."\n";
         }
 
     /**
