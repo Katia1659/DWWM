@@ -1,6 +1,6 @@
 <?php
 
-
+// On initialise la classe Etudiant avec ses différents attributs
 
 Class Etudiants {
 
@@ -12,6 +12,8 @@ Class Etudiants {
     private string $dateNaissance;
 
 
+// On crée la méthode construct qui initialise les attributs de l'objet
+
     public function __construct(string $prenom, string $nom, string $dateNaissance, Filiere $filiere) {
             $this->filiere = $filiere;
             self::$compteurEtudiant++;
@@ -22,10 +24,12 @@ Class Etudiants {
     }
 
 
+// On crée la méthode toString qui permet de convertir un objet en string
+
     public function __toString() : string {
 
 
-        return $this->filiere. "Je suis l'étudiant " . $this->prenom ." ".$this->nom. " ma date de naissance est : ". $this->dateNaissance; 
+        return "Je suis l'étudiant " . $this->prenom ." ".$this->nom. " ma date de naissance est : ". $this->dateNaissance; 
     }
 
     /**

@@ -2,6 +2,7 @@
 
 include_once "../Modele/Etudiant.class.php";
 
+// On initialise la classe Filiere avec ses différents attributs
 Class Filiere {
 
     public int $id;
@@ -9,6 +10,7 @@ Class Filiere {
     private string $code;
     private string $libelle;
 
+// On crée la méthode construct qui initialise les attributs de l'objet
 
     public function __construct(string $code, string $libelle) {
         self::$compteurFiliere++;
@@ -16,6 +18,8 @@ Class Filiere {
         $this->code = $code;
         $this->libelle = $libelle;
     }
+
+// On crée la méthode toString qui permet de convertir un objet en string
 
     public function __toString() {
         
