@@ -6,6 +6,7 @@ include_once '../modele/Filiere.class.php';
 
 $tabEtudiant = [];
 
+//On met les etudiants dans un tableau
 for ($i=0; $i < 5; $i++) 
 { 
 
@@ -21,6 +22,7 @@ $tabEtudiant[$i] = $newEtudiant;
 
 }
 
+//On met les filière dans un tableau
 
 
 for ($i=0; $i < 3; $i++) 
@@ -36,7 +38,7 @@ for ($i=0; $i < 3; $i++)
 }
 
 
-
+//Affichage en sélectionnant les positions dans les tableaux
 
 echo "Liste des étudiants par filière : \n";
 

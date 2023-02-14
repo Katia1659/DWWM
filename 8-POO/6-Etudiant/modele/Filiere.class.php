@@ -15,7 +15,8 @@ class Filiere {
     public function __construct($code,$libelle,$nom,$prenom,$dateNaissance)
     {
         $this->etudiant= new Etudiant ($nom,$prenom,$dateNaissance);
-
+        
+//Compteur pour auto-increment
         self::$compteur++;
         $this->id = self::$compteur;
         

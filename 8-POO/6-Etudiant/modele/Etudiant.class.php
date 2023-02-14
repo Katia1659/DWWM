@@ -13,6 +13,7 @@ class Etudiant
 
     public function __construct($nom,$prenom,$dateNaissance)
     {
+        //Compteur pour auto-increment
         self::$compteur++;
         $this->id = self::$compteur;
         
