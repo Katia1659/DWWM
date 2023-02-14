@@ -34,18 +34,18 @@ for ($k = 1; $k <= $nbrProfesseur; $k++) {
     $id = readline("PROFESSEUR :\n". "Quel id : ");
     $nom = readline("Quel nom : ");
     $prenom = readline("Quel prenom : ");
-    $salaire = readline("Quel salaire : ");
-    $specialite = readline("Quel specialite : ");
+    $salaire = readline("Quelle salaire : ");
+    $specialite = readline("Quelle specialite : ");
     $Professeur[$k] = new Professeur ( $id, $nom, $prenom, $salaire, $specialite);
     // echo $etudiant[$j];
 }
 
-echo "La liste des employés : \n";
+echo "La liste des étudiants : \n";
 for ($i=1; $i <= $nbretudiant ; $i++) { 
     echo $etudiant[$i];
     echo PHP_EOL;
 }
-echo "La liste des étudiants :\n";
+echo "La liste des employés :\n";
 for ($j=1; $j <= $nbrEmploye ; $j++) { 
     echo $employe[$j];
     echo PHP_EOL;

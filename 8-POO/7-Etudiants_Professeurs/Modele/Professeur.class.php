@@ -18,4 +18,24 @@ class Professeur extends Employe
 
 
 
+
+    /**
+     * Get the value of specialite
+     */ 
+    public function getSpecialite()
+    {
+        return $this->specialite;
+    }
+
+    /**
+     * Set the value of specialite
+     *
+     * @return  self
+     */ 
+    public function setSpecialite($specialite)
+    {
+        $this->specialite = $specialite;
+
+        return $this;
+    }
 }
