@@ -1,4 +1,6 @@
 <?php
+
+/*Cration de la class mere Personne*/
 class Personne{
     protected static int $id;
     protected string $nom;
@@ -18,9 +20,13 @@ class Personne{
     public function __auto(){
         self::$id++;
     }
+
+    /*Methode qui va chercher le salaire est le calculer avec la methode de l'enfant Utilisateur*/
     public function calculSalaire() : float{
         return  $this->salaire;
     }
+
+    /*Methode d'affichage basique de la class mere*/
     public function afficher() : void{
         $salaire = $this->calculSalaire();
         echo "- Nom : $this->nom \n- Prenom : $this->prenom \n- Mail : $this->mail \n- Téléphone : $this->tel \n- Salaire : $salaire €\n";

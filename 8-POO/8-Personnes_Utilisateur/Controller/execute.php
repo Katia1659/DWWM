@@ -5,6 +5,7 @@ include_once "../Model/Utilisateur.class.php";
 
 $nbProfil=readline("Donnez le nombre de profil a créer : ");
 
+/*Rentrer les données d'un certains nombres d'utilisateur est de profile*/
 for ($i=1; $i <=$nbProfil ; $i++) {
     $mn = "Profil_$i";
     $profil ="Statuts_$i";
@@ -22,7 +23,7 @@ for ($i=1; $i <=$nbProfil ; $i++) {
     $$profil = new Profil($code,$libelle);
     $$mn= new Utilisateur($nom, $prenom, $mail, $tel, $salaire,$login,$passsword,$services,$$profil);
 }
-
+/*Affichage des données des Objet Utilisateur est Profil*/
 echo "\n\nLa liste des profils : \n\n";
 
 for ($i=1; $i <=$nbProfil ; $i++) {

@@ -1,4 +1,6 @@
 <?php
+
+/*class Profil afin de créer un profil au sein de la class Utilisateur*/
 class Profil{
     private static int $id;
     private string $code;
