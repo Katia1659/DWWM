@@ -18,12 +18,12 @@ class Personne{
     public function __auto(){
         self::$id++;
     }
-    public function __calculSalaire() : float{
-        $salaire = ($this->salaire * 35)*30;
-        return $salaire;
+    public function calculSalaire() : float{
+        return  $this->salaire;
     }
-    public function __toString(){
-        return"Nom : $this->nom \nPrenom : $this->prenom \nMail : $this->mail \nTéléphone : $this->tel \nSalaire : $this->salaire";
+    public function afficher() : void{
+        $salaire = $this->calculSalaire();
+        echo "- Nom : $this->nom \n- Prenom : $this->prenom \n- Mail : $this->mail \n- Téléphone : $this->tel \n- Salaire : $salaire €\n";
     }
 
     /**
