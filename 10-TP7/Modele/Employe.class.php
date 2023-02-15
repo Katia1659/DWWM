@@ -50,7 +50,7 @@ Class Employe {
         }
 //jouter la méthode AfficherEmployé() qui affiche les informations de l’employé comme suit :
     }
-    public function afficherEmploye($employe):void{
+    public function afficherEmploye():void{
 
         //- Matricule : […]
                 // - Nom complet : [NOM Prénom]
@@ -61,7 +61,7 @@ Class Employe {
         $nom = strtoupper($this->nom);
         $prenom = ucfirst($this->prenom);
         $age = $this->age();
-        $anciennetee = $employe->anciennete();
+        $anciennetee = $this->anciennete();
         $salaire = $this->salaire;
         echo "-> Matricule : [$matricule]"."\n"."-> Nom complet : [$nom $prenom]"."\n".
         "-> Age : [$age]"."\n"."-> Anciennetée : [$anciennetee]"."\n"."-> Salaire : [$salaire]";

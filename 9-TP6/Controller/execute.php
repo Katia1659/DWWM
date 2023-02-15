@@ -13,7 +13,7 @@ echo "Détails du compte : "."\n"."***********************"."\n";
 //creation du compte n1
 $detail = new Compte($cin,$nom,$prenom,$tel);
 //
-$detailClient = $detail->get_proprietaire();
+//$detailClient = $detail->get_proprietaire();
 $detail->afficherCompte();
 echo "\n"."***********************"."\n";
 //demander la somme a crediter envoyer le resultat dans la methode crediter 
