@@ -3,7 +3,7 @@
 class Personne
 {
     //Initalisation attribut
-    private static $_compteur;
+    private  static int $_compteur;
     protected int $id;
     protected string $nom;
     protected string $prenom;

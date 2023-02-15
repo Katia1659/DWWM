@@ -2,7 +2,7 @@
 class Profil
 {
     //Initalisation des attribut
-    private static $_compteur;
+    private static int $_compteur;
     private int $_id;
     private string $_code;
     private string $_libelle;
