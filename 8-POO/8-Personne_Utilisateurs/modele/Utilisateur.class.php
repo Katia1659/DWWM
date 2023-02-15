@@ -5,9 +5,9 @@ class Utilisateur extends Personne
     private $login;
     private $password;
     private $service;
-    private $profil;
+    private Profil $profil;
 
-    public function __construct(string $nom, string $prenom, $mail, $telephone, $salaire, $login, $password, $service, $profil)
+    public function __construct(string $nom, string $prenom, $mail, $telephone, $salaire, $login, $password, $service, Profil $profil)
     {
         parent::__construct($nom, $prenom, $mail, $telephone, $salaire);
         $this->login = $login;

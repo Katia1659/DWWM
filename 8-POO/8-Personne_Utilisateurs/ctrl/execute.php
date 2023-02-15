@@ -22,10 +22,12 @@ foreach ($utilisateurs as $key => $utilObjet) {
     $utilObjet->affiche();
 }
 
-// foreach ($utilisateurs as $key => $value) {
-//     if ($value->getLibelle() == "Manager") {
-//         echo "La liste des managers:";
-//     }
-// }
+foreach ($utilisateurs as $key => $value) {
+     if ($value->getProfil()->getLibelle() == $mn->getLibelle())
+      { echo PHP_EOL;
+        echo "La liste des managers:\n";
+        $value->affiche();
+      }
+ }
 
 ?>
