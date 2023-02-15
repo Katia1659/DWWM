@@ -6,16 +6,15 @@ class Etudiant
     private string $_nom;
     private string $_prenom;
     private DateTime $_dateNaissance;
-    private string $_libelle;
 
 
     //constructeur
-    public function __construct(string $nom,string $prenom,string $date,string $libelle){
+    public function __construct(string $nom,string $prenom,string $date,Filiere $filiere){
         Etudiant::$_id ++;
         $this->_nom = $nom;
         $this->_prenom = $prenom;
         $this->_dateNaissance = new DateTime($date);
-        $this->_libelle = $libelle;
+        $this->_filiere = $filiere;
 
 
     }

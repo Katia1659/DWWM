@@ -5,11 +5,11 @@ require_once '../modele/Etudiant.class.php';
 //demande a l'utilisateur le nombre de filiere
 $numFil = readline('Combien de filiere dans votre école : ');
 
-//demande a l'uilisateur de saisir le nom des filiere
+//Initialisation des filiere
 for ($i =1 ; $i <= $numFil ; $i++){
     $filiere = "filiere$i";
     $code = $i;
-    $libelle = readline("Nom de la filiale ? :");
+    $libelle = readline("Nom de la filiere ? :");
     $$filiere = new Filiere($code,$libelle);
 }
 
@@ -20,12 +20,11 @@ $numEtud = readline("Combien d'etudiant : ");
 for ($i = 1 ; $i <= $numEtud ; $i++){
     $f = random_int(1,$numFil);
     $filiere = "filiere$f";
-    $libelle = $$filiere->getLibelle();
     $etudiant = "etudiant$i";
     $nom = readline('Votre nom : ');
     $prenom = readline('Votre prenom : ');
     $dateNaissance = readline('Votre date de naissance (dd-mm-yyyy) : ');
-    $$etudiant = new Etudiant($nom, $prenom, $dateNaissance, $libelle);
+    $$etudiant = new Etudiant($nom, $prenom, $dateNaissance, $$filiere);
 }
 
 //Affichage des filiere
@@ -44,7 +43,7 @@ for ($i = 1; $i <= $numFil; $i++) {
     echo "Filiere " . $libelle . " : \n";
     for ($j = 1; $j <= $numEtud; $j++) {
         $etudiant = "etudiant$j";
-        $libEtudiant = $$etudiant->getLibelle();
+        $libEtudiant = $$etudiant->_filiere->getLibelle();
         if ($libelle === $libEtudiant){
             echo $$etudiant."\n";
         }
