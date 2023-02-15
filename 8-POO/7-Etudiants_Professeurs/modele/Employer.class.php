@@ -15,7 +15,7 @@ class Employe extends Personne
     {
 
         $this->salaire = $salaire;
-        Personne::__construct($nom, $prenom);
+        parent::__construct($nom, $prenom);
     }
 
     /**
@@ -24,9 +24,8 @@ class Employe extends Personne
      */
     public function __toString(): string
     {
-        return Personne::__toString()." mon salaire est de : $this->salaire.";
+        return parent::__toString()." mon salaire est de : ". $this->salaire." €.";
     }
-
     /**
      * Get the value of salaire
      */

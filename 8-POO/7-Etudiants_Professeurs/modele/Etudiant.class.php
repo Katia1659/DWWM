@@ -15,16 +15,16 @@ class Etudiant extends Personne
     public function __construct(int $cne, string $nom, string $prenom)
     {
         $this->cne = $cne;
-        Personne::__construct($nom, $prenom);
+        parent::__construct($nom, $prenom);
     }
 
     /**
      * methode __toString Etudiant
-     * @return String
+     * @return string
      */
     public function __toString(): string
     {
-        return Personne::__toString() . " mon CNE est : $this->cne.";
+        return parent::__tostring() . " mon CNE est :". $this->cne.".";
     }
 
     /**

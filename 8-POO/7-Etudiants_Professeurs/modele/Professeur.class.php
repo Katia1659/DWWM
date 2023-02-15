@@ -13,7 +13,7 @@ class Professeur extends Employe
      */
     public function __construct(string $nom, string $prenom, float $salaire, string $specialite)
     {
-        Employe::__construct($nom, $prenom, $salaire);
+        parent::__construct($nom, $prenom, $salaire);
         $this->specialite = $specialite;
     }
 
@@ -23,7 +23,7 @@ class Professeur extends Employe
      */
     public function __toString(): string
     {
-        return Employe::__toString() . " ma spécialité est : $this->specialite.";
+        return parent::__toString() . "\n\t Ma spécialité est : ". $this->specialite.".";
     }
 
     /**

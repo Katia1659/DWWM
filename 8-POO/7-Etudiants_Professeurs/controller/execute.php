@@ -19,9 +19,7 @@ $prof2= new Professeur("GOMEZ","JOSE", 3600, "BACK-END");
 
 $institue = array($emp1,$emp2,$prof1,$prof2, $etud1, $etud2);
 
-echo $emp1;
-
-// foreach ($institue as $key => $objet) {
-//     echo $objet;
-// }
+foreach ($institue as $key => $objet) {
+    echo $objet."\n";
+}
 ?>

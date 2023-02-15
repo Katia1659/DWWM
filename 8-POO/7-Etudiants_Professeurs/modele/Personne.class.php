@@ -25,10 +25,11 @@ class Personne
     * Methode __toString class personne
     *@return string
     */
-   public  function __toString(): string
-   {
-      return "je suis $this-> nom, $this->prenom.\n";
-   }
+  
+   public function __toString():string
+    {
+        return "je suis " . $this->nom . " " . $this->prenom ;
+    }
 
    /**
     * Get the value of id
