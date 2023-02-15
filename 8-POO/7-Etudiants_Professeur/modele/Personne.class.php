@@ -7,7 +7,6 @@ Class Personne
     protected string $prenom;
 
     //on defini le constucteur
-
     public function __construct(int $id, string $nom, string $prenom)
     {
         $this->id = $id;
@@ -15,7 +14,7 @@ Class Personne
         $this->prenom = $prenom;
     }
 
-//on defini la methode tostring pour l'affichage
+    //on defini la methode tostring pour l'affichage
     public function __toString()
     {
         return "Je suis $this->nom $this->prenom ";

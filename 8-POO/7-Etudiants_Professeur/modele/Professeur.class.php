@@ -6,7 +6,6 @@ class Professeur extends Employe
     protected string $specialite;
 
     //on defini le constucteur
-
     public function __construct(string $specialite , float $salaire,int $id, string $nom, string $prenom)
     {
         parent::__construct($salaire, $id, $nom, $prenom);

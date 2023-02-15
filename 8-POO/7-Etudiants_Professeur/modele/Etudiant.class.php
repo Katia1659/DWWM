@@ -15,10 +15,6 @@ class Etudiant extends Personne
     {
         return parent::__toString() ."mon CNE est $this->cne";
     }
-
-   
-
-
 }
 
 ?>
