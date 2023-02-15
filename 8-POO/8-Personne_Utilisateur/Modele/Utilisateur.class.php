@@ -28,15 +28,16 @@ Class Utilisateur extends Personne {
 
     public function calculerSalaire () {
         if ($this -> profil-> getLibelle() == "MANAGER") {
-            $this -> salaire = $this -> salaire * 1.1 ;
-            echo "Le salaire après augmentation est : " . $this-> salaire. "€"."\n";
+            $sal1 = parent :: calculerSalaire();
+            $sal1 = $sal1 * 1.1 ;
+            echo "Le salaire après augmentation est : " . $sal1. "€"."\n";
        }
        elseif ($this -> profil ->getLibelle() == "DIRECTEUR GENERAL") {
-        $this -> salaire = $this -> salaire * 1.4 ;
-        echo "Le salaire après augmentation est : " . $this-> salaire. "€"."\n";
+        $sal1 = parent :: calculerSalaire();
+        $sal1 = $sal1 * 1.4 ;
+        echo "Le salaire après augmentation est : " .$sal1. "€"."\n";
        } 
-
-       
+ 
     }
 
 
