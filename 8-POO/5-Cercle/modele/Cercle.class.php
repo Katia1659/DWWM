@@ -7,19 +7,12 @@ class Cercle
     private Point $centre;
     private $rayon;
 
-    /**
-     * constructeur cercle
-     */
-
     public function __construct($x, $y, $rayon)
     {
         $this->centre= new Point($x,$y);
         $this->rayon = $rayon;
     }
-    /**
-     * getPerimetre méthode qui retourne le perimetre du cercle
-     * @return float
-     */
+
 
     public function getPerimetre(): float
     {
@@ -28,10 +21,6 @@ class Cercle
 
         return $peri;
     }
-    /**
-     * getSurface méthode qui retourne la surface du cercle
-     * @return float
-     */
 
 
     public function getSurface(): float
@@ -42,10 +31,6 @@ class Cercle
         return $surface;
     }
 
-    /**
-     * appartient méthode qui vérifie si un point est à l'intérieur du cercle 
-     * @return void
-     */
 
 
     public function appartient(Point $point): void
@@ -62,7 +47,6 @@ class Cercle
         }
     }
 
-    //Methode pour afficher les infos de l'article
     public function afficher()
 
     {

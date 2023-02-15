@@ -9,10 +9,6 @@ class Employe
     private $date_Embauche;
     private $salaire;
 
-    /**
-     * Constructeur de la classe
-     * 
-     */
 
     public function __construct($matricule, $nom, $prenom, $date_Naisssance, $date_Embauche, $salaire)
     {
@@ -24,11 +20,6 @@ class Employe
         $this->salaire = $salaire;
     }
 
-    /**
-     * Méthode age( ) qui retourne l’âge de l’employé.
-     * @return string
-     */
-
     public function age(): string
     {
         $dateNaissance = $this->date_Naisssance;
@@ -37,12 +28,6 @@ class Employe
        return $diff->format('%y');
     }
 
-    /**
-     * Méthode anciennete( ) qui retourne le nombre d’années d’ancienneté de
-     * l’employé. 
-     * @return string
-     */
-
      public function anciennete(): string
     {
         $dateNaissance = $this->date_Embauche;
@@ -50,13 +35,6 @@ class Employe
         $diff = date_diff(date_create($dateNaissance), date_create($aujourdhui));
        return $diff->format('%y');
     }
-
-    /**
-     * Méthode augmentationDuSalaire( ) 
-     * qui augmente le salaire de l’employé 
-     * en prenant en considération l’ancienneté.
-     * @return float
-     */
 
     public function augmentationDuSalaire() : float
     {
@@ -81,11 +59,6 @@ class Employe
 
     }
 
-    /**
-     * Méthode AfficherEmployé() qui affiche les informations de l’employé 
-     * @return void
-     */
-
     public function afficherEmploye(): void
     {
         print "--------------------------------------\n";
@@ -103,9 +76,6 @@ class Employe
         print " Salaire: ".$this->augmentationDuSalaire()."\t";
 
     }
-
-
-
 
     /**
      * Get the value of matricule
