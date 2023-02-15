@@ -1,5 +1,5 @@
 <?php
-include_once "../modele/Profil.class.php";
+
 class Utilisateur extends Personne
 { //ATTRIBUTS
     private $login;
@@ -17,7 +17,7 @@ class Utilisateur extends Personne
         $this->profil = $profil;
     }
 
-// CALCUL DE SALAIRE 
+    // CALCUL DE SALAIRE 
     public function Affiche()
     {
         $role = $this->profil;
@@ -28,23 +28,21 @@ class Utilisateur extends Personne
             "role : " . $role->getLibelle() . "\n";
     }
 
-// AFFICHAGE DES NOMS ET PRENOMS DES MANAGERS 
+    // AFFICHAGE DES NOMS ET PRENOMS DES MANAGERS 
     public function __toString()
     {
-        return $this->nom . " " . $this->prenom . " est manager \n" ;
+        return $this->nom . " " . $this->prenom . " est manager \n";
     }
 
-//CALCUL DES AUGMENTATIONS EVENTUELLES 
+    //CALCUL DES AUGMENTATIONS EVENTUELLES 
     public function calculerSalaire()
     {
         if ($this->profil->getLibelle() == "DG") {
-       
-           $this -> salaire = $this -> salaire  + ($this -> salaire * 40 / 100);
-            
-        } elseif ($this->profil->getLibelle() == "MN") {
-            
-            $this -> salaire = $this -> salaire  + ($this -> salaire * 10 / 100);
 
+            $this->salaire = $this->salaire  + ($this->salaire * 40 / 100);
+        } elseif ($this->profil->getLibelle() == "MN") {
+
+            $this->salaire = $this->salaire  + ($this->salaire * 10 / 100);
         }
     }
 

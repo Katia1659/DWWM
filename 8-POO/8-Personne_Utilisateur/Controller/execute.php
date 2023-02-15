@@ -1,6 +1,7 @@
 <?php
 include_once "../modele/Personne.class.php";
 include_once "../modele/Utilisateur.class.php";
+include_once "../modele/Profil.class.php";
 
 //CREATION DES PROFILS 
 $cp = new Profil("1", "CP");
@@ -21,12 +22,12 @@ $utilisateur[8] = new Utilisateur("Charlou", "AZERTY", "Pianiste", "Julien", "Le
 
 
 //MISE EN PLACE DE L'AUGEMENTATION EVENTUELLE
-for ($i=1; $i <= sizeof($utilisateur); $i++) { 
+for ($i = 1; $i <= sizeof($utilisateur); $i++) {
     $utilisateur[$i]->calculerSalaire();
 }
 
 //AFFICHAGE DES INFORMATIONS DES UTILISATEURS
-for ($i=1; $i <= sizeof($utilisateur); $i++) { 
+for ($i = 1; $i <= sizeof($utilisateur); $i++) {
     $utilisateur[$i]->Affiche();
 }
 

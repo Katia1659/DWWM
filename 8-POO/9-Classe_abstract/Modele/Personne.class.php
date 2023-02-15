@@ -1,6 +1,6 @@
 <?php
 
-class Personne
+abstract class Personne
 { //ATTRIBUTS
     protected $id;
     protected $nom;
@@ -8,35 +8,17 @@ class Personne
     protected $mail;
     protected $telephone;
     protected $salaire;
-    public static $compteur;
+    public $counter;
 
-    //CONTRUCTION
-    public function __construct(string $nom, string $prenom, string $mail, string $telephone, float $salaire)
+
+    abstract function calculerSalaire()
     {
-        self::$compteur++;
-        $this->id = self::$compteur;
-        $this->nom = $nom;
-        $this->prenom = $prenom;
-        $this->mail = $mail;
-        $this->telephone = $telephone;
-        $this->salaire = $salaire;
+
     }
 
-    // CALCUL DE SALAIRE 
-    public function calculerSalaire()
-    {
-        return $this->salaire;
-    }
 
-    // AFFICHAGE DES INFORMATIONS 
-    public function Affiche()
-    {
-        echo "PROFIL : \nnom : " . $this->nom . "\n" .
-            "prenom : " . $this->prenom . "\n" .
-            "mail : " . $this->mail . "\n" .
-            "telephone : " . $this->telephone . "\n" .
-            "salaire : " . $this->salaire . "\n";
-    }
+
+
 
     /**
      * Get the value of id
@@ -159,21 +141,21 @@ class Personne
     }
 
     /**
-     * Get the value of compteur
+     * Get the value of counter
      */
-    public function getCompteur()
+    public function getCounter()
     {
-        return $this->compteur;
+        return $this->counter;
     }
 
     /**
-     * Set the value of compteur
+     * Set the value of counter
      *
      * @return  self
      */
-    public function setCompteur($compteur)
+    public function setCounter($counter)
     {
-        $this->compteur = $compteur;
+        $this->counter = $counter;
 
         return $this;
     }

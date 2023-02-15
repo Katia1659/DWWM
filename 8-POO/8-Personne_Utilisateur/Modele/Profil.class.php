@@ -1,6 +1,6 @@
 <?php
 
-class Profil 
+class Profil
 { //ATTRIBUTS
     private $id;
     private $code;
@@ -8,7 +8,7 @@ class Profil
     public static $compteur;
 
     //CONTRUCTION
-    public function __construct( string $code, string $libelle)
+    public function __construct(string $code, string $libelle)
     {
         self::$compteur++;
         $this->id = self::$compteur;
@@ -25,7 +25,7 @@ class Profil
 
     /**
      * Get the value of id
-     */ 
+     */
     public function getId()
     {
         return $this->id;
@@ -35,7 +35,7 @@ class Profil
      * Set the value of id
      *
      * @return  self
-     */ 
+     */
     public function setId($id)
     {
         $this->id = $id;
@@ -45,7 +45,7 @@ class Profil
 
     /**
      * Get the value of code
-     */ 
+     */
     public function getCode()
     {
         return $this->code;
@@ -55,7 +55,7 @@ class Profil
      * Set the value of code
      *
      * @return  self
-     */ 
+     */
     public function setCode($code)
     {
         $this->code = $code;
@@ -65,7 +65,7 @@ class Profil
 
     /**
      * Get the value of libelle
-     */ 
+     */
     public function getLibelle()
     {
         return $this->libelle;
@@ -75,7 +75,7 @@ class Profil
      * Set the value of libelle
      *
      * @return  self
-     */ 
+     */
     public function setLibelle($libelle)
     {
         $this->libelle = $libelle;
@@ -85,7 +85,7 @@ class Profil
 
     /**
      * Get the value of compteur
-     */ 
+     */
     public function getCompteur()
     {
         return $this->compteur;
@@ -95,7 +95,7 @@ class Profil
      * Set the value of compteur
      *
      * @return  self
-     */ 
+     */
     public function setCompteur($compteur)
     {
         $this->compteur = $compteur;
