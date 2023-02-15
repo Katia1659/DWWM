@@ -8,7 +8,7 @@ class Personne
     protected String $prenom;
     protected String $mail;
     protected String $telephone;
-    protected int $salaire;
+    protected float $salaire;
 
 
 public function __construct($nom, $prenom,$mail,$telephone,$salaire)
@@ -24,9 +24,16 @@ public function __construct($nom, $prenom,$mail,$telephone,$salaire)
 
 }
 
+public function affiche():void {
 
+//Affiche info de la personne
 
+            echo "Bonjour, "."\n".$this->nom." ".$this->prenom."\n";
+            echo "Votre adresse e-mail est : ".$this->mail."\n";
+            echo "Votre adresse téléphone est : ".$this->telephone."\n";
+            echo "Vous avez un salaire de ".$this->salaire."\n";
 
+}
     /**
      * Get the value of id
      */ 

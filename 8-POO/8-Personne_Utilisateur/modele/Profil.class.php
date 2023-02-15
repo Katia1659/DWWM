@@ -2,47 +2,23 @@
 
 class Profil
 {
-    private int $id;
-    public static $compteur = 1;
+ 
     protected String $code;
     protected String $libelle;
   
-
+    public static $compteur = 1;
+    protected int $id;
 
 public function __construct($code,$libelle)
 {
 
-
-    self::$compteur++;
-    $this->id = self::$compteur;
-
     $this->code = $code;
     $this->libelle = $libelle;
     
+    self::$compteur++;
+    $this->id = self::$compteur;
 
 }
-
-
-
-    /**
-     * Get the value of id
-     */ 
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * Set the value of id
-     *
-     * @return  self
-     */ 
-    public function setId($id)
-    {
-        $this->id = $id;
-
-        return $this;
-    }
 
     /**
      * Get the value of code
