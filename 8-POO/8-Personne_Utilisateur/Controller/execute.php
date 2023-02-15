@@ -52,7 +52,3 @@ for ($i = 1; $i <= count($utilisateur); $i++) {
         $utilisateur[$i]->affiche();
     }
 }
-
-
-
-
