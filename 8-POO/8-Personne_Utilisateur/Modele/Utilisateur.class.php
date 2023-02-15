@@ -30,6 +30,7 @@ class Utilisateur extends Personne
 
     }
 
+    //Method qui calcul le salaire  en fonction du profil
     public function calculerSalaire(): void
     {
         $status = is_null($this->_profil);
@@ -42,6 +43,8 @@ class Utilisateur extends Personne
             }
         }
     }
+
+    //Methode afficher
     public function afficher(): void
     {
         $login = $this->_login;
