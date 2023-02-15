@@ -18,8 +18,9 @@ class Filiere {
 
     public function __toString()
     {
-        // $this->_etudiant = new Etudiant($nom,$prenom,$dateNaiss);
-        
+        $filiere = $this->libelle;
+        $texte = "filiere : $filiere";
+        return $texte;
 
     }
 
