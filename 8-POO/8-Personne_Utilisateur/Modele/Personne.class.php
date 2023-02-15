@@ -20,28 +20,23 @@ class Personne
         $this->mail = $mail;
         $this->telephone = $telephone;
         $this->salaire = $salaire;
-
     }
 
-
-    public function calculerSalaire($profil)
+// CALCUL DE SALAIRE 
+    public function calculerSalaire()
     {
-        if ($profil->getLibelle() == "DG") {
-            $this->salaire = $this->salaire + ($this->salaire * 40 / 100);
-        } elseif ($profil->getLibelle() == "MN") {
-            $this->salaire = $this->salaire + ($this->salaire * 10 / 100);
-        }
-
+        return $this->salaire;
     }
 
-
-
-public function Affiche(){
-
-    
-}
-
-
+// AFFICHAGE DES INFORMATIONS 
+    public function Affiche()
+    {
+        echo "PROFIL : \nnom : " . $this->nom. "\n".
+         "prenom : " . $this->prenom. "\n".
+         "mail : " . $this->mail. "\n".
+         "telephone : " . $this->telephone. "\n".
+         "salaire : " . $this->salaire. "\n";
+    }
 
     /**
      * Get the value of id

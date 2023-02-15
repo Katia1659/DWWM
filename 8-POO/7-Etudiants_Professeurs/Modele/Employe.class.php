@@ -13,7 +13,7 @@ class Employe extends Personne
 
     public function __toString()
     {
-       return parent::__tostring() . " mon salaire est: ". $this->salaire ." €";
+       return parent::__tostring() . " mon salaire est: ". $this->salaire ." €" ;
     }
 
 

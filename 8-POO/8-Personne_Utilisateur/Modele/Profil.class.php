@@ -16,8 +16,6 @@ class Profil
         $this->libelle = $libelle;
     }
 
-
-
     public function __toString()
     {
         return "";
