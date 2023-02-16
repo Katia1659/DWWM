@@ -1,0 +1,6 @@
+
+W	php:S1808	"=Move this open curly brace to the beginning of the next line.(Î¤¸ıùÿÿÿÿ
+R	php:S1808"=Move this open curly brace to the beginning of the next line.(Ê¤¯ú
+d	php:S1808	"JPut one space between the closing parenthesis and the opening curly brace.(Î¤¸ıùÿÿÿÿ
+gphp:S116"NRename this field "$_cne" to match the regular expression ^[a-z][a-zA-Z0-9]*$.(İÿ¸ñıÿÿÿÿ
+f	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(Å¢Ã
