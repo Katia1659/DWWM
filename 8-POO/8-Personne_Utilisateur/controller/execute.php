@@ -53,6 +53,8 @@
 
     }
 
+    //liste des managers 
+
     echo "\n";
     echo "la liste des manager : "."\n";
     echo "\n";

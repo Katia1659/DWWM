@@ -2,10 +2,13 @@
 
 class Utilisateur extends Personne {
 
+    //declare attributs
     private string $login;
     private string $password;
     private string $service;
     private Profil $_profil;
+
+    //methode construct
 
     public function __construct($nom,$prenom,$mail,$tel,$salaire,$login,$password,$service,Profil $_profil)
     {
@@ -17,7 +20,7 @@ class Utilisateur extends Personne {
     }
 
 
-
+    //methoce reaffectation salaire 
     public function calculerSalaire(){
         parent::calculSalaire();
         if ($this->_profil->getCode() == "MN") {

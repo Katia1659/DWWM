@@ -21,11 +21,11 @@ class Manager extends Personne{
         return $nvxsalaire;
     }
    
-    public function afficher() :string {
+    public function afficher() : void {
         $nom = strtoupper($this->nom);
         $prenom = ucwords($this->prenom);
         $nvxSalaire = $this->calculerSalaireMN();
-        return "le salaire du Manager ". $nom ." " . $prenom. " est : ". $nvxSalaire."€, son service est : ". $this->_service;
+        echo "le salaire du Manager ". $nom ." " . $prenom. " est : ". $nvxSalaire."€, son service est : ". $this->_service;
     }
 
 

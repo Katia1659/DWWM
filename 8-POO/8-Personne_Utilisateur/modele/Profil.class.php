@@ -1,10 +1,14 @@
 <?php 
 
 class Profil {
+
+    //declare attributs 
     private static $codeId = 0;
     private int $id;
     private string $code;
     private string $libelle;
+
+    // methode construct
 
     public function __construct($code,$libelle)
     {
@@ -16,7 +20,7 @@ class Profil {
 
 
 
-
+    //get et set attributs 
 
     /**
      * Get the value of libelle

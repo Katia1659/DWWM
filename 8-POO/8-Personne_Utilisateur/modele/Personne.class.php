@@ -1,6 +1,8 @@
 <?php
 
 class Personne {
+
+    //declare attributs 
     private static $codeId = 0;
     private int $id;
     protected string $nom;
@@ -9,6 +11,8 @@ class Personne {
     protected string $tel;
     protected float $salaire;
 
+
+    //methode construct 
     public function __construct($nom,$prenom,$mail,$tel,$salaire){
         self::$codeId++;
         $this->id = self::$codeId;
@@ -19,15 +23,20 @@ class Personne {
         $this->salaire = $salaire;
     }
 
+    //methode salaire
+
     public function calculSalaire(){
         $salaire = $this->salaire;
          
     }
 
+    // methode affiche 
     public function affiche () : void{
 
     }
 
+
+    // get et set attributs
 
     /**
      * Get the value of salaire
