@@ -1,28 +1,34 @@
 <?php
 
-abstract class Personne
-{ //ATTRIBUTS
-    protected $id;
-    protected $nom;
-    protected $prenom;
-    protected $mail;
-    protected $telephone;
-    protected $salaire;
-    public $counter;
+abstract class Personne {
+    
 
+    protected int $id ;
+    public static $compteur ; 
+    protected string $nom ;
+    protected string $prenom ;
+    protected string $mail ;
+    protected string $telephone ;
+    protected float $salaire ;
+    
 
-    abstract function calculerSalaire()
-    {
+    abstract public function calculerSalaire() : float ;
 
+    public function __construct ($nom, $prenom, $mail, $telephone, $salaire) {
+        self:: $compteur++; 
+        $this -> id = self :: $compteur ;
+        $this -> nom = $nom ;
+        $this -> prenom = $prenom ;
+        $this -> mail = $mail ;  
+        $this -> telephone = $telephone ;
+        $this -> salaire = $salaire ; 
     }
-
-
 
 
 
     /**
      * Get the value of id
-     */
+     */ 
     public function getId()
     {
         return $this->id;
@@ -32,7 +38,7 @@ abstract class Personne
      * Set the value of id
      *
      * @return  self
-     */
+     */ 
     public function setId($id)
     {
         $this->id = $id;
@@ -42,7 +48,7 @@ abstract class Personne
 
     /**
      * Get the value of nom
-     */
+     */ 
     public function getNom()
     {
         return $this->nom;
@@ -52,7 +58,7 @@ abstract class Personne
      * Set the value of nom
      *
      * @return  self
-     */
+     */ 
     public function setNom($nom)
     {
         $this->nom = $nom;
@@ -62,7 +68,7 @@ abstract class Personne
 
     /**
      * Get the value of prenom
-     */
+     */ 
     public function getPrenom()
     {
         return $this->prenom;
@@ -72,7 +78,7 @@ abstract class Personne
      * Set the value of prenom
      *
      * @return  self
-     */
+     */ 
     public function setPrenom($prenom)
     {
         $this->prenom = $prenom;
@@ -82,7 +88,7 @@ abstract class Personne
 
     /**
      * Get the value of mail
-     */
+     */ 
     public function getMail()
     {
         return $this->mail;
@@ -92,7 +98,7 @@ abstract class Personne
      * Set the value of mail
      *
      * @return  self
-     */
+     */ 
     public function setMail($mail)
     {
         $this->mail = $mail;
@@ -102,7 +108,7 @@ abstract class Personne
 
     /**
      * Get the value of telephone
-     */
+     */ 
     public function getTelephone()
     {
         return $this->telephone;
@@ -112,7 +118,7 @@ abstract class Personne
      * Set the value of telephone
      *
      * @return  self
-     */
+     */ 
     public function setTelephone($telephone)
     {
         $this->telephone = $telephone;
@@ -122,7 +128,7 @@ abstract class Personne
 
     /**
      * Get the value of salaire
-     */
+     */ 
     public function getSalaire()
     {
         return $this->salaire;
@@ -132,7 +138,7 @@ abstract class Personne
      * Set the value of salaire
      *
      * @return  self
-     */
+     */ 
     public function setSalaire($salaire)
     {
         $this->salaire = $salaire;
@@ -142,7 +148,7 @@ abstract class Personne
 
     /**
      * Get the value of counter
-     */
+     */ 
     public function getCounter()
     {
         return $this->counter;
@@ -152,7 +158,7 @@ abstract class Personne
      * Set the value of counter
      *
      * @return  self
-     */
+     */ 
     public function setCounter($counter)
     {
         $this->counter = $counter;
@@ -160,3 +166,5 @@ abstract class Personne
         return $this;
     }
 }
+
+?>
