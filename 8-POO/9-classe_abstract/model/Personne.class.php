@@ -1,5 +1,7 @@
 <?php
 
+// on crée la classe abstraite personne qui ne pourra pas etre instancié mais servira de modele pour les classes developpeur et manager
+
 abstract class Personne 
 {
     protected int $id;
@@ -8,8 +10,10 @@ abstract class Personne
     protected string $mail;
     protected string $telephone;
     protected float $salaire;
-    public int $counter = 0;
+    public static $counter = 0;
     
+
+    // creation constructeur
     public function __construct(string $nom, string $prenom, string $mail, string $telephone,float $salaire)
     {
         self::$counter++;
@@ -21,6 +25,7 @@ abstract class Personne
         $this->salaire = $salaire;
     }
 
+    //methode calculer salaire
     abstract function calculerSalaire();
 
     /**
@@ -125,5 +130,25 @@ abstract class Personne
     }
 
    
+
+    /**
+     * Get the value of counter
+     */ 
+    public function getCounter()
+    {
+        return $this->counter;
+    }
+
+    /**
+     * Set the value of counter
+     *
+     * @return  self
+     */ 
+    public function setCounter($counter)
+    {
+        $this->counter = $counter;
+
+        return $this;
+    }
 }
 ?>

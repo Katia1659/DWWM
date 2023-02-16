@@ -1,4 +1,6 @@
 <?php
+
+//creation de la classe manager 
 class Manager extends Personne
 {
     private string $_service;
@@ -12,7 +14,13 @@ class Manager extends Personne
         
     }
 
-  
+    //methode pour afficher
+    public function afficher():void {
+        echo PHP_EOL."Le salaire du manager $this->nom $this->prenom est : $this->salaire €, son service : $this->_service".PHP_EOL;
+        
+    }
+
+    //methode pour calculer le salaire
     public function calculerSalaire(){
         $this->salaire = $this->salaire *1.35;
     }

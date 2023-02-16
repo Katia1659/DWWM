@@ -1,4 +1,6 @@
 <?php
+
+//creation de la classe developpeur
 class Developpeur extends Personne
 {
     private string $_specialite;
@@ -12,13 +14,15 @@ class Developpeur extends Personne
         
     }
 
+    //methode calculer salaire
     public function calculerSalaire(){
         $this->salaire = $this->salaire *1.2;
 
     }
 
+    //methode afficher
     public function afficher():string {
-        $texte = "$this->nom $this->prenom".PHP_EOL."salaire : $this->salaire".PHP_EOL."mail : $this->mail".PHP_EOL."telephone : $this->telephone".PHP_EOL."salaire : $this->salaire".PHP_EOL."specialité : $this->_specialite";
+        $texte = PHP_EOL."Le salaire du développeur $this->nom $this->prenom est : $this->salaire €, sa spécialité : $this->_specialite ".PHP_EOL;
         return $texte;
     }
 
