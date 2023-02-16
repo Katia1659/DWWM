@@ -1,17 +1,5 @@
-<<<<<<< HEAD
+
 <?php 
-
-class Utilisateur {
-    private string $login;
-    private string $password;
-    private string $service;
-
-    public function __construct () {
-        
-    }
-
-=======
-<?php
 
 
 // Création de l'objet et initialisation des attributs
@@ -54,7 +42,6 @@ Class Utilisateur extends Personne {
     }
 
 
->>>>>>> 5e9356344e56f8603aed19ecfd277b1c35ab68d1
 
     /**
      * Get the value of login
@@ -115,12 +102,9 @@ Class Utilisateur extends Personne {
 
         return $this;
     }
-<<<<<<< HEAD
-}
 
 
 
-=======
 
     /**
      * Get the value of profil
@@ -144,5 +128,4 @@ Class Utilisateur extends Personne {
 }
 
 
->>>>>>> 5e9356344e56f8603aed19ecfd277b1c35ab68d1
 ?>

@@ -1,32 +1,7 @@
 <?php
 
-<<<<<<< HEAD
-class Personne {
-    private int $id;
-    private string $nom;
-    private string $prenom;
-    private string $mail;
-    private string $telephone; 
-    private float $salaire ;
-    private static $compteur;
-
-    public function __construct () {
-        self :: $compteur++;
-        $this -> id = self ;
-    }
-
-    
-    public function calculerSalaire(){
-
-    }
 
 
-
-
-
-    
-
-=======
 // Création de l'objet et initialisation des attributs
 Class Personne{ 
     protected int $id ;
@@ -59,7 +34,6 @@ Class Personne{
     }
 
 
->>>>>>> 5e9356344e56f8603aed19ecfd277b1c35ab68d1
     /**
      * Get the value of id
      */ 
@@ -81,8 +55,8 @@ Class Personne{
     }
 
     /**
-<<<<<<< HEAD
-=======
+
+
      * Get the value of compteur
      */ 
     public function getCompteur()
@@ -103,7 +77,7 @@ Class Personne{
     }
 
     /**
->>>>>>> 5e9356344e56f8603aed19ecfd277b1c35ab68d1
+
      * Get the value of nom
      */ 
     public function getNom()
@@ -164,7 +138,7 @@ Class Personne{
     }
 
     /**
-<<<<<<< HEAD
+
      * Get the value of telephone
      */ 
     public function getTelephone()
@@ -180,9 +154,8 @@ Class Personne{
     public function setTelephone($telephone)
     {
         $this->telephone = $telephone;
-=======
-     * Get the value of tel
-     */ 
+    }
+
     public function getTel()
     {
         return $this->tel;
@@ -196,7 +169,7 @@ Class Personne{
     public function setTel($tel)
     {
         $this->tel = $tel;
->>>>>>> 5e9356344e56f8603aed19ecfd277b1c35ab68d1
+
 
         return $this;
     }
@@ -220,10 +193,7 @@ Class Personne{
 
         return $this;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 5e9356344e56f8603aed19ecfd277b1c35ab68d1
 }
 
 ?>

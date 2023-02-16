@@ -1,17 +1,6 @@
-<<<<<<< HEAD
+
 <?php 
 
-class Profil {
-    private int $id ;
-    private string $code ;
-    private string $libelle;
-
-    public function __construct () {
-        
-    }
-
-=======
-<?php
 
 // Création de l'objet et initialisation des attributs
 Class Profil{ 
@@ -27,8 +16,7 @@ Class Profil{
         $this -> libelle = $libelle;
         $this -> code = $code;
     }
-    
->>>>>>> 5e9356344e56f8603aed19ecfd277b1c35ab68d1
+
 
     /**
      * Get the value of id
@@ -89,11 +77,8 @@ Class Profil{
 
         return $this;
     }
-<<<<<<< HEAD
-}
 
 
-=======
 
     /**
      * Get the value of compteur
@@ -118,5 +103,4 @@ Class Profil{
 
 
 
->>>>>>> 5e9356344e56f8603aed19ecfd277b1c35ab68d1
 ?>

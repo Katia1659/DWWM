@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<?php 
 
-
-
-
-=======
 <?php
 include_once "../Modele/Personne.class.php";
 include_once "../Modele/Utilisateur.class.php";
@@ -58,5 +52,5 @@ echo "\n";
 $utilisateur5 -> affiche();
 echo "\n";
 $utilisateur5 -> calculerSalaire();
->>>>>>> 5e9356344e56f8603aed19ecfd277b1c35ab68d1
+
 ?>
