@@ -19,11 +19,10 @@ public function __construct (string $nom, string $prenom, string $dateNaissance,
     $this -> dateNaissance = $dateNaissance;
     $this -> filiere = $filiere ;
 
-    self :: $compteur ++;
+    self :: $compteur++;
     $this -> id = self :: $compteur ;
 }
     
-
 public function __toString (){
 
     return "Je suis l'etudiant ". $this->prenom . " " . $this -> nom . ", ma date de naissance est : \n" . $this -> dateNaissance ;
