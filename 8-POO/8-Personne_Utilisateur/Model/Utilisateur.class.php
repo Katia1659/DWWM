@@ -13,7 +13,7 @@ class Utilisateur extends Personne{
         $this ->login = $login;
         $this ->passsword = $passsword;
         $this ->services = $services;
-        $this -> Profil = $profil;
+        $this ->Profil = $profil;
     }
 /*Affiche de la class Personne avec d'autres données*/
     public function afficher() : void

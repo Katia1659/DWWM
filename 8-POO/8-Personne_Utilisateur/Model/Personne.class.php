@@ -2,14 +2,17 @@
 
 /*Cration de la class mere Personne*/
 class Personne{
-    protected static int $id;
+    protected  int $id;
     protected string $nom;
     protected string $prenom;
     protected string $mail;
     protected string $tel;
     protected float $salaire;
+    private static  int $comp = 0;
+    
     public function __construct($nom,$prenom,$mail,$tel,$salaire)
     {
+        $this->id = self::$comp;
         $this->nom =$nom;
         $this->prenom = $prenom;
         $this->mail = $mail;
@@ -17,14 +20,7 @@ class Personne{
         $this->salaire = $salaire;
 
     }
-    public function __auto(){
-        self::$id++;
-    }
-
-    /*Methode qui va chercher le salaire est le calculer avec la methode de l'enfant Utilisateur*/
-    public function calculSalaire() : float{
-        return  $this->salaire;
-    }
+    
 
     /*Methode d'affichage basique de la class mere*/
     public function afficher() : void{
@@ -129,4 +125,24 @@ class Personne{
         $this->salaire = $salaire;
     }
 
+
+    /**
+     * Get the value of id
+     */ 
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set the value of id
+     *
+     * @return  self
+     */ 
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
 }
