@@ -75,7 +75,7 @@
         <input type="submit" name="submit" class="btn btn-success me-5 mb-5" value="Delete">
         <a href="../View/delete.php" class="btn btn-danger  mb-5">Annuler </a>
     </div>
-    </form>
+        </form>
 </body>
 
 </html>
