@@ -1,5 +1,6 @@
 <?php
 
+// on crée la classe abstraite Personne
 abstract class Personne {
     protected int $id;
     public static $compteur;
@@ -9,6 +10,7 @@ abstract class Personne {
     protected string $telephone;
     protected float $salaire;
 
+// On crée la méthode construct qui initialise les attributs de l'objet
 
     public function __construct(string $nom, string $prenom, string $mail, string $telephone, float $salaire) {
         self::$compteur++;
@@ -20,9 +22,10 @@ abstract class Personne {
         $this-> salaire = $salaire;
     }
 
-
+// On crée la méthode abstraite calculerSalaire 
     abstract public function calculerSalaire();
 
+// On crée la méthode affiche qui affiche les informations de la personne
     public function affiche() {
         echo "Cette personne s'appelle ". $this->nom. " ". $this->prenom." son adresse mail est : ".$this->mail." son numéro de téléphone est ".$this->telephone." son salaire est de ".$this->salaire."€";
     }
