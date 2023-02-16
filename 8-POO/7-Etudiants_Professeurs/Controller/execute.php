@@ -1,12 +1,17 @@
 <?php
 
+<<<<<<< HEAD
 // On inclue les différentes classes du modèle, ATTENTION il faut les déclarer dans l'ordre hiérarchique (La classe personne étant au sommet de la hiérarchie)
+=======
+// inclut les différents fichiers du dossier
+>>>>>>> 5e9356344e56f8603aed19ecfd277b1c35ab68d1
 
 include_once "../Modele/Personne.class.php";
 include_once "../Modele/Employe.class.php";
 include_once "../Modele/Etudiant.class.php";
 include_once "../Modele/Professeur.class.php";
 
+<<<<<<< HEAD
 // Instanciation des différents employés
 
 $employe1 = new Employe (42, 'DOUK', 'Rachid', 10000);
@@ -26,6 +31,22 @@ $professeur1 = new Professeur(32, 'OBA', 'Kevin', 5700.00 , 'JAVA/JEE');
 $professeur2 = new Professeur(24, 'MAGASSOUBA', 'Cheick', 5000, 'PHP');
 
 // Via la méthode toString on affiche les différents employés, étudiants, et professeurs. 
+=======
+// Instanciation des objets
+
+$employe1 = new Employe (42, 'DOUK', 'Rachid', 10000);
+$employe2 = new Employe (26, 'NGOYE', 'Roland', 12000);
+
+
+$etudiant1 = new Etudiant (18, 'OBAKA', 'Med', 65678754);
+$etudiant2 = new Etudiant (18, 'ALSENI', 'Thomas', 87543543);
+
+
+$professeur1 = new Professeur(32, 'OBA', 'Kevin', 5700.00 , 'JAVA/JEE');
+$professeur2 = new Professeur(24, 'MAGASSOUBA', 'Cheick', 5000, 'PHP');
+
+// Affichage du résultat via la méthode toString
+>>>>>>> 5e9356344e56f8603aed19ecfd277b1c35ab68d1
 
 echo "La liste des employés : \n";
 echo $employe1."\n".$employe2."\n";

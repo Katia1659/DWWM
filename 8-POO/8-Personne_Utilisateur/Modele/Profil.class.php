@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php 
 
 class Profil {
@@ -9,6 +10,25 @@ class Profil {
         
     }
 
+=======
+<?php
+
+// Création de l'objet et initialisation des attributs
+Class Profil{ 
+    private int $id;     
+    private string $libelle ; 
+    private string $code ;
+    public static $compteur ;
+
+    public function __construct($libelle,$code)
+    {   
+        self:: $compteur++; 
+        $this -> id = self:: $compteur;
+        $this -> libelle = $libelle;
+        $this -> code = $code;
+    }
+    
+>>>>>>> 5e9356344e56f8603aed19ecfd277b1c35ab68d1
 
     /**
      * Get the value of id
@@ -69,7 +89,34 @@ class Profil {
 
         return $this;
     }
+<<<<<<< HEAD
 }
 
 
+=======
+
+    /**
+     * Get the value of compteur
+     */ 
+    public function getCompteur()
+    {
+        return $this->compteur;
+    }
+
+    /**
+     * Set the value of compteur
+     *
+     * @return  self
+     */ 
+    public function setCompteur($compteur)
+    {
+        $this->compteur = $compteur;
+
+        return $this;
+    }
+}
+
+
+
+>>>>>>> 5e9356344e56f8603aed19ecfd277b1c35ab68d1
 ?>

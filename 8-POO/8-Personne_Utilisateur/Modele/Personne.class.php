@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 class Personne {
     private int $id;
     private string $nom;
@@ -25,6 +26,40 @@ class Personne {
 
     
 
+=======
+// Création de l'objet et initialisation des attributs
+Class Personne{ 
+    protected int $id ;
+    public static $compteur ;
+    protected string $nom ;
+    protected string $prenom ; 
+    protected string $mail ;
+    protected string $tel ; 
+    protected float $salaire ;
+
+    public function __construct($nom , $prenom , $mail , $tel , $salaire)
+    {   
+        self:: $compteur++; 
+        $this -> id = self :: $compteur ;
+        $this -> nom = $nom ;
+        $this -> prenom = $prenom ; 
+        $this -> mail = $mail ;
+        $this -> tel = $tel ;
+        $this -> salaire = $salaire ;
+    }
+
+
+    // Creation des méthodes d'affichage et du calcul d'augmentation du salaire
+    public function affiche () : void {
+        echo "Identité : ".$this -> nom. " " .$this -> prenom."\nCoordonnées : \n".$this -> mail. " / " .$this -> tel."\nSalaire : " . $this -> salaire;
+    }
+
+    public function calculerSalaire (){
+       return $this -> salaire ;
+    }
+
+
+>>>>>>> 5e9356344e56f8603aed19ecfd277b1c35ab68d1
     /**
      * Get the value of id
      */ 
@@ -46,6 +81,29 @@ class Personne {
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Get the value of compteur
+     */ 
+    public function getCompteur()
+    {
+        return $this->compteur;
+    }
+
+    /**
+     * Set the value of compteur
+     *
+     * @return  self
+     */ 
+    public function setCompteur($compteur)
+    {
+        $this->compteur = $compteur;
+
+        return $this;
+    }
+
+    /**
+>>>>>>> 5e9356344e56f8603aed19ecfd277b1c35ab68d1
      * Get the value of nom
      */ 
     public function getNom()
@@ -106,6 +164,7 @@ class Personne {
     }
 
     /**
+<<<<<<< HEAD
      * Get the value of telephone
      */ 
     public function getTelephone()
@@ -121,6 +180,23 @@ class Personne {
     public function setTelephone($telephone)
     {
         $this->telephone = $telephone;
+=======
+     * Get the value of tel
+     */ 
+    public function getTel()
+    {
+        return $this->tel;
+    }
+
+    /**
+     * Set the value of tel
+     *
+     * @return  self
+     */ 
+    public function setTel($tel)
+    {
+        $this->tel = $tel;
+>>>>>>> 5e9356344e56f8603aed19ecfd277b1c35ab68d1
 
         return $this;
     }
@@ -144,6 +220,10 @@ class Personne {
 
         return $this;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5e9356344e56f8603aed19ecfd277b1c35ab68d1
 }
 
 ?>

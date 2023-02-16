@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 // initialisation des attributs 
@@ -166,5 +167,8 @@ abstract class Personne {
         return $this;
     }
 }
+=======
+<?php 
+>>>>>>> 5e9356344e56f8603aed19ecfd277b1c35ab68d1
 
 ?>
