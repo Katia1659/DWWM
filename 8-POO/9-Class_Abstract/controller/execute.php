@@ -24,6 +24,7 @@ for ($i=1; $i <= $nbr ; $i++) {
 }
 
 
+// affiche la liste des dev et des manageurs
 echo "\n";
 echo "liste : "."\n";
 echo "\n";

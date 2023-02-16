@@ -4,8 +4,10 @@ include_once "../modele/Abstract.class.php";
 
 class Manager extends Personne{
 
+    //attributs
     private $_service;
 
+    //methode construct Manager
     public function __construct($nom,$prenom,$mail,$tel,$salaire,$_service)
     {
         parent::__construct($nom,$prenom,$mail,$tel,$salaire);
@@ -13,7 +15,7 @@ class Manager extends Personne{
     }
 
 
-
+    // clacul salaire Manager
     public function calculerSalaireMN()
     {
         parent::calculerSalaire();
@@ -21,6 +23,7 @@ class Manager extends Personne{
         return $nvxsalaire;
     }
    
+    //methode afficher en void 
     public function afficher() : void {
         $nom = strtoupper($this->nom);
         $prenom = ucwords($this->prenom);

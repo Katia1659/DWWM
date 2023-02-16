@@ -2,6 +2,7 @@
 
  abstract class Personne {
 
+    //attributs
     public static $counter = 0;
     private int $id;
     protected string $nom;
@@ -10,6 +11,8 @@
     protected string $tel;
     protected float $salaire;
     
+
+    //methode construc class abstract
     public function __construct($nom,$prenom,$mail,$tel,$salaire)
     {
         self::$counter++;
@@ -21,6 +24,8 @@
         $this->salaire = $salaire;
     }
 
+    //recup salaire pour les enfants 
+
     public function calculerSalaire(){
         $salaire = $this->salaire;
         return $salaire;
@@ -28,6 +33,7 @@
 
     
 
+    //get et set attributs
     
 
     /**

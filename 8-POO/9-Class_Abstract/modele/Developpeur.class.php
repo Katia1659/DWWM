@@ -4,14 +4,17 @@ include_once "../modele/Abstract.class.php";
 
 class Developpeur extends Personne{
 
+    //attributs 
     private $_specialite;
 
+    //methode contstruc class Dev
     public function __construct($nom,$prenom,$mail,$tel,$salaire,$_specialite)
     {
       parent::__construct($nom,$prenom,$mail,$tel,$salaire);
       $this->_specialite = $_specialite;
     }
 
+    // methode calcul salaire Dev
     public function calculerSalaireDev()
     {
         parent::calculerSalaire();
@@ -19,6 +22,7 @@ class Developpeur extends Personne{
         return $nvxSalaire;
     }
 
+    // methode afficher Dev type string
     public function afficher() :string {
         $nom = strtoupper($this->nom);
         $prenom = ucwords($this->prenom);
@@ -27,6 +31,7 @@ class Developpeur extends Personne{
     }
 
 
+    // get et set attributs
 
     /**
      * Get the value of _specialite
