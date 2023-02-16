@@ -10,15 +10,12 @@ abstract class Personne
     protected $salaire;
     private static $cmp;
 
-// public function __construct($nom, $prenom, $mail, $telephone, $salaire)
-//     {
-//     $this->id++;
-//     $this->nom = $nom;
-//     $this->prenom = $prenom;
-//     $this->mail = $mail;
-//     $this->telephone = $mail;
-//     $this->salaire = $salaire;
-//     }
+public function __construct()
+    {
+        
+    $this->id++;
+    
+    }
 
 abstract function calculerSalaire();
 

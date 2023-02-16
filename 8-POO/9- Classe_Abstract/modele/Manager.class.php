@@ -24,7 +24,7 @@ class Manager extends Personne
 
     public function affiche() : void {
         echo 
-        "\nLe salaire du Manager: " .$this->calculerSalaire();
+        "\nLe salaire du Manager: " .$this->nom." ".$this->prenom." est : " . $this->salaire." € \n";
         "\n Sa spécialité : " . $this->service."\n";
     }
 

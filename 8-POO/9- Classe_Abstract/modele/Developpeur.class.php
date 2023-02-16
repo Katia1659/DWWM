@@ -9,6 +9,7 @@ class Developpeur extends Personne
 public function __construct($nom, $prenom, $mail, $telephone, $salaire, $specialite)
     { 
     // parent::__construct($nom, $prenom, $mail, $telephone, $salaire);
+    $this->nom = $nom;
     $this->prenom = $prenom;
     $this->mail = $mail;
     $this->telephone = $telephone;
@@ -24,7 +25,7 @@ public function __construct($nom, $prenom, $mail, $telephone, $salaire, $special
     public function affiche()
     {
         echo 
-        "\nLe salaire du Développeur: " .$this->calculerSalaire();
+        "\nLe salaire du Développeur " .$this->nom." ".$this->prenom." est : " . $this->salaire." € \n";
         "\n Sa spécialité : " . $this->specialite."\n";
     }
 
