@@ -1,6 +1,6 @@
 <?php
 
-
+//Créer la classe abstraite « Personne».
 abstract class Personne{
     protected int $id;
     protected string $nom;
@@ -11,17 +11,19 @@ abstract class Personne{
 
     private static $counter = 0;
 
+    //constructeur creation
     public function __construct(int $id,string $nom,string $prenom,string $mail,int $telephone,float $salaire)
     {
         self::$counter++;
-        $this->id = $id;
+        $this->id = self::$counter;
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->mail = $mail;
         $this->telephone = $telephone;
         $this->salaire = $salaire;
     }
-    abstract public function calculerSalaire();
+    //methode calculer salaire
+    abstract function calculerSalaire();
     
 }
 
