@@ -4,7 +4,7 @@
 
 class Manager extends Personne {
 
-    private $_service;    
+    private String $_service;    
 
     public static $compteur = 1;
     protected int $id;
@@ -17,7 +17,8 @@ public function __construct($_service,$nom,$prenom,$mail,$telephone,$salaire)
     self::$compteur++;
     $this->id = self::$compteur;
 
-    $this->_service->$_service;
+    $this->_service = $_service;
+
     
 }
 
@@ -29,7 +30,7 @@ public function calculerSalaire() {
 
 public function afficher() {
 
-    return "Le salaire du manager".$this->nom." ".$this->prenom." est : ".$this->salaire."€, son service : ".$this->_service;
+    echo "Le salaire du manager".$this->nom." ".$this->prenom." est : ".$this->salaire."€, son service : ".$this->_service."\n";
     
 }
 

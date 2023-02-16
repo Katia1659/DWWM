@@ -4,7 +4,7 @@
 
 class Developpeur extends Personne {
 
-    private $_specialite;    
+    private String $_specialite;    
 
     public static $compteur = 1;
     protected int $id;
@@ -17,7 +17,7 @@ public function __construct($_specialite,$nom,$prenom,$mail,$telephone,$salaire)
     self::$compteur++;
     $this->id = self::$compteur;
 
-    $this->_specialite->$_specialite;
+    $this->_specialite = $_specialite;
     
 }
 
@@ -29,7 +29,7 @@ public function calculerSalaire() {
 
 public function afficher() {
 
-    return "Le salaire du développeur".$this->nom." ".$this->prenom." est : ".$this->salaire."€, sa specialite : ".$this->_specialite;
+    echo "Le salaire du développeur".$this->nom." ".$this->prenom." est : ".$this->salaire."€, sa specialite : ".$this->_specialite."\n";
     
 }
 

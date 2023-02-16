@@ -26,6 +26,7 @@ abstract public function calculerSalaire();
 
 
 
+
 /**
  * Get the value of id
  */ 

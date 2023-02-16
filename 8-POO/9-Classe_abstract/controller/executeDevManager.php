@@ -7,9 +7,11 @@ include '../modele/Manager.class.php';
 
 echo "****************************************************"."\n";
 
+
+//Creation de developpeurs
 for ($i=1; $i <= 2; $i++) {
 
-    echo "Utilisateur ".Developpeur::$compteur."\n";
+    echo "Developpeur ".Developpeur::$compteur."\n";
 
 echo "-----------------------"."\n";
 
@@ -26,13 +28,15 @@ $_specialite = readline("Votre spécialité : ");
 echo PHP_EOL;
 
 
-$dev[$i]=new Developpeur($_specialite,$nom,$prenom,$mail,$telephone,$salaire);
+$dev[$i] = new Developpeur($_specialite,$nom,$prenom,$mail,$telephone,$salaire);
 
 }
 
+
+//Creation de managers
 for ($i=1; $i <= 2; $i++) {
 
-    echo "Utilisateur ".Manager::$compteur."\n";
+    echo "Manager ".Manager::$compteur."\n";
 
 echo "-----------------------"."\n";
 
@@ -49,25 +53,28 @@ $_service = readline("Votre service : ");
 echo PHP_EOL;
 
 
-$manager[$i]=new Manager($_service,$nom,$prenom,$mail,$telephone,$salaire);
+$manager[$i] = new Manager($_service,$nom,$prenom,$mail,$telephone,$salaire);
 
 }
 echo "****************************************************"."\n";
 
-foreach ($dev as $key => $value) {
+foreach ($dev as $value) {
 
     //Calcul du salaire
-    $dev->calculerSalaire();
+    $value->calculerSalaire();
 
-    //Affichage dev/utilisateur
-    $dev->afficher();
+    //Affichage dev
+    $value->afficher();
+    
 }
 
-foreach ($manager as $key => $value) {
+foreach ($manager as $value) {
 
     //Calcul du salaire
-    $manager->calculerSalaire();
+    $value->calculerSalaire();
 
-    //Affichage dev/utilisateur
-    $manager->afficher();
+    //Affichage manager
+    $value->afficher();
 }
+
+//6. Les class Manager et Developpeur on besoin de la classe Personne pour s'instancier
