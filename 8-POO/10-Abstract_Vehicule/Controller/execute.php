@@ -13,16 +13,16 @@ $voiture[0] = new Voiture("1995/Renald", 1500 );
 $voiture[1] = new Voiture("2002/Ferrari", 72500 );
 
 
-//info camion de $i + phrase type a demarrer camion
+//info camion de $i + phrase type  demarrer camion
 $camion[1]->demarrer();
 
-//info camion de $i + phrase type a accelerer camion
+//info camion de $i + phrase type  accelerer camion
 $camion[0]->accelerer();
 
-//info voiture de $i + phrase type a demarrer voiture
+//info voiture de $i + phrase type  demarrer voiture
 $voiture[0]->demarrer();
 
-//info voiture de $i + phrase type a accelerer voiture
+//info voiture de $i + phrase type  accelerer voiture
 $voiture[1]->accelerer();
 
 ?>

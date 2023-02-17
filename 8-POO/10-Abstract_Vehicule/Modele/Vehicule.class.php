@@ -24,7 +24,7 @@ abstract Class Vehicule{
 
     public function __toString()
     {
-        return "Matricule : ".$this->matricule." / ". $this->anneeModele." / ". $this->prix;
+        return "Matricule : ".$this->getMatricule()." / ". $this->getAnneeModele()." / ". $this->getPrix();
     }
 
     /**
