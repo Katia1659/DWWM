@@ -10,10 +10,9 @@ include_once '../modele/Camion.class.php';
 
 
 //Creation de voitures
-for ($i=0; $i < 1; $i++) { 
+for ($i=1; $i < 2; $i++) { 
 
-
-echo "Voiture ".Voiture::$compteur."\n";
+echo "Voiture ".$i++."\n";
 
 echo "***************************"."\n";
 
@@ -29,8 +28,9 @@ echo "***************************"."\n";
 
 
 //Creation de camions
+for ($i=1; $i < 2; $i++) { 
 
-echo "Camion ".Camion::$compteur."\n";
+echo "Camion ".$i++."\n";
 
 echo "***************************"."\n";
 
@@ -42,27 +42,26 @@ $prix = readline("Prix du véhicule : ");
 $camion = new Camion($annee,$prix);
 
 echo "***************************"."\n";
-
+}
 //Affichage camion
 $demarreC = $camion->démarrer();
 echo $demarreC;
 
 $accelereC =$camion->accélérer();
+echo $accelereC;
 
-$string = strval($camion);
-echo $string;
+echo $camion;
 
 
 
 
     //Affichage voiture
- $voiture->démarrer();
-echo $voiture;
+$demarreV= $voiture->démarrer();
+echo $demarreV;
 
-$voiture->accélérer();
-echo $voiture;
+$accelereV= $voiture->accélérer();
+echo $accelereV;
 
-$voiture->__toString();
 echo $voiture;
 
 

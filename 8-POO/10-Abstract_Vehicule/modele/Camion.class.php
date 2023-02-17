@@ -3,7 +3,7 @@
 class Camion extends Vehicule {
 
 protected int $matricule;
-public static $compteur=1;
+public static $compteur;
 
 
 public function __construct($annee,$prix){
@@ -21,9 +21,9 @@ public function __construct($annee,$prix){
 
 public function __toString()
 {
-    return "----------------------"."\n";
-    return "Matricule : ".$this->matricule."\n"."Année du modèle : ".$this->annee."\n"."Prix : ".$this->prix."€"."\n"; 
-    return "----------------------"."\n";
+    return "----------------------"."\n".
+     "Matricule : ".$this->matricule."\n"."Année du modèle : ".$this->annee."\n"."Prix : ".$this->prix."€"."\n". 
+     "----------------------"."\n";
 }
 
 public function démarrer()

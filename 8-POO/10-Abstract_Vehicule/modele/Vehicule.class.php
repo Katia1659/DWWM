@@ -2,7 +2,7 @@
 
 abstract class Vehicule {
 
-    protected int $matricule = 1;
+    protected int $matricule;
     protected int $annee;
     protected int $prix;
 
