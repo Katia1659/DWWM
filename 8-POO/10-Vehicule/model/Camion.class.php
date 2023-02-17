@@ -1,6 +1,6 @@
 <?php
 
-//creation de la classe manager 
+//creation de la classe camion
 class Camion extends Vehicule
 {
 
@@ -11,6 +11,7 @@ class Camion extends Vehicule
         parent::__construct($anneeModele, $prix);        
     }
 
+    //methode demarrer et accelerer
     public function demarrer(){
        echo "le camion demarre bien".PHP_EOL;
     } 
@@ -18,6 +19,7 @@ class Camion extends Vehicule
         echo "le camion accelere bien ".PHP_EOL;
     }
     
+    //methode to string
     public function __toString(){
 echo PHP_EOL."--------details du camion--------".PHP_EOL ;
 return parent::__toString();

@@ -1,6 +1,6 @@
 <?php
 
-// on crée la classe abstraite personne qui ne pourra pas etre instancié mais servira de modele pour les classes developpeur et manager
+// on crée la classe abstraite vehicule
 
 abstract class Vehicule 
 {
@@ -18,14 +18,17 @@ abstract class Vehicule
         $this->prix = $prix;
     }
 
-    //methode calculer salaire
+    //methode demmarer et accelerer
     abstract public function demarrer(); 
     abstract public function accelerer();
 
+    //methode to string
     public function __toString(){
         $text = "matricule : $this->matricule année du modele : $this->anneeModele prix : $this->prix".PHP_EOL;
         return $text;
     }
+
+    //////////////////////////////////getter et setter////////////////////////////////////
 
     /**
      * Get the value of matricule
