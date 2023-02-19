@@ -7,11 +7,11 @@ Class Camion extends Vehicule {
     }
 
     public function demarrer() :void {
-        echo "Démarrage réussi";
+        echo "On démarre";
     }
 
     public function accelerer() :void {
-        echo "camion accelerer";
+        echo "On accelere";
     }
 
     public function __toString () {

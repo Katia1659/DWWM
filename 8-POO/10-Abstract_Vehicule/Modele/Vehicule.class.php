@@ -1,11 +1,14 @@
 <?php 
 
-abstract class Vehicule {
+abstract class Vehicule 
+{ //ATTRIBUTS
+
     private string $matricule; 
     public static $compteur;
     private float $prix;
     private int $annee;
 
+        //CONTRUCTION
     public function __construct(string $matricule, float $prix, int $annee){
 
         self:: $compteur++ ;
@@ -19,8 +22,8 @@ abstract class Vehicule {
 
     abstract function accelerer() : void ;
 
-    public function __toString() {
-        echo "Le prix du véhicule est de " . $this-> prix . " sortie en " . $this -> annee . ", son matricule est : ". $this -> matricule;  
+    public function __toString () {
+        echo "Le prix du véhicule est :  " . $this-> prix . "\nsortie en :  " . $this -> annee . " \nson matricule est : ". $this -> matricule;  
     }
 
 

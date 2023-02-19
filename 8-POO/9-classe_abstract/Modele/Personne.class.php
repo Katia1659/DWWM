@@ -2,7 +2,7 @@
 
 abstract class Personne {
     
-
+ //ATTRIBUTS
     protected int $id ;
     public static $compteur ; 
     protected string $nom ;
@@ -12,8 +12,7 @@ abstract class Personne {
     protected float $salaire ;
     
 
-    abstract public function calculerSalaire() : float ;
-
+   //CONTRUCTION
     public function __construct ($nom, $prenom, $mail, $telephone, $salaire) {
         self:: $compteur++; 
         $this -> id = self :: $compteur ;
@@ -25,6 +24,8 @@ abstract class Personne {
     }
 
 
+    // CALCUL DE SALAIRE 
+    abstract public function calculerSalaire() : float ;
 
     /**
      * Get the value of id
@@ -146,25 +147,7 @@ abstract class Personne {
         return $this;
     }
 
-    /**
-     * Get the value of counter
-     */ 
-    public function getCounter()
-    {
-        return $this->counter;
-    }
 
-    /**
-     * Set the value of counter
-     *
-     * @return  self
-     */ 
-    public function setCounter($counter)
-    {
-        $this->counter = $counter;
-
-        return $this;
-    }
 }
 
 ?>

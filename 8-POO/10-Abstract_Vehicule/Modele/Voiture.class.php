@@ -7,11 +7,11 @@ Class Voiture extends Vehicule {
     }
 
     public function demarrer() :void {
-        echo "Démarrage réussi";
+        echo "On démarre ";
     }
 
     public function accelerer() :void {
-        echo "appuie sur le champignon chef";
+        echo "On accelere";
     }
 
     public function __toString () {
