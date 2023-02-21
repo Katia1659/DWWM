@@ -9,22 +9,16 @@ class Personne
    protected int $id=0;
    protected string $nom;
    protected string $prenom;
-   protected string $mail;
-   protected string $telephone;
-   protected float $salaire;
+  
 
    /**
     * Constructeur class mere Personne
     */
 
-   public function  __construct(string $nom, string $prenom, string $mail, string $telephone, string $salaire)
+   public function  __construct(string $nom, string $prenom)
    {
       $this->nom = $nom;
       $this->prenom = $prenom;
-      $this->mail=$mail;
-      $this->telephone=$telephone;
-      $this->salaire=$salaire;
-      $this->id++;
    }
 
    /**
@@ -36,23 +30,10 @@ class Personne
     {
         echo   "---------Personne------------------------\n"
                ."Nom:  " . $this->nom . "\n"
-               ."Prenom: ". $this->prenom ."\n"
-               ."mail: ".$this->mail."\n"
-               ."telephone: ".$this->telephone."\n"
-               ."Salaire : ".$this->salaire." €"."\n";
+               ."Prenom: ". $this->prenom ."\n";
     }
     
-    /**
-     * 
-     * Methode calculerSalaire()
-     * @return float
-     */
-   public function calculerSalaire():float
-   {
-      return $this->salaire;
-   }
-
-
+   
    /**
     * Get the value of id
     */
@@ -109,66 +90,6 @@ class Personne
    public function setPrenom($prenom)
    {
       $this->prenom = $prenom;
-
-      return $this;
-   }
-
-   /**
-    * Get the value of mail
-    */ 
-   public function getMail()
-   {
-      return $this->mail;
-   }
-
-   /**
-    * Set the value of mail
-    *
-    * @return  self
-    */ 
-   public function setMail($mail)
-   {
-      $this->mail = $mail;
-
-      return $this;
-   }
-
-   /**
-    * Get the value of telephone
-    */ 
-   public function getTelephone()
-   {
-      return $this->telephone;
-   }
-
-   /**
-    * Set the value of telephone
-    *
-    * @return  self
-    */ 
-   public function setTelephone($telephone)
-   {
-      $this->telephone = $telephone;
-
-      return $this;
-   }
-
-   /**
-    * Get the value of salaire
-    */ 
-   public function getSalaire()
-   {
-      return $this->salaire;
-   }
-
-   /**
-    * Set the value of salaire
-    *
-    * @return  self
-    */ 
-   public function setSalaire($salaire)
-   {
-      $this->salaire = $salaire;
 
       return $this;
    }

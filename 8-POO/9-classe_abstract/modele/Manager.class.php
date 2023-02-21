@@ -15,6 +15,7 @@
      */
     public function __construct(string $nom,string $prenom,string $mail,string $telephone,int $salaire,string $service)
     {
+        parent::__construct($nom, $prenom, $mail, $telephone, $salaire);
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->mail=$mail;
