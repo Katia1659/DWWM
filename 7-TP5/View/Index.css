@@ -1,0 +1,45 @@
+.relative{
+    position: relative;
+}
+
+.icons1{
+    top: 8em;
+    right: -15em;
+}
+
+.icons2{
+    bottom: -15em;
+    right: -15em;
+}
+
+.icons3{
+
+    bottom: 32em;
+    right:  -68em;
+}
+
+.icons4{
+    bottom: 25em;
+    right:  -68em;
+}
+
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.bcg{
+    /* background: linear-gradient(to bottom right, lightblue, white); */
+    /* background-color: lightblue; */
+    background-image: url("../Assets/date.png") ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+
+.texte{
+    padding-top: 2em;
+}
+
+
