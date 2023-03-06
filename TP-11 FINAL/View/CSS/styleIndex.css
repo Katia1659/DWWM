@@ -1,0 +1,158 @@
+body{
+    background-image: url(../assets/p6210157-2.jpg) ;
+    background-size:110%;
+    background-attachment: fixed;
+}
+
+.formConnect{
+    font-size: large;
+    border-radius: 3em;
+    margin-top: 8em;
+    width: 30%;
+    background-color: rgba(190, 190, 190, 0.9);
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+.centreForm{
+    display: flex;
+    justify-content: center;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    height: 150px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%,
+         rgba(21,22,22,0.4234068627450981) 60%, rgba(219,232,235,1) 100%);
+}
+
+.nosoulign{
+    text-decoration: none;
+    color: white;
+    margin: 1em;
+    font-size: 1.2em;  
+}
+
+.nosoulign2{
+    text-decoration: none;
+    color: rgb(3, 28, 255);
+    margin: 1em;
+    font-size: 1.2em;  
+}
+
+.img-fluid{
+    height: 135px;
+    margin-right: 1em;
+}
+
+.gauche{
+    width: 15%;
+}
+
+.centre{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+}
+
+.droite{
+    width: 15%;
+}
+
+.posgraph{
+    margin-top: 3%;
+    margin-left: 28%;
+    width: 44%;
+}
+
+         
+.btn-grad {
+    background-image: linear-gradient(to right, #7b4397 0%, #dc2430  51%, #7b4397  100%);
+    margin: 10px;
+    padding: 5px 25px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+  }
+
+  .btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+ 
+
+           
+  .btn-grad2 {
+    background-image: linear-gradient(to right, #ee0979 0%, #ff6a00  51%, #ee0979  100%);
+    margin: 10px;
+    padding: 5px 25px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+  }
+
+  .btn-grad2:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+ 
+  .posimage{
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+    padding-right: 3em;
+  }
+
+  .centrerLabel{
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-between;
+    width: 32%;
+    margin-left: 34%;
+    
+  }
+
+  .sizelabel1{
+    width: 33%;
+    background-color: rgb(237, 211, 4);
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    margin: 20px;
+  }
+  
+  .sizelabel2{
+    width: 33%;
+    background-color: rgb(216, 218, 201);
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    margin: 20px;
+  }
+
+  .sizelabel3{
+    width: 33%;
+    background-color:rgb(253, 180, 101);
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    margin: 20px;
+  }
+  .bordeur{
+    border-bottom: 1px black solid;
+    padding-bottom: 1em;
+  }

@@ -12,7 +12,7 @@ class Voiture extends Vehicule{
     //affiche les info de la voiture 
     public function __toString(){
         
-        return  " ce vehicule est une voiture\n". parent::__toString();
+        return  "ce vehicule est une voiture\n". parent::__toString();
     }
 
     //methode qui montre que la voiture demarre 
