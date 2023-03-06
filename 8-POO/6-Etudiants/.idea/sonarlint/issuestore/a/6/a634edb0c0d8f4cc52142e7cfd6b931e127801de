@@ -1,0 +1,15 @@
+
+d	php:S1808	"JPut one space between the closing parenthesis and the opening curly brace.(Î¨Â®úÿÿÿÿ
+^	php:S1808"JPut one space between the closing parenthesis and the opening curly brace.(ÄÇùI
+_	php:S18080"JPut one space between the closing parenthesis and the opening curly brace.(¯¯ğˆ
+P	php:S1808"6Put exactly one space after comma separated arguments.(ËûÄ¾øÿÿÿÿ
+P	php:S1808"6Put exactly one space after comma separated arguments.(¾±¤üÿÿÿÿ
+O	php:S1599"5Remove the use of this variable variable "$$filiere".(ËûÄ¾øÿÿÿÿ
+J	php:S1599"5Remove the use of this variable variable "$$filiere".(Á“„Ş
+P	php:S1599"6Remove the use of this variable variable "$$etudiant".(¬™éÅüÿÿÿÿ
+O	php:S1599#"5Remove the use of this variable variable "$$filiere".(åÖ¾ÿÿÿÿÿ
+J	php:S1599+"5Remove the use of this variable variable "$$filiere".(Á“„Ş
+P	php:S1599/"6Remove the use of this variable variable "$$etudiant".(×òº§üÿÿÿÿ
+P	php:S15991"6Remove the use of this variable variable "$$etudiant".(¸áÚµùÿÿÿÿ
+f	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(ŠÑî¸
+k	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(¨¬§Úÿÿÿÿÿ
