@@ -1,0 +1,15 @@
+
+U	php:S1808";Move this open curly brace to the end of the previous line.(ÒÌâ–øÿÿÿÿ
+U	php:S1808";Move this open curly brace to the end of the previous line.(ÒÌâ–øÿÿÿÿ
+U	php:S1808(";Move this open curly brace to the end of the previous line.(ÒÌâ–øÿÿÿÿ
+U	php:S18080";Move this open curly brace to the end of the previous line.(ÒÌâ–øÿÿÿÿ
+_	php:S1808"JPut one space between the closing parenthesis and the opening curly brace.(ÖÙ‹ô
+d	php:S18083"JPut one space between the closing parenthesis and the opening curly brace.(¢‘ï–ùÿÿÿÿ
+K	php:S1599"1Remove the use of this variable variable "$$pro".(óÝ“”ýÿÿÿÿ
+K	php:S1599""1Remove the use of this variable variable "$$pro".(µ¥Æåüÿÿÿÿ
+G	php:S1599#"2Remove the use of this variable variable "$$user".(ÆüŽ¢
+G	php:S1599*"2Remove the use of this variable variable "$$user".(ã—†Ø
+L	php:S15992"2Remove the use of this variable variable "$$user".(¡ûŠêýÿÿÿÿ
+G	php:S15994"2Remove the use of this variable variable "$$user".(ã—†Ø
+k	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.( Æº‰ûÿÿÿÿ
+k	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(ÌáÅ’þÿÿÿÿ

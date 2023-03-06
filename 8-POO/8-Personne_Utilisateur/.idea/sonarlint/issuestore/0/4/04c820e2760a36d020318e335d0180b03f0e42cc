@@ -1,0 +1,11 @@
+
+_	php:S1808"JPut one space between the closing parenthesis and the opening curly brace.(Ø¸Ş
+d	php:S1808 "JPut one space between the closing parenthesis and the opening curly brace.(«Ğ…¼ıÿÿÿÿ
+b	php:S1808 "HPut one space between this "elseif" keyword and the opening parenthesis.(«Ğ…¼ıÿÿÿÿ
+~	php:S1808"dEither split this list into multiple lines, aligned at column "8" or put all arguments on line "12".(Òƒ¦„şÿÿÿÿ
+_	php:S1808"EMove the closing parenthesis with the opening brace on the next line.(äŠüüÿÿÿÿ
+`php:S107"GThis function has 8 parameters, which is greater than the 7 authorized.(Òƒ¦„şÿÿÿÿ
+dphp:S116"PRename this field "$_login" to match the regular expression ^[a-z][a-zA-Z0-9]*$.(ÁØŞ
+gphp:S116"SRename this field "$_password" to match the regular expression ^[a-z][a-zA-Z0-9]*$.(ë¬¸å
+kphp:S116	"RRename this field "$_service" to match the regular expression ^[a-z][a-zA-Z0-9]*$.(»–êùûÿÿÿÿ
+f	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(Å¢Ã

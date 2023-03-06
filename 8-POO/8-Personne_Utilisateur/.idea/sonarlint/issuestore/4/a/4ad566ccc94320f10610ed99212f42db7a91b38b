@@ -1,0 +1,7 @@
+
+R	php:S1808"=Move this open curly brace to the beginning of the next line.(Æ¿ÿ´
+_	php:S1808"JPut one space between the closing parenthesis and the opening curly brace.(Æ¿ÿ´
+lphp:S116"SRename this field "$_compteur" to match the regular expression ^[a-z][a-zA-Z0-9]*$.(¯”Â¶ÿÿÿÿÿ
+aphp:S116"MRename this field "$_id" to match the regular expression ^[a-z][a-zA-Z0-9]*$.(ë²ûœ
+hphp:S116"ORename this field "$_code" to match the regular expression ^[a-z][a-zA-Z0-9]*$.(ƒ¹Áêùÿÿÿÿ
+fphp:S116"RRename this field "$_libelle" to match the regular expression ^[a-z][a-zA-Z0-9]*$.(×Áèç
