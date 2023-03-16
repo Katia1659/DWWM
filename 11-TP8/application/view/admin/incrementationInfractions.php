@@ -1,4 +1,8 @@
+<<<<<<< HEAD:11-TP8/application/view/admin/incrementationInfractions.php
+<!-- BATIST -->
+=======
 <!-- BATISTE -->
+>>>>>>> ff3caee15e9bdf7ef4c9b05c61454ab625a52110:la_boite_a_jurons/application/view/admin/incrementationInfractions.php
 <?php 
 session_start();
 ?>
