@@ -1,0 +1,232 @@
+
+/**** Placement dans la page ****/
+
+
+
+.titreTab,.infraUser {
+  margin-left: 5%;
+  margin-right: 10%;
+
+height: 40em;
+
+            color: white;
+            text-align: center;
+  
+}
+
+
+
+section {
+  height:50%;
+  width: 60%;
+  margin-top: 10em;
+  margin-left: 20%; 
+      overflow-y:auto;
+      overflow-x: hidden;
+      
+ 
+}
+
+
+
+
+
+ /* Designing for scroll-bar */
+ ::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: gainsboro;
+  border-radius: 5px;margin-top: 15px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+/**** Tableaux ****/
+
+.tableau {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.158);
+}
+
+
+/***** Legende du tableau *****/
+
+.legend{
+  background-color: rgba(0, 0, 0, 0.671);
+  color: white;
+  border-radius: 5px 5px 0% 0%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  
+ 
+}
+
+.infraction{
+  padding-top: 10px;
+ 
+}
+
+#infra{
+  background-color: black;
+  padding-left: 10px;
+  margin-left: 5px;
+  color: white;
+  border-radius: 5px;
+  border: hidden;
+}
+
+#trTab2 { 
+  background-color: black;
+  color: white;
+}
+
+
+.ligne1 {height: 50px;}
+
+.ligne2 {opacity: 0; height: 15px;}
+
+
+tr:nth-child(even) {
+  background-color:rgba(0, 0, 0, 0.377);
+}
+
+
+
+/* input {
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+} */
+
+.infraUser th{
+  border-collapse: collapse;
+  height: 41px;
+  width: 227.5px;
+  background-color: rgba(0, 0, 0, 0.356);
+  color: white;
+  text-align: center;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  
+  
+}
+
+/**** Fond d'écran ****/
+
+body{
+    background-image: url(../img/fond.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+tr {
+    display: flex;
+    justify-content: flex-start;
+    height: auto;    
+}
+
+.td1{
+  width: 25%;
+  padding-left: 10%;
+}
+
+.td2{
+  width: 25%;
+  padding-left: 5%;
+}
+
+.td3{
+  width: 25%;
+  padding-left: 10%;
+}
+
+.td4{
+  width: 25%;
+  padding-left: 15%;
+}
+
+
+
+/**** Bouton validation ****/
+#holder {margin-top: -6px;}
+
+      .submit {
+        background: #3D4C53;
+        width : 225.5px;
+        height : 50px;
+        overflow: hidden;
+        padding-top: 6%;
+        text-align : center;
+        transition : .2s;
+        cursor : pointer;
+        border-radius: 0px 15px 0px 0px;
+        box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+        border-bottom: 1px solid white;
+        color: white;
+        background : #25bd7e;
+        padding-bottom: 10px;
+
+       
+      }
+      .btnTwo {
+        position : relative;
+        width : 200px;
+        height : 150px;
+        margin-top: -100px;
+        padding-top: 1px;
+        background : #25bd7e;
+        left : -200px;
+        transition : .3s;
+        border-bottom: 1px solid white;
+      }
+      .btnText {
+        color : white;
+        transition : .3s;
+      }
+      .btnText2 {
+        margin-top : 58px;
+        margin-right : -130px;
+        color : #FFF;
+      }
+      .submit:hover .btnTwo{ /*When hovering over .button change .btnTwo*/
+        left: -130px;
+      }
+      .submit:hover .btnText{ /*When hovering over .button change .btnText*/
+        margin-left : 65px;
+      }
+      .submit:active { /*Clicked and held*/
+        box-shadow: 0px 5px 6px rgba(0,0,0,0.3);
+      }
+
+
+.Infraction{
+  width: 110px;
+
+  margin-left: 15px;
+
+
+}
+
+.retard{
+  width: 90px;
+ 
+  margin-left: 15px;
+
+}
+
