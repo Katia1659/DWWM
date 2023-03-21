@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+   {{ article.title }} 
+{% endblock %}
+
+{% block body %}
+    <div>
+        <h1>{{ article.title }}</h1>
+        <p>
+            {{ article.description }}
+        </p>
+    </div>
+
+    <figure>
+        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fG1hdHJpeHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60" alt="">
+    </figure>
+    <small>{{ article.createdAt|date("d/m/Y") }}</small>
+{% endblock %}
