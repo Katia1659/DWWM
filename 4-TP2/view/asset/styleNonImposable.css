@@ -1,0 +1,22 @@
+body {
+    background: fixed;
+    background-color: #556b91;
+    background-image: linear-gradient(120deg, #030099b9 0%, #ff0101f3 100%);
+    margin: 10%;
+}
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    border: solid;
+    border-radius: 15px;
+    background-color: aliceblue;
+    }
+    
+    .div1 { grid-area: 2 / 2 / 5 / 5; }
+    .div2 { grid-area: 4 / 3 / 5 / 5; }
+    .div3 { grid-area: 2 / 2 / 4 / 5; }
