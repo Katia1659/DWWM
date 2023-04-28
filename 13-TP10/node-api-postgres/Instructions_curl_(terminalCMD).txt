@@ -1,0 +1,10 @@
+POST
+Ajouter un nouvel utilisateur avec le name Elaine et l'email elaine@example.com.
+curl --data "name=Elaine&email=elaine@example.com" http://localhost:3000/users
+
+PUT
+Mettre à jour l'utilisateur dont l'id est 1 pour avoir le name Kramer et l'email kramer@example.com.
+curl -X PUT -d "name=Kramer" -d "email=kramer@example.com" http://localhost:3000/users/1
+
+Supprimer l'utilisateur dont l'id est 1 .
+curl -X "DELETE" http://localhost:3000/users/1
