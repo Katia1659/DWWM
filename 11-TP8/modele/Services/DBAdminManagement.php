@@ -9,7 +9,7 @@ function deleteStagiaire($liste): bool
         $stmt = $bdd->prepare($sql);
         $status = $stmt->execute();
     }
-    
+
     return $status;
 }
 
@@ -18,7 +18,7 @@ function selectStagiaire(): array
     $host = 'localhost';
     $dbname = 'boîte_a_jurons';
     $username = 'root';
-    $password = '';
+    $password = 'Fgty452dsefrt';
     $dsn = "mysql:host=$host;dbname=$dbname";
     // récupérer tous les utilisateurs
     $sql = "SELECT * FROM user";
